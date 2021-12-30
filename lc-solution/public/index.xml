@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Dec 2021 11:52:32 -0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode solution for FB Tag</title>
+      <link>http://example.org/posts/fb-tag/</link>
+      <pubDate>Thu, 30 Dec 2021 11:52:32 -0800</pubDate>
+      
+      <guid>http://example.org/posts/fb-tag/</guid>
+      <description>1. Two Sum 4
+2. Add Two Numbers 4
+3. longest substring without repeating characters 6
+4. Median of Two Sorted Arrays 7
+5. Longest Palindromic Substring 9
+6. Zigzag Conversion 10
+7. Reverse Integer 11
+8. String to Integer (atoi) 11
+9. Palindrome Number 12
+10. Regular Expression Matching 13
+11. Container With Most Water 14
+14. Longest Common Prefix 15
+15. 3Sum 16
+16. 3Sum Closest 16
+259. 3Sum Smaller 16</description>
+    </item>
+    
+  </channel>
+</rss>

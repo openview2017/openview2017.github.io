@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>LeetCode solution for FB Tag | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="1. Two Sum 4
+2. Add Two Numbers 4
+3. longest substring without repeating characters 6
+4. Median of Two Sorted Arrays 7
+5. Longest Palindromic Substring 9
+6. Zigzag Conversion 10
+7. Reverse Integer 11
+8. String to Integer (atoi) 11
+9. Palindrome Number 12
+10. Regular Expression Matching 13
+11. Container With Most Water 14
+14. Longest Common Prefix 15
+15. 3Sum 16
+16. 3Sum Closest 16
+259. 3Sum Smaller 16">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="LeetCode solution for FB Tag" />
+<meta property="og:description" content="1. Two Sum 4
+2. Add Two Numbers 4
+3. longest substring without repeating characters 6
+4. Median of Two Sorted Arrays 7
+5. Longest Palindromic Substring 9
+6. Zigzag Conversion 10
+7. Reverse Integer 11
+8. String to Integer (atoi) 11
+9. Palindrome Number 12
+10. Regular Expression Matching 13
+11. Container With Most Water 14
+14. Longest Common Prefix 15
+15. 3Sum 16
+16. 3Sum Closest 16
+259. 3Sum Smaller 16" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/fb-tag/" />
+<meta property="article:published_time" content="2021-12-30T11:52:32-08:00" />
+<meta property="article:modified_time" content="2021-12-30T11:52:32-08:00" />
+<meta itemprop="name" content="LeetCode solution for FB Tag">
+<meta itemprop="description" content="1. Two Sum 4
+2. Add Two Numbers 4
+3. longest substring without repeating characters 6
+4. Median of Two Sorted Arrays 7
+5. Longest Palindromic Substring 9
+6. Zigzag Conversion 10
+7. Reverse Integer 11
+8. String to Integer (atoi) 11
+9. Palindrome Number 12
+10. Regular Expression Matching 13
+11. Container With Most Water 14
+14. Longest Common Prefix 15
+15. 3Sum 16
+16. 3Sum Closest 16
+259. 3Sum Smaller 16">
+<meta itemprop="datePublished" content="2021-12-30T11:52:32-08:00" />
+<meta itemprop="dateModified" content="2021-12-30T11:52:32-08:00" />
+<meta itemprop="wordCount" content="19866">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LeetCode solution for FB Tag"/>
+<meta name="twitter:description" content="1. Two Sum 4
+2. Add Two Numbers 4
+3. longest substring without repeating characters 6
+4. Median of Two Sorted Arrays 7
+5. Longest Palindromic Substring 9
+6. Zigzag Conversion 10
+7. Reverse Integer 11
+8. String to Integer (atoi) 11
+9. Palindrome Number 12
+10. Regular Expression Matching 13
+11. Container With Most Water 14
+14. Longest Common Prefix 15
+15. 3Sum 16
+16. 3Sum Closest 16
+259. 3Sum Smaller 16"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">LeetCode solution for FB Tag</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-12-30T11:52:32-08:00">December 30, 2021</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.c1shqcpbdft1"><strong>1. Two Sum</strong>  <strong>4</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.9v1b2paxy2b6"><strong>2. Add Two Numbers</strong>  <strong>4</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ee7nobsh30i"><strong>3. longest substring without repeating characters</strong>  <strong>6</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.s0lbh97zmrnj"><strong>4. Median of Two Sorted Arrays</strong>  <strong>7</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.u73zy9v3j8j1"><strong>5. Longest Palindromic Substring</strong>  <strong>9</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.gqysvdu3nb2u"><strong>6. Zigzag Conversion</strong>  <strong>10</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.5dzkhabrrb5b"><strong>7. Reverse Integer</strong>  <strong>11</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8g2mcm6odvo6"><strong>8. String to Integer (atoi)</strong>  <strong>11</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.nspomwx1r13a"><strong>9. Palindrome Number</strong>  <strong>12</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.9un3e23amjuw"><strong>10. Regular Expression Matching</strong>  <strong>13</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.o2ikophf7soc"><strong>11. Container With Most Water</strong>  <strong>14</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.kyo0d5ybqu8c"><strong>14. Longest Common Prefix</strong>  <strong>15</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.i01a1rmsu99u"><strong>15. 3Sum</strong>  <strong>16</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.l3juj9ua1daw"><strong>16. 3Sum Closest</strong>  <strong>16</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.crjzzqyr7402"><strong>259. 3Sum Smaller</strong>  <strong>16</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.5n4o408v121w"><strong>17. Letter Combinations of a Phone Number</strong>  <strong>19</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.fql9x5ituio1"><strong>19. Remove Nth Node From End of List</strong>  <strong>20</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.d04ojn2vl0i8"><strong>20. Valid Parentheses</strong>  <strong>20</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ip0d2f5x6rrb"><strong>21. Merge Two Sorted Lists</strong>  <strong>21</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.n5szxeu9mavs"><strong>23. Merge k Sorted Lists</strong>  <strong>22</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.2cn9feqoodr"><strong>13. Roman to Integer</strong>  <strong>22</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.bm8iiut4s5qx"><strong>24 Swap Nodes in Pairs</strong>  <strong>23</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.yryfm23fuzy3"><strong>25 Reverse Nodes in k-Group</strong>  <strong>24</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tp9hom4w1vhg"><strong>26 Remove Duplicates from Sorted Array</strong>  <strong>25</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.pr4h4ut6016q"><strong>29 Divide Two Integers</strong>  <strong>26</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.brgtsdgl529m"><strong>31 Next Permutation</strong>  <strong>26</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.1uri4p54zdj0"><strong>46. Permutations</strong>  <strong>28</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.2l92fo3a35kh"><strong>32 Longest Valid Parentheses</strong>  <strong>29</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tpvwhbsw002x"><strong>33 Search in Rotated Sorted Array</strong>  <strong>31</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.1dqinnkhznsj"><strong>34 Find First and Last Position of Element in Sorted Array</strong>  <strong>32</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.947xnr64ccjr"><strong>35 Search Insert Position</strong>  <strong>33</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.xx3691x4a78"><strong>36 Valid Sudoku</strong>  <strong>34</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ndc1baxk915x"><strong>39 Combination Sum</strong>  <strong>35</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.yixjmrk57mq2"><strong>40 Combination Sum II</strong>  <strong>36</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.vrynnl4x4i8"><strong>41 First Missing Positive</strong>  <strong>37</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ujt651a277kp"><strong>42. Trapping Rain Water</strong>  <strong>38</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.adwui369d63z"><strong>43. Multiply Strings</strong>  <strong>39</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.rmq5c2eomu6t"><strong>44. Wildcard Matching</strong>  <strong>40</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.qdm52bqmecc5"><strong>55. Jump Game</strong>  <strong>42</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.3m6p8mn8hyap"><strong>45. Jump Game II</strong>  <strong>42</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.svgxc1jtme6y"><strong>1306. Jump Game III</strong>  <strong>44</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8x575vodla0a"><strong>43 Multiply Strings</strong>  <strong>45</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.841yr6ga8kx3"><strong>792. Number of Matching Subsequences</strong>  <strong>46</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.t4oggot1m39c"><strong>51 N-Queens</strong>  <strong>47</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8nq3lcsjaldn"><strong>48 Rotate Image</strong>  <strong>49</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.f3znmibqqawr"><strong>49 Group Anagrams</strong>  <strong>50</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.gj40ayg97rx6"><strong>50 Pow(x, n)</strong>  <strong>50</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.cnj3kroddh93"><strong>53 Maximum Subarray</strong>  <strong>50</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.q9vnhgo5zw9i"><strong>54 Spiral Matrix</strong>  <strong>50</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.xcnffhtpygxi"><strong>1849. Splitting a String Into Descending Consecutive Values</strong>  <strong>51</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.t06tw29jgx7p"><strong>1110 Delete Nodes And Return Forest</strong>  <strong>53</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.dqcdq2uhipba"><strong>56 Merge Intervals</strong>  <strong>55</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.cfk317cx03l1"><strong>57 Insert Interval</strong>  <strong>56</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.si67oy5issb2"><strong>60 Permutation Sequence</strong>  <strong>57</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.xp9ktfi4smge"><strong>62 Unique Paths</strong>  <strong>57</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.otk3uhf6kiw5"><strong>63 Unique Paths II</strong>  <strong>57</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tyq94jpxj4l5"><strong>65 Valid Number</strong>  <strong>57</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.by0dj45jizp0"><strong>66 Plus One</strong>  <strong>58</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8wkjgqufsxu4"><strong>67 Add Binary</strong>  <strong>59</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ma3doienanc8"><strong>767 Reorganize String</strong>  <strong>61</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.4ttjp55tml2q"><strong>209. Minimum Size Subarray Sum</strong>  <strong>62</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.mb3dvqm9su9v"><strong>380 Insert Delete GetRandom O(1)</strong>  <strong>63</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.kq6adl6bcgk2"><strong>398 Random Pick Index</strong>  <strong>64</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.wm72j8a5mrsi"><strong>528. Random Pick with Weight</strong>  <strong>67</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.h60zy8pe6l9v"><strong>78 Subsets</strong>  <strong>67</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.p0zihe9zcis6"><strong>815 Bus Routes</strong>  <strong>68</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ywirn4p2w4lz"><strong>76 Minimum Window Substring</strong>  <strong>70</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ys6a37me6wiz"><strong>146. LRU Cache</strong>  <strong>72</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.htxq23e6lg5"><strong>212. Word Search</strong>  <strong>74</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.7tuimykd2xj2"><strong>1057. Campus Bikes</strong>  <strong>76</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.j5en6sx73l5v"><strong>726. Number of Atoms</strong>  <strong>77</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.q4azv1fxq40m"><strong>1597. Build Binary Expression Tree From Infix Expression</strong>  <strong>79</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.qzma8yf6o6jj">Related solution for 772. Basic Calculator III  80</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.utitnuc7f83g"><strong>1231. Divide Chocolate</strong>  <strong>81</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.chf67hurlip4"><strong>875. Koko Eating Bananas</strong>  <strong>82</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.b2tglaeo55wr"><strong>935. Knight Dialer</strong>  <strong>83</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.mrc8zkq01zdh"><strong>616. Add Bold Tag in String</strong>  <strong>85</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8toa6jabzaf5"><strong>126. Word Ladder II</strong>  <strong>85</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.eyj5f46si527"><strong>127. Word Ladder</strong>  <strong>87</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.al1zaylw92c8"><strong>102. Binary Tree Level Order Traversal</strong>  <strong>88</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.qavmsml521v4"><strong>103. Binary Tree Zigzag Level Order Traversal</strong>  <strong>89</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.lxgnd0bg9g8q">108. Convert Sorted Array to Binary Search Tree  <strong>90</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.laybq13bec12"><strong>979. Distribute Coins in Binary Tree</strong>  <strong>91</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.6d5so045mwkh"><strong>股票买卖专题</strong>  <strong>92</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.enukbh5ainwy">121. Best Time to Buy and Sell Stock (only one time transaction)  92</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.hjsayf9d0kjz">122. Best Time to Buy and Sell Stock II (no limit on transaction times)  94</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.6wmzfn2nnfjb">714. Best Time to Buy and Sell Stock with Transaction Fee (122 + transaction fee)  96</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.vlfr6aog7xha">123. Best Time to Buy and Sell Stock III (at most 2 times transaction, hard)  98</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.7lcslf25n4ra">188. Best Time to Buy and Sell Stock IV (at most K times transaction, hard)  99</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.4gyu6jvps179">309. Best Time to Buy and Sell Stock with Cooldown  101</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.h05awufz42zo"><strong>437. Path Sum III</strong>  <strong>102</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.fmr9m33mtp7u">96. Unique Binary Search Trees  <strong>103</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.n4hwpjiwuqva"><strong>1120. Maximum Average Subtree</strong>  <strong>104</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.kf79ctrcvs5h"><strong>1339. Maximum Product of Splitted Binary Tree</strong>  <strong>104</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.w3dy7e67yqk5"><strong>151 Reverse Words in a String</strong>  <strong>105</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.2srgzv9b5ezs"><strong>152 Maximum Product Subarray</strong>  <strong>106</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.srsl8spp1qp2"><strong>158 Read N Characters Given read4 II - Call Multiple Times</strong>  <strong>107</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.o9tnqwdruwwf"><strong>Lowest Common Ancestors 专题</strong>  <strong>107</strong></a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.gaiox9izz77j">236. Lowest Common Ancestor of a Binary Tree  107</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.66k76zkekw4d">1644. Lowest Common Ancestor of a Binary Tree II  109</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.jdj5yund139o">1650. Lowest Common Ancestor of a Binary Tree III  111</a></p>
+<p><a href="https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tanyquvgvt4e">1676. Lowest Common Ancestor of a Binary Tree IV  114</a></p>
+<h1 id="1-two-sum">1. Two Sum</h1>
+<p>(Wu)</p>
+<p>python</p>
+<p>class Solution:</p>
+<p>def twoSum(self, nums: List[int], target: int) -&gt; List[int]:</p>
+<p>​    s = {}</p>
+<p>​    for i, e in enumerate(nums):</p>
+<p>​      if target - e in s:</p>
+<p>​        return [i, s[target-e]]</p>
+<p>​      s[e] = i</p>
+<p>follow up: 如果数据量很大怎么办？</p>
+<p>Step 1: Ask if the data is already sorted</p>
+<p>Step 2: If sorted - 从硬盘load 最前面和最后面到内存里，使用two pointers的方法，如果找不到再load前面的下一部分，和后面的前一部分</p>
+<p>Step 3: If not sorted , 先用硬盘外排的方法sort所有数据，再按step2做two pointers的方法</p>
+<p>Step 4: 外排的方法是 - 分成k份，分别到内存里排序，再merge k sorted array</p>
+<h1 id="2-add-two-numbers">2. Add Two Numbers</h1>
+<p>（Wu）</p>
+<p>python</p>
+<p>class Solution:</p>
+<p>def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -&gt; Optional[ListNode]:</p>
+<p>​    dummy = temp = ListNode()</p>
+<p>​    carry = 0</p>
+<p>​    while l1 or l2 or carry:</p>
+<p>​      val1 = val2 = 0</p>
+<p>​      if l1:</p>
+<p>​        val1 = l1.val</p>
+<p>​        l1 = l1.next</p>
+<p>​      if l2:</p>
+<p>​        val2 = l2.val</p>
+<p>​        l2 = l2.next</p>
+<p>​      temp.next = ListNode((val1 + val2 + carry)%10)</p>
+<p>​      carry = (val1 + val2 + carry)//10</p>
+<p>​      temp = temp.next</p>
+<p>​</p>
+<p>​    return dummy.next</p>
+<p>follow up：减法</p>
+<p>java</p>
+<p>class Solution {</p>
+<p>public ListNode addTwoNumbers(ListNode l1, ListNode l2) {</p>
+<p>​    return addTwoNumbers(l1, l2, false);</p>
+<p>}</p>
+<p>public ListNode addTwoNumbers(ListNode l1, ListNode l2, boolean flip) {</p>
+<p>​    ListNode dummyHead = new ListNode(0);</p>
+<p>​    boolean allEqual = false;</p>
+<p>​    //ListNode prev = dummyHead;</p>
+<p>​    ListNode p = l1, q = l2, curr = dummyHead;</p>
+<p>​    int carry = 0;</p>
+<p>​    int last = 0;</p>
+<p>​    while (p != null || q != null) {</p>
+<p>​      if (p == null) {</p>
+<p>​        return addTwoNumbers(l2, l1, true);</p>
+<p>​      }</p>
+<p>​      int x = (p != null) ? p.val : 0;</p>
+<p>​      int y = (q != null) ? q.val : 0;</p>
+<p>​      if (x == y) {</p>
+<p>​        allEqual = true;</p>
+<p>​      } else {</p>
+<p>​        allEqual = false;</p>
+<p>​      }</p>
+<p>​      int sum = x + carry - y;</p>
+<p>​      carry = 0;</p>
+<p>​      while (p.next != null &amp;&amp; sum &lt; 0) {</p>
+<p>​        carry&ndash;;</p>
+<p>​        sum += 10;</p>
+<p>​      }</p>
+<p>​      last = sum;</p>
+<p>​      if (p.next != null) {</p>
+<p>​        curr.next = new ListNode(sum);</p>
+<p>​        curr = curr.next;</p>
+<p>​      }</p>
+<p>​      if (p != null) p = p.next;</p>
+<p>​      if (q != null) q = q.next;</p>
+<p>​    }</p>
+<p>​    if (carry &lt; 0) {</p>
+<p>​      last = carry;</p>
+<p>​    }</p>
+<p>​     if (carry == 0 &amp;&amp; allEqual) {</p>
+<p>​       return new ListNode(0);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    if (last &lt; 0 &amp;&amp; !flip) {</p>
+<p>​      return addTwoNumbers(l2, l1, true);</p>
+<p>​    }</p>
+<p>​    if (flip)</p>
+<p>​      curr.next = new ListNode(-last);</p>
+<p>​    else</p>
+<p>​      curr.next = new ListNode(last);</p>
+<p>​</p>
+<p>​    return dummyHead.next;</p>
+<p>}</p>
+<p>}</p>
+<p>// 342 - 465 = -123</p>
+<p>// 9999999 - 9999 = 9990000</p>
+<p>// 999 - 999 = 0</p>
+<p>// 9999 - 9999999= -9990000</p>
+<h1 id="3-longest-substring-without-repeating-characters">3. longest substring without repeating characters</h1>
+<p>High Level: 双指针, 慢指针跳着走</p>
+<p>(huang)</p>
+<p>C#</p>
+<p>public class Solution {</p>
+<p>public int LengthOfLongestSubstring(string s) {</p>
+<p>​    Dictionary&lt;int, int&gt; slow_map = new Dictionary&lt;int, int&gt;();</p>
+<p>​    int slow = 0;</p>
+<p>​    int maxlen = 0;</p>
+<p>​    for(int fast = 0; fast &lt; s.Length; fast ++)</p>
+<p>​    {</p>
+<p>​      char ch = s[fast];</p>
+<p>​      if (slow_map.ContainsKey(ch)){</p>
+<p>​        slow = Math.Max(slow, slow_map[ch] + 1);</p>
+<p>​      }</p>
+<p>​      maxlen = Math.Max(maxlen, fast - slow + 1);</p>
+<p>​      slow_map[ch] = fast;</p>
+<p>​    }</p>
+<p>​    return maxlen;</p>
+<p>}</p>
+<p>}</p>
+<p>private static List<!-- raw HTML omitted --> longestSubstr(String s) {</p>
+<p>List<!-- raw HTML omitted --> res = new ArrayList&lt;&gt;();</p>
+<p>int start = 0;</p>
+<p>int end = 0;</p>
+<p>int maxLen = 0, counter = 0;</p>
+<p>int[] map = new int[128]; // to check the char exists or not</p>
+<p>while ( end &lt; s.length()) {</p>
+<p>char c1 = s.charAt(end);</p>
+<p>if (map[c1] &gt; 0) counter++;</p>
+<p>map[c1]++; // set c1 from 0 to 1</p>
+<p>end++;</p>
+<p>while (counter &gt; 0) {</p>
+<p>char c2 = s.charAt(start);</p>
+<p>if (map[c2] &gt; 1) counter&ndash;; // c1 == c2, decrease the counter</p>
+<p>map[c2]&ndash;;</p>
+<p>start++; // reset start to new pos</p>
+<p>}</p>
+<p>maxLen = Math.max(maxLen, end - start);</p>
+<p>String substr = s.substring(start, end); // candidates</p>
+<p>res.add(substr);</p>
+<p>}</p>
+<p>// maxLen, find all substr in res which len == maxLen</p>
+<p>List<!-- raw HTML omitted --> subset = new ArrayList&lt;&gt;();</p>
+<p>for (String str : res) {</p>
+<p>if (str.length() == maxLen) {</p>
+<p>subset.add(str);</p>
+<p>}</p>
+<p>}</p>
+<p>return subset;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="4-median-of-two-sorted-arrays">4. Median of Two Sorted Arrays</h1>
+<p>High Level: 找第k个数 + recursion</p>
+<p>(huang)</p>
+<p>public double median(int[] a, int[] b) {   // Write your solution here   //time : O(nlogn)   //space : O(1)   Arrays.sort(a);   Arrays.sort(b);   int length = a.length + b.length;   int mid0 = (length - 1 )/ 2;   int mid1 = length / 2;   int left = 0;   int right = length - 1;   while(left &lt; mid0 || right &gt; mid1) {//quick select + binary search or whatever    int pivot = quickSelectIndex(a, b, left, right);    if(pivot &lt;= mid0) {     left = pivot + 1;    } else {     right = pivot - 1;    }   }   return (double)(num(a, b, mid0) + num(a, b, mid1)) /2;  }  private int num(int[] a, int[] b, int i) {//2-array mapping function   return i &lt; a.length ? a[i] : b[i - a.length];  }  private void swap(int[] a, int[] b, int i, int j) {//2-array mapping and swap function   int[] numi = i &lt; a.length ? a : b;   int[] numj = j &lt; a.length ? a : b;   i = i &lt; a.length ? i : i - a.length;   j = j &lt; a.length ? j : j - a.length;   int tmp = numi[i];   numi[i] = numj[j];   numj[j] = tmp;   return;  }  private int quickSelectIndex(int[] a, int[] b, int left, int right) {   int pivot = left + (int)(Math.random() * (right + 1 - left) );   int i = left;   int j = right - 1;   swap(a, b, pivot, right);   while(i &lt;= j) {    if(num(a, b, i) &gt; num(a, b, right)) {     if(num(a, b, j) &gt;= num(a, b, right)) {      j&ndash;;     } else {      swap(a, b, i, j);      i++;      j&ndash;;     }    } else {     i++;    }   }   swap(a, b, i, right);   return i ;  }</p>
+<h1 id="5-longest-palindromic-substring">5. Longest Palindromic Substring</h1>
+<p>（tang）</p>
+<p>High Level：</p>
+<p>Java:</p>
+<p>// TC: O(n^2) SC: O(1) 空间优化的方法</p>
+<p>class Solution { public String longestPalindrome(String s) {   if (s == null || s.length() &lt; 1) return &ldquo;&quot;;   int start = 0, end = 0;   for (int i = 0; i &lt; s.length(); i++) {     int len1 = expandAroundCenter(s, i, i);     int len2 = expandAroundCenter(s, i, i + 1);     int len = Math.max(len1, len2);     if (len &gt; end - start) {       start = i - (len - 1) / 2;       end = i + len / 2;     }   }   return s.substring(start, end + 1); }  private int expandAroundCenter(String s, int left, int right) {   int L = left, R = right;   while (L &gt;= 0 &amp;&amp; R &lt; s.length() &amp;&amp; s.charAt(L) == s.charAt(R)) {     L&ndash;;     R++; // (L, R)   }   return R - L - 1; } }  // dp的方法 SC O(n^2) class Solution { public String longestPalindrome(String s) {   if (s == null || s.length() &lt; 1) return &ldquo;&quot;;   int start = 0, end = 0;   for (int i = 0; i &lt; s.length(); i++) {     int len1 = expandAroundCenter(s, i, i);     int len2 = expandAroundCenter(s, i, i + 1);     int len = Math.max(len1, len2);     if (len &gt; end - start) {       start = i - (len - 1) / 2;       end = i + len / 2;     }   }   return s.substring(start, end + 1); }  private int expandAroundCenter(String s, int left, int right) {   int L = left, R = right;   while (L &gt;= 0 &amp;&amp; R &lt; s.length() &amp;&amp; s.charAt(L) == s.charAt(R)) {     L&ndash;;     R++; // (L, R)   }   return R - L - 1; } }</p>
+<h1 id="6-zigzag-conversion">6. Zigzag Conversion</h1>
+<p>（tang）</p>
+<p>High Level:</p>
+<p>StringBuilders</p>
+<p>boolean goingdown, 换方向</p>
+<p>TC: O(1)</p>
+<p>class Solution {</p>
+<p>public String longestPalindrome(String s) {</p>
+<p>if (s == null || s.length() &lt; 1) return &ldquo;&quot;;</p>
+<p>int start = 0, end = 0;</p>
+<p>for (int i = 0; i &lt; s.length(); i++) {</p>
+<p>​    int len1 = expandAroundCenter(s, i, i);</p>
+<p>​    int len2 = expandAroundCenter(s, i, i + 1);</p>
+<p>​    int len = Math.max(len1, len2);</p>
+<p>​    if (len &gt; end - start) {</p>
+<p>​      start = i - (len - 1) / 2;</p>
+<p>​      end = i + len / 2;</p>
+<p>​    }</p>
+<p>}</p>
+<p>return s.substring(start, end + 1);</p>
+<p>}</p>
+<p>private int expandAroundCenter(String s, int left, int right) {</p>
+<p>int L = left, R = right;</p>
+<p>while (L &gt;= 0 &amp;&amp; R &lt; s.length() &amp;&amp; s.charAt(L) == s.charAt(R)) {</p>
+<p>​    L&ndash;;</p>
+<p>​    R++; // (L, R)</p>
+<p>}</p>
+<p>return R - L - 1;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="7-reverse-integer">7. Reverse Integer</h1>
+<p>(lynn)</p>
+<p>需要处理边界 - 用long</p>
+<p>或者每次需要乘以0时，判断是否valid</p>
+<p>Time : O(1) max should be the digit number of Integer_MAX_VALUE</p>
+<p>Space : O(1)</p>
+<p>class Solution {</p>
+<p>public int reverse(int x) {</p>
+<p>​    int result = 0;</p>
+<p>​    long longRes = 0;</p>
+<p>​    boolean negative = x &gt; 0 ? false : true;</p>
+<p>​    x = x &gt; 0 ? x : -1 * x;</p>
+<p>​    while (x != 0) {</p>
+<p>​      int digit = x % 10;</p>
+<p>​      int curResult = result * 10 + digit;</p>
+<p>​</p>
+<p>​      //curResult might be overflow</p>
+<p>​      //check overflow, if we calculate back to match result failed, represent there is an overflow</p>
+<p>​      if ((curResult - digit) / 10 != result) {</p>
+<p>​        return 0;</p>
+<p>​      }</p>
+<p>​      result = curResult;</p>
+<p>​      x = x / 10;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return negative ? -1 * result : result;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="8-string-to-integer-atoi">8. String to Integer (atoi)</h1>
+<p>(lynn)</p>
+<p>Java:</p>
+<p>Time O(n) n is the length of input string</p>
+<p>Space : O(1)</p>
+<p>class Solution {</p>
+<p>public int myAtoi(String s) {</p>
+<p>​    if (s == null || s.length() == 0) {</p>
+<p>​      return 0;</p>
+<p>​    }</p>
+<p>​    //maintain an index to loop the char in string</p>
+<p>​    int index = 0;</p>
+<p>​    //Step1: remove leading space</p>
+<p>​    while (index &lt; s.length() &amp;&amp; s.charAt(index) == ' &lsquo;) {</p>
+<p>​      index++;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    //Step2: check the sign</p>
+<p>​    int sign = 1;</p>
+<p>​    if (index &lt; s.length() &amp;&amp; (s.charAt(index) == &lsquo;-&rsquo; || s.charAt(index) == &lsquo;+')) {</p>
+<p>​      sign = s.charAt(index) == &lsquo;-&rsquo; ? -1 : 1;</p>
+<p>​      index++;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    //Step3: read the digit until non-digit</p>
+<p>​    int result = 0;</p>
+<p>​    while (index &lt; s.length() &amp;&amp; s.charAt(index) &gt;= &lsquo;0&rsquo; &amp;&amp; s.charAt(index) &lt;= &lsquo;9&rsquo;) {</p>
+<p>​      int digit = s.charAt(index) - &lsquo;0&rsquo;;</p>
+<p>​</p>
+<p>​      <strong>if (result &gt; Integer.MAX_VALUE / 10</strong></p>
+<p>​        <strong>|| (result == Integer.MAX_VALUE / 10 &amp;&amp; digit &gt; Integer.MAX_VALUE % 10)) {</strong></p>
+<p>​        <strong>return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;</strong></p>
+<p>​      <strong>}</strong></p>
+<p>​      result = result * 10 + digit;;</p>
+<p>​      index++;</p>
+<p>​    }</p>
+<p>​    return sign * result;</p>
+<p>​</p>
+<p>}</p>
+<p>}</p>
+<h1 id="9-palindrome-number">9. Palindrome Number</h1>
+<p>(zhang)</p>
+<p>High Level: 取%，取/</p>
+<p>Java:</p>
+<p>//方法一：</p>
+<p>class Solution {</p>
+<p>public boolean isPalindrome(int x) {</p>
+<p>​    if (x &lt; 0) return false;</p>
+<p>​</p>
+<p>​    int rev = 0;</p>
+<p>​    int y = x;</p>
+<p>​    while ( y != 0) {</p>
+<p>​        rev = rev * 10 + y % 10;</p>
+<p>​        System.out.println(rev);</p>
+<p>​        y = y / 10;</p>
+<p>​    }</p>
+<p>​    return rev == x; // -1126087180 overflow return false;</p>
+<p>}</p>
+<p>}</p>
+<p>//方法二：只做一半，不需要考虑overflow的情况，更好</p>
+<p>c#</p>
+<p>public class Solution {</p>
+<p>public bool IsPalindrome(int x) {</p>
+<p>​    if(x &lt; 0 || (x % 10 == 0 &amp;&amp; x != 0)) {</p>
+<p>​      return false;</p>
+<p>​    }</p>
+<p>​    int half = 0;</p>
+<p>​    while( x &gt; half){</p>
+<p>​      half = half *10 + x % 10;</p>
+<p>​      x /= 10;</p>
+<p>​    }</p>
+<p>​    return half == x || ( x == half /10);</p>
+<p>}</p>
+<p>}</p>
+<h1 id="10-regular-expression-matching">10. Regular Expression Matching</h1>
+<p>(luo)</p>
+<p>/*</p>
+<p>dp的方法</p>
+<p>TC： O（mn）</p>
+<p>SC: O(mn)</p>
+<p><a href="https://www.youtube.com/watch?v=bSdw9rJYf-I">https://www.youtube.com/watch?v=bSdw9rJYf-I</a></p>
+<p>*/</p>
+<p>// dp的方法：复杂度更好</p>
+<p>class Solution {</p>
+<p>public boolean isMatch(String s, String p) {</p>
+<p>​    int lenS = s.length();</p>
+<p>​    int lenP = p.length();</p>
+<p>​    char[] sArray = s.toCharArray();</p>
+<p>​    char[] pArray = p.toCharArray();</p>
+<p>​</p>
+<p>​    boolean[][] dp = new boolean[lenS + 1][lenP + 1];</p>
+<p>​    dp[0][0] = true;</p>
+<p>​</p>
+<p>​    //当s的长度为0的情况</p>
+<p>​    for (int i = 2; i &lt;= lenP; i++) {</p>
+<p>​      dp[0][i] = pArray[i - 1] == &lsquo;*&rsquo; ? dp[0][i - 2] : false;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = 1; i &lt;= lenS; i++) {</p>
+<p>​      for (int j = 1; j &lt;= lenP; j++) {</p>
+<p>​</p>
+<p>​        char sc = sArray[i - 1];</p>
+<p>​        char pc = pArray[j - 1];</p>
+<p>​</p>
+<p>​        if (sc == pc || pc == &lsquo;.') {</p>
+<p>​          dp[i][j] = dp[i - 1][j - 1];</p>
+<p>​        } else {</p>
+<p>​          if (pc == &lsquo;*') { // 前面的字母重复0次，直接看j-2的位置</p>
+<p>​            if (dp[i][j - 2]) {</p>
+<p>​              dp[i][j] = true;</p>
+<p>​            } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == &lsquo;.') {// 前面的字母重复1次</p>
+<p>​              dp[i][j] = dp[i - 1][j];</p>
+<p>​            }</p>
+<p>​          }</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return dp[lenS][lenP];</p>
+<p>}</p>
+<p>}</p>
+<p>// recursion</p>
+<p>/*</p>
+<p>recursion的方法</p>
+<p>先看第一个字母是否match</p>
+<p>再看剩下的</p>
+<p>TC: O((lenS+lenP) * 2^(lenS + lenP))</p>
+<p>*/</p>
+<p>// recursion的方法，代码简短</p>
+<p>class Solution {</p>
+<p>public boolean isMatch(String s, String p) {</p>
+<p>​    // corner case check, if p length is 0 but s length is not 0, return false</p>
+<p>​    if (p.length() == 0) return s.length() == 0;</p>
+<p>​</p>
+<p>​    boolean firstMatch = s.length() &gt; 0 &amp;&amp; (s.charAt(0) == p.charAt(0) || p.charAt(0) == &lsquo;.');</p>
+<p>​</p>
+<p>​    if (p.length() &gt;= 2 &amp;&amp; p.charAt(1) == &lsquo;*&rsquo; ) {</p>
+<p>​      return isMatch(s, p.substring(2)) || (firstMatch &amp;&amp; isMatch(s.substring(1), p));</p>
+<p>​    } else {</p>
+<p>​      return firstMatch &amp;&amp; isMatch(s.substring(1), p.substring(1));</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<h1 id="11-container-with-most-water">11. Container With Most Water</h1>
+<p>（Aye）</p>
+<p>双指针</p>
+<p>public int maxArea(int[] height) {</p>
+<p>​    if (height == null || height.length == 0) {</p>
+<p>​      return 0;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    int start = 0;</p>
+<p>​    int end = height.length - 1;</p>
+<p>​    int maxArea = 0;</p>
+<p>​    while (start &lt; end) {</p>
+<p>​      int current = Math.min(height[start], height[end]);</p>
+<p>​      maxArea = Math.max(maxArea, current * (end - start));</p>
+<p>​      while (start &lt; end &amp;&amp; height[start] &lt;= current) {</p>
+<p>​        start++;</p>
+<p>​      }</p>
+<p>​</p>
+<p>​      while (start &lt; end &amp;&amp; height[end] &lt;= current) {</p>
+<p>​        end&ndash;;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return maxArea;</p>
+<p>}</p>
+<h1 id="14-longest-common-prefix">14. Longest Common Prefix</h1>
+<p>(zhang)</p>
+<p>class Solution {</p>
+<p>// Horizontal scanning</p>
+<p>public String longestCommonPrefix(String[] strs) {</p>
+<p>if (strs.length == 0) return &ldquo;&quot;;</p>
+<p>String prefix = strs[0];</p>
+<p>for (int i = 1; i &lt; strs.length; i++)</p>
+<p>​    while (strs[i].indexOf(prefix) != 0) {</p>
+<p>​      prefix = prefix.substring(0, prefix.length() - 1);</p>
+<p>​      if (prefix.isEmpty()) return &ldquo;&quot;;</p>
+<p>​    }</p>
+<p>return prefix;</p>
+<p>}</p>
+<p>​    // Vertical scanning</p>
+<p>public String longestCommonPrefix_Vertical(String[] strs) {</p>
+<p>if (strs == null || strs.length == 0) return &ldquo;&quot;;</p>
+<p>for (int i = 0; i &lt; strs[0].length() ; i++){</p>
+<p>​    char c = strs[0].charAt(i);</p>
+<p>​    for (int j = 1; j &lt; strs.length; j ++) {</p>
+<p>​      if (i == strs[j].length() || strs[j].charAt(i) != c)</p>
+<p>​        return strs[0].substring(0, i);</p>
+<p>​    }</p>
+<p>}</p>
+<p>return strs[0];</p>
+<p>}</p>
+<p>public String longestCommonPrefix_sort(String[] strs) {</p>
+<p>​    if (strs == null || strs.length == 0) return &ldquo;&quot;;</p>
+<p>​    Arrays.sort(strs);</p>
+<p>​</p>
+<p>​    int len = Math.min(strs[0].length(), strs[strs.length - 1].length());</p>
+<p>​    int i = 0;</p>
+<p>​    while (i &lt; len &amp;&amp; strs[0].charAt(i) == strs[strs.length - 1].charAt(i))</p>
+<p>​        i++;</p>
+<p>​    return strs[0].substring(0, i);</p>
+<p>}</p>
+<p>}</p>
+<h1 id="15-3sum">15. 3Sum</h1>
+<p>（Aye）</p>
+<p>TC: O(n^2)</p>
+<p>SC: O(1)</p>
+<p>注意remove duplicates</p>
+<p>1 + 2sum</p>
+<p>Java:</p>
+<h1 id="16-3sum-closest">16. 3Sum Closest</h1>
+<p>(Aye)</p>
+<h1 id="259-3sum-smaller">259. 3Sum Smaller</h1>
+<p>(Aye), (huang), (tang)</p>
+<p>先sort，再 two pointers</p>
+<p>// TC： O（n^2） class Solution {   public int threeSumSmaller(int[] nums, int target) {     Arrays.sort(nums);     int sum = 0;     for (int i = 0; i &lt; nums.length - 2; i++) {       sum += twoSumSmaller(nums, i + 1, target - nums[i]);     }     return sum;   }    private int twoSumSmaller(int[] nums, int startIndex, int target) {     int sum = 0;     int left = startIndex;     int right = nums.length - 1;     while (left &lt; right) {       if (nums[left] + nums[right] &lt; target) {         sum += right - left; //这里是关键         left++;       } else {         right&ndash;;       }     }     return sum;   } }</p>
+<p>/<em><strong><strong><strong><strong><strong><strong><strong><strong><strong>Hybrid</strong></strong></strong></strong></strong></strong></strong></strong></strong></em>**************/ class Solution {   public int threeSumSmaller(int[] nums, int target) {     Arrays.sort(nums);     int sum = 0;     for (int i = 0; i &lt; nums.length - 2; i++) {       sum += twoSumSmaller(nums, i + 1, target - nums[i]);     }     return sum;   }    private int twoSumSmaller(int[] nums, int startIndex, int target) {     int sum = 0;     int left = startIndex;     int right = nums.length - 1;     while (left &lt; right) {       if (nums[left] + nums[right] &lt; target) {         /*        L        [left,nL]??  right         |  |     |       -3 -2 -1 0 1 3  t: 2 [left, right - 1], newTarget: target - nums[right]      each point (L, right]: right-left, right - nL                         */         int newLeft = binarySearch(nums, left, right - 1, target - nums[right]);         if (newLeft == -1) {           return sum;         }         sum += ((right - left) + (right - newLeft)) * (newLeft - left + 1) / 2;         left = newLeft;         left++;       } else {         int newRight = binarySearch(nums, left + 1, right, target - nums[left]);         if (newRight == -1) {           return sum;         }         right = newRight;       }     }     return sum;   }      private int binarySearch(int[] arr, int left, int right, int target) {     int mid;     int left0 = left;     if (arr[right] &lt; target) {       return right;     }     if (right &gt;= left + 1 &amp;&amp; arr[left+1] &lt; target) {       while (left &lt; right - 1) {         mid = left + (right - left) / 2;         if (arr[mid] &gt;= target) {           right = mid;         } else {           left = mid;         }       }       if (arr[right] &lt; target) {         return right;       }       if (arr[left] &lt; target) {         return left;       }                }      if (arr[left0] &lt; target) {       return left;     }     return -1;    } } /* Runtime: 5 ms, faster than 98.30% of Java online submissions for 3Sum Smaller. Memory Usage: 38.2 MB, less than 96.10% of Java online submissions for 3Sum Smaller. */</p>
+<h1 id="17-letter-combinations-of-a-phone-number">17. Letter Combinations of a Phone Number</h1>
+<p>（huang）</p>
+<p>dfs</p>
+<p>C#</p>
+<p>//(luo) DFS</p>
+<p>class Solution {</p>
+<p>//TC: O(4^n)</p>
+<p>// SC: O(n)</p>
+<p>public List<!-- raw HTML omitted --> letterCombinations(String digits) {</p>
+<p>​    if (digits == null || digits.length() == 0) {</p>
+<p>​      return new ArrayList&lt;&gt;();</p>
+<p>​    }</p>
+<p>​    String[] numChar = {&quot;&rdquo;, &ldquo;&rdquo;, &ldquo;abc&rdquo;, &ldquo;def&rdquo;, &ldquo;ghi&rdquo;, &ldquo;jkl&rdquo;, &ldquo;mno&rdquo;, &ldquo;pqrs&rdquo;, &ldquo;tuv&rdquo;, &ldquo;wxyz&rdquo;};</p>
+<p>​    char[] input = digits.toCharArray();</p>
+<p>​    List<!-- raw HTML omitted --> result = new ArrayList&lt;&gt;();</p>
+<p>​    StringBuilder sb = new StringBuilder();</p>
+<p>​    helper(input, numChar, sb, result, 0);</p>
+<p>​    return result;</p>
+<p>}</p>
+<p>private void helper(char[] input, String[] numChar, StringBuilder sb, List<!-- raw HTML omitted --> result, int index) {</p>
+<p>​    if (index == input.length) {</p>
+<p>​      result.add(sb.toString());</p>
+<p>​      return;</p>
+<p>​    }</p>
+<p>​    char[] chars = numChar[input[index] - &lsquo;0&rsquo;].toCharArray(); // 注意这里</p>
+<p>​    for (int i = 0; i &lt; chars.length; i++) {</p>
+<p>​      sb.append(chars[i]);</p>
+<p>​      helper(input, numChar, sb, result, index + 1);</p>
+<p>​      sb.deleteCharAt(sb.length() - 1);</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<h1 id="19-remove-nth-node-from-end-of-list">19. Remove Nth Node From End of List</h1>
+<p>(tang)</p>
+<p>// 快慢指针 class Solution {   public ListNode removeNthFromEnd(ListNode head, int n) {     ListNode dummy = new ListNode(0);     dummy.next = head;     ListNode slow = head;     ListNode fast = head;     int count = 0;     while (count &lt; n &amp;&amp; fast.next != null) {       fast = fast.next;       count++;     }     if (count &lt; n) {       return head.next;     }     while (fast.next != null) {       fast = fast.next;       slow = slow.next;     }     slow.next = slow.next.next;     return dummy.next;   } } /* n = 2 count = 2;   s   |  |   d&gt;1,2,3&gt; 5  o(2n) o(1) */</p>
+<h1 id="20-valid-parentheses">20. Valid Parentheses</h1>
+<p>(Lynn)</p>
+<p>High Level: stack</p>
+<p>public boolean isValid(String s) {</p>
+<p>​    if (s == null || s.length() == 0) {</p>
+<p>​      return true;</p>
+<p>​    }</p>
+<p>​    int index = 0;</p>
+<p>​    Deque<!-- raw HTML omitted --> stack = new ArrayDeque&lt;&gt;();</p>
+<p>​    while (index &lt; s.length()) {</p>
+<p>​      char c = s.charAt(index);</p>
+<p>​      if (c == &lsquo;(&rsquo; || c =='{&rsquo; || c == &lsquo;[') {</p>
+<p>​        stack.push(c);</p>
+<p>​      } else if (c == &lsquo;)') {</p>
+<p>​        if (stack.isEmpty() || stack.pop() != &lsquo;(') {</p>
+<p>​          return false;</p>
+<p>​        }</p>
+<p>​      } else if (c == &lsquo;]') {</p>
+<p>​        if (stack.isEmpty() || stack.pop() != &lsquo;[') {</p>
+<p>​          return false;</p>
+<p>​        }</p>
+<p>​      } else if (c == &lsquo;}') {</p>
+<p>​        if (stack.isEmpty() || stack.pop() != &lsquo;{') {</p>
+<p>​          return false;</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​      index++;</p>
+<p>​    }</p>
+<p>​    return stack.isEmpty();</p>
+<p>}</p>
+<h1 id="21-merge-two-sorted-lists">21. Merge Two Sorted Lists</h1>
+<p>(Lynn)</p>
+<p>public ListNode mergeTwoLists(ListNode l1, ListNode l2) {</p>
+<p>​    if (l1 == null || l2 == null) {</p>
+<p>​      return l1 == null ? l2 : l1;</p>
+<p>​    }</p>
+<p>​    ListNode dummy = new ListNode(0);</p>
+<p>​    ListNode cur = dummy;</p>
+<p>​    while (l1 != null &amp;&amp; l2 != null) {</p>
+<p>​      <strong>if (l1.val &lt;= l2.val) {</strong></p>
+<p>​        <strong>cur.next = l1;</strong></p>
+<p>​        <strong>l1 = l1.next;</strong></p>
+<p>​      <strong>} else {</strong></p>
+<p>​        <strong>cur.next = l2;</strong></p>
+<p>​        <strong>l2 = l2.next;</strong></p>
+<p>​      <strong>}</strong></p>
+<p>​      cur = cur.next;</p>
+<p>​    }</p>
+<p>​    if (l1 != null) {</p>
+<p>​      cur.next = l1;</p>
+<p>​    }</p>
+<p>​    if (l2 != null) {</p>
+<p>​      cur.next = l2;</p>
+<p>​    }</p>
+<p>​    return dummy.next;</p>
+<p>}</p>
+<h1 id="23-merge-k-sorted-lists">23. Merge k Sorted Lists</h1>
+<p>(Lynn)</p>
+<p>public ListNode mergeKLists(ListNode[] lists) {</p>
+<p>​    ListNode dummy = new ListNode(0);</p>
+<p>​    ListNode cur = dummy;</p>
+<p>​    <strong>PriorityQueue<!-- raw HTML omitted --> minHeap = new PriorityQueue&lt;&gt;((a, b) -&gt; a.val - b.val);</strong></p>
+<p>​</p>
+<p>​    for (ListNode head : lists) {</p>
+<p>​      if (head != null) {</p>
+<p>​        minHeap.offer(head);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    while (!minHeap.isEmpty()) {</p>
+<p>​      <strong>//pop top out and add to result</strong></p>
+<p>​      ListNode node = minHeap.poll();</p>
+<p>​      cur.next = node;</p>
+<p>​      cur = cur.next;</p>
+<p>​</p>
+<p>​      <strong>//offer a next node to the queue</strong></p>
+<p>​      if (node.next != null) {</p>
+<p>​        minHeap.offer(node.next);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return dummy.next;</p>
+<p>}</p>
+<h1 id="13-roman-to-integer">13. Roman to Integer</h1>
+<p>(luo)</p>
+<p>/*<a href="https://www.youtube.com/watch?v=dlATMslQ6Uc">https://www.youtube.com/watch?v=dlATMslQ6Uc</a></p>
+<p>从右往前依次处理</p>
+<p>如果当前char比后一位的char，在map里的值小，需要减去当前char代表的value；</p>
+<p>如果当前char比后一位的char，在map里的值大，则是正常的从左到右，从小到大的顺序，则只需要加上当前的char代表的value到result中</p>
+<p>TC：O（n）从右到左一遍</p>
+<p>SC：O（1）</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public int romanToInt(String s) {</p>
+<p>​    Map&lt;Character, Integer&gt; map = new HashMap&lt;&gt;();</p>
+<p>​    map.put(&lsquo;I&rsquo;, 1);</p>
+<p>​    map.put(&lsquo;V&rsquo;, 5);</p>
+<p>​    map.put(&lsquo;X&rsquo;, 10);</p>
+<p>​    map.put(&lsquo;L&rsquo;, 50);</p>
+<p>​    map.put(&lsquo;C&rsquo;, 100);</p>
+<p>​    map.put(&lsquo;D&rsquo;, 500);</p>
+<p>​    map.put(&lsquo;M&rsquo;, 1000);</p>
+<p>​</p>
+<p>​    int n = s.length();</p>
+<p>​    int result = map.get(s.charAt(n - 1));</p>
+<p>​    for (int i = n - 2; i &gt;= 0; i&ndash;) {</p>
+<p>​      int currentValue = map.get(s.charAt(i));</p>
+<p>​</p>
+<p>​      if (currentValue &lt; map.get(s.charAt(i + 1))) {</p>
+<p>​        result -= currentValue;</p>
+<p>​      } else {</p>
+<p>​        result += currentValue;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return result;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="24--swap-nodes-in-pairs">24  Swap Nodes in Pairs</h1>
+<p>(Huang)</p>
+<p>// (Luo) TC: O(n) SC: O(1) recursively swap the nodes</p>
+<p>class Solution {</p>
+<p>public ListNode swapPairs(ListNode head) {</p>
+<p>​    if (head == null || head.next == null) {</p>
+<p>​      return head;</p>
+<p>​    }</p>
+<p>​    ListNode node1 = head;</p>
+<p>​    ListNode node2 = head.next;</p>
+<p>​    ListNode node3 = head.next.next;</p>
+<p>​</p>
+<p>​    ListNode node = swapPairs(node3);</p>
+<p>​</p>
+<p>​    node2.next = node1;</p>
+<p>​    node1.next = node;</p>
+<p>​</p>
+<p>​    return node2;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="25--reverse-nodes-in-k-group">25  Reverse Nodes in k-Group</h1>
+<p>(Tang)   public ListNode reverseKGroup2(ListNode head, int k) {     ListNode dummy = new ListNode(0), start = dummy;     dummy.next = head;     ListNode p = start, c, n = p; // 0     while(n != null) {       p = start;        n = p;       start = p.next; // 1       for(int i = 0; i &lt; k &amp;&amp; n != null; i++) n = n.next; // 2       if(n == null) break;       for(int i = 0; i &lt; k-1; i++) {         c = p.next;         p.next = c.next;         c.next = n.next;         n.next = c;       }     }     return dummy.next;   }   /*&mdash;&mdash;&ndash;k == 3&mdash;&mdash;&mdash;&mdash;&mdash;-  * n(tail)  * p(prev)   * start  <em>dummy  1  2  3  4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 0/   /</em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-  * n(tail)  * p(prev)   *    start        <em>dummy  1  2  3  4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 1/      /</em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-  *          n(tail)  * p(prev)   *    start  <em>dummy  1  2  3  4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 2/        /</em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-  *          n(tail)  * p(prev)   *    start  <em>dummy  (1)  2  3  4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 3-0/    /</em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-  *       n(tail)  * p(prev)   *         start  <em>dummy  2  3  （1）  4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 3-1/      /</em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-  *    n(tail)  * p(prev)   *          start  <em>dummy  3   2  1   4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 3-2/     /</em>&mdash;&mdash;&mdash;&ndash;top again&mdash;&mdash;&mdash;&mdash;&ndash;  *          n(tail)  *          p(prev)   *          start  *dummy  3   2  1   4  5  *    cur  <em>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</em> 4/</p>
+<h1 id="26--remove-duplicates-from-sorted-array">26  Remove Duplicates from Sorted Array</h1>
+<p>// code by Luo, 快慢指针</p>
+<p>class Solution {</p>
+<p>public int removeDuplicates(int[] nums) {</p>
+<p>​    if (nums.length &lt;= 1) {</p>
+<p>​      return nums.length;</p>
+<p>​    }</p>
+<p>​    int slow = 1; // <strong>[0&hellip;slow-1] to keep</strong></p>
+<p>​</p>
+<p>​    for (int i = 1; i &lt; nums.length; i++) {<strong>// fast pointer to traverse</strong></p>
+<p>​      if (nums[i] != nums[slow - 1]) {</p>
+<p>​        nums[slow] = nums[i];</p>
+<p>​        slow++;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return slow;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="29--divide-two-integers">29  Divide Two Integers</h1>
+<p>(zhang)</p>
+<p>// TC: O(32)</p>
+<p>High Level: bit operation</p>
+<p>public int divide(int A, int B) {</p>
+<p>​    if (A == 1 &laquo; 31 &amp;&amp; B == -1) return (1 &laquo; 31) - 1;</p>
+<p>​    int a = Math.abs(A), b = Math.abs(B), res = 0;</p>
+<p>​    for (int x = 31; x &gt;= 0; x&ndash;)</p>
+<p>​      if ((a &raquo;&gt; x) - b &gt;= 0) {</p>
+<p>​        res += 1 &laquo; x;</p>
+<p>​        a -= b &laquo; x;</p>
+<p>​      }</p>
+<p>​    return (A &gt; 0) == (B &gt; 0) ? res : -res;</p>
+<p>}</p>
+<h1 id="31--next-permutation">31  Next Permutation</h1>
+<p>(Aye)</p>
+<p><img src="https://lh3.googleusercontent.com/OTgVbWPM109ggbbjPzjX27PIRey03dhu_rkqZOdjEj-Ox3sQxWFjik2iItLxMBxIk1a_zeH0CIxRuwjVJo5AW2qQfSNRTKQsfdVAA85RLnrDgfmZN9kdFC8QDiQy9g0c2WkNiYFE" alt="img"></p>
+<p>reference: <a href="https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/">https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/</a></p>
+<p>// Java code by Tang   public void nextPermutation(int[] nums) {      int i = nums.length - 2;     while (i &gt;= 0 &amp;&amp; nums[i + 1] &lt;= nums[i]) {       i&ndash;;     }     if (i &gt;= 0) {       int j = nums.length - 1;       while (nums[j] &lt;= nums[i]) {         j&ndash;;       }       swap(nums, i, j);     }     reverse(nums, i + 1);   }    private void reverse(int[] nums, int start) {     int i = start, j = nums.length - 1;     while (i &lt; j) {       swap(nums, i, j);       i++;       j&ndash;;     }   }    private void swap(int[] nums, int i, int j) {     int temp = nums[i];     nums[i] = nums[j];     nums[j] = temp;   }</p>
+<h1 id="46-permutations">46. Permutations</h1>
+<p>Java code by Tang   public List&lt;List<!-- raw HTML omitted -->&gt; permute(int[] nums) {     List&lt;List<!-- raw HTML omitted -->&gt; res = new ArrayList&lt;List<!-- raw HTML omitted -->&gt;();     if (nums == null || nums.length == 0) {       return res;     }     helper(nums, 0, res);     return res;   }   private void helper(int[] nums, int idx, List&lt;List<!-- raw HTML omitted -->&gt; res) {     if (idx == nums.length - 1) {       List<!-- raw HTML omitted --> tmp = toList(nums);       res.add(tmp);       return;     }     for (int i = idx; i &lt; nums.length; i++) {       swap(nums, idx, i);       helper(nums, idx + 1, res);       swap(nums, idx, i);           }   }   private List<!-- raw HTML omitted --> toList(int[] nums) {     List<!-- raw HTML omitted --> res = new ArrayList<!-- raw HTML omitted -->();     for (int i = 0; i &lt; nums.length; i++) {       res.add(nums[i]);     }     return res;   }   private void swap(int[] arr, int i, int j) {     int tmp = arr[i];     arr[i] = arr[j];     arr[j] = tmp;   } /* dfs recur tree o(n!) - tc;   ||  1 2 3 4 5   0, i -[0, .., n-1]          /  |  \   \    (1)2345 (2)xxx (3)xxx  (4)xxxx  (5)XXXXX  n      /||\      (12)xxx (13)xx                   n-1     /||\   - - - - - n                       1  |0  1 -[1,n]  &mdash;&mdash;   n-1  |1      n   1    &mdash;&mdash;    |    n     tc: n * (n-1) * (n-2) *&hellip; * 1 = n! sc: o(n)   */</p>
+<h1 id="32--longest-valid-parentheses">32  Longest Valid Parentheses</h1>
+<p>(huang) Java code by Tang /* ************Method 1: two times traversal with o(1) space complexity ************/   public int longestValidParentheses(String s) {     int left = 0, right = 0, maxlength = 0;     for (int i = 0; i &lt; s.length(); i++) {       if (s.charAt(i) == &lsquo;(') {         left++;       } else {         right++;       }       if (left == right) {         maxlength = Math.max(maxlength, 2 * right);       } else if (right &gt;= left) {         left = right = 0;       }     }     left = right = 0;     for (int i = s.length() - 1; i &gt;= 0; i&ndash;) {       if (s.charAt(i) == &lsquo;(') {         left++;       } else {         right++;       }       if (left == right) {         maxlength = Math.max(maxlength, 2 * left);       } else if (left &gt;= right) {         left = right = 0;       }     }     return maxlength;   } /* ************Method 2: Stack method with o(n) space complexity ************/ /* ************common stack setting with consideration on corner cases ************/   public int longestValidParentheses(String s) {     int max = 0;     Deque<!-- raw HTML omitted --> stack = new ArrayDeque&lt;&gt;();     for (int i = 0; i &lt; s.length(); i++) {       char c = s.charAt(i);       if (c == &lsquo;(') {         stack.offerLast(i);       } else {         if (!stack.isEmpty() &amp;&amp; s.charAt(stack.peekLast()) == &lsquo;(') {            stack.pollLast();           int left = stack.isEmpty() ? -1 : Math.abs(stack.peekLast());           max = Math.max(max, i - left); // (peekLast(), i]         } else { // don&rsquo;t forgot to add &lsquo;)&rsquo; if necessary           stack.offerLast(i);         }       }     }     return max;   }</p>
+<h1 id="33--search-in-rotated-sorted-array">33  Search in Rotated Sorted Array</h1>
+<p>Java code by Tang</p>
+<p>public int search(int[] nums, int target) { // code by Tang</p>
+<p>​    if (nums == null || nums.length == 0) {</p>
+<p>​      return -1;</p>
+<p>​    }</p>
+<p>​    int lo = 0;</p>
+<p>​    int hi = nums.length - 1;</p>
+<p>​    int mid;</p>
+<p>​    while (lo &lt; hi - 1) {</p>
+<p>​      mid = lo + (hi - lo) / 2;</p>
+<p>​      // if you use double side binary search protocol</p>
+<p>​      if (nums[lo] == target) {</p>
+<p>​        return lo;</p>
+<p>​      } else if (nums[hi] == target) {</p>
+<p>​        return hi;</p>
+<p>​      } else if (nums[mid] == target) {</p>
+<p>​        return mid;</p>
+<p>​      }</p>
+<p>​      // boundary must be check to avoid error, e.g. [1,2,3], target 1</p>
+<p>​      if (nums[mid] &gt; nums[lo]) { // left mono-increasing</p>
+<p>​        if (target &gt; nums[lo] &amp;&amp; target &lt; nums[mid]) {</p>
+<p>​          hi = mid;</p>
+<p>​        } else {</p>
+<p>​          lo = mid;</p>
+<p>​        }</p>
+<p>​      } else {</p>
+<p>​        if (target &gt; nums[mid] &amp;&amp; target &lt; nums[hi]) {</p>
+<p>​          lo = mid;</p>
+<p>​        } else {</p>
+<p>​          hi = mid;</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    if (nums[lo] == target) {</p>
+<p>​      return lo;</p>
+<p>​    }</p>
+<p>​    if (nums[hi] == target) {</p>
+<p>​      return hi;</p>
+<p>​    }</p>
+<p>​    return -1;</p>
+<p>}</p>
+<h1 id="34--find-first-and-last-position-of-element-in-sorted-array">34  Find First and Last Position of Element in Sorted Array</h1>
+<p>//(Zhang)</p>
+<p>public int[] searchRange(int[] A, int target) {</p>
+<p>int start = firstGreaterEqual(A, target);</p>
+<p>if (start == A.length || A[start] != target) {</p>
+<p>​       return new int[]{-1, -1};</p>
+<p>}</p>
+<p>int second = firstGreaterEqual(A, target + 1) - 1;</p>
+<p>return new int[]{start, second};</p>
+<p>}</p>
+<p>//find the first number that is greater than or equal to target.</p>
+<p>//could return A.length if target is greater than A[A.length-1].</p>
+<p>//actually this is the same as lower_bound in C++ STL.</p>
+<p>private int firstGreaterEqual(int[] A, int target) {</p>
+<p>int low = 0, high = A.length;</p>
+<p>while (low &lt; high) {</p>
+<p>​     int mid = low + ((high - low) &raquo; 1);</p>
+<p>​     //low &lt;= mid &lt; high</p>
+<p>​     if (A[mid] &lt; target) {</p>
+<p>​       low = mid + 1;</p>
+<p>​     } else {</p>
+<p>​       //should not be mid-1 when A[mid]==target.</p>
+<p>​       //could be mid even if A[mid]&gt;target because mid&lt;high.</p>
+<p>​       high = mid;</p>
+<p>​     }</p>
+<p>}</p>
+<p>return low;</p>
+<p>}</p>
+<p>}</p>
+<p>// double-sided binary search by Tang</p>
+<p>public int[] searchRange(int[] nums, int target) {</p>
+<p>​    int[] res = new int[]{-1, -1};</p>
+<p>​    if (nums == null || nums.length == 0) {</p>
+<p>​      return res;</p>
+<p>​    }</p>
+<p>​    int left = firstBS(nums, target, 0, nums.length - 1);</p>
+<p>​    if (left == -1) {</p>
+<p>​      return res;</p>
+<p>​    }</p>
+<p>​    int right = lastBS(nums, target, left, nums.length - 1);</p>
+<p>​      return new int[]{left, right};</p>
+<p>}</p>
+<p>private int firstBS(int[] array, int target, int lo, int hi) {</p>
+<p>​    int mid;</p>
+<p>​    while (lo &lt; hi - 1) {</p>
+<p>​      mid = lo + (hi - lo) / 2;</p>
+<p>​      if (array[mid] &gt;= target) {</p>
+<p>​        hi = mid;</p>
+<p>​      } else {</p>
+<p>​        lo = mid;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    if (array[lo] == target) {</p>
+<p>​      return lo;</p>
+<p>​    }</p>
+<p>​    if (array[hi] == target) {</p>
+<p>​      return hi;</p>
+<p>​    }</p>
+<p>​    return -1;</p>
+<p>}</p>
+<p>private int lastBS(int[] array, int target, int lo, int hi) {</p>
+<p>​    int mid;</p>
+<p>​    while (lo &lt; hi - 1) {</p>
+<p>​      mid = lo + (hi - lo) / 2;</p>
+<p>​      if (array[mid] &lt;= target) {</p>
+<p>​        lo = mid;</p>
+<p>​      } else {</p>
+<p>​        hi = mid;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    if (array[hi] == target) {</p>
+<p>​      return hi;</p>
+<p>​    }</p>
+<p>​    if (array[lo] == target) {</p>
+<p>​      return lo;</p>
+<p>​    }</p>
+<p>​    return -1;</p>
+<p>}</p>
+<h1 id="35--search-insert-position">35  Search Insert Position</h1>
+<p>(luo)</p>
+<p>/*</p>
+<p>Binary Search 找target，或者找应该插入的位置</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public int searchInsert(int[] nums, int target) {</p>
+<p>​    // pre-process提前处理target小于最小值，大于最大值的情况</p>
+<p>​    if (target &lt; nums[0]) {</p>
+<p>​      return 0;</p>
+<p>​    }</p>
+<p>​    if (target &gt; nums[nums.length - 1]) {</p>
+<p>​      return nums.length;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    int left = 0;</p>
+<p>​    int right = nums.length - 1;</p>
+<p>​</p>
+<p>​    while (left + 1 &lt; right) {</p>
+<p>​      int mid = left + (right - left) / 2;</p>
+<p>​      if (nums[mid] == target) {</p>
+<p>​        return mid;</p>
+<p>​      } else if (nums[mid] &lt; target) {</p>
+<p>​        left = mid;</p>
+<p>​      } else {</p>
+<p>​        right = mid;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    if (target == nums[left]) return left;</p>
+<p>​    if (target == nums[right]) return right;</p>
+<p>​    return left + 1;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="36--valid-sudoku">36  Valid Sudoku</h1>
+<p>// code by Luo, 分别看行，列，和每一个box</p>
+<p>class Solution {</p>
+<p>public boolean isValidSudoku(char[][] board) {</p>
+<p>// check each row</p>
+<p>for (int i = 0; i &lt; 9; i++) {</p>
+<p>Set<!-- raw HTML omitted --> set = new HashSet&lt;&gt;();</p>
+<p>for (int j = 0; j &lt; 9; j++) {</p>
+<p>​    if (board[i][j] != &lsquo;.&rsquo; &amp;&amp; !set.add(board[i][j])) {</p>
+<p>​     return false;</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<p>// check each column</p>
+<p>for (int i = 0; i &lt; 9; i++) {</p>
+<p>Set<!-- raw HTML omitted --> set = new HashSet&lt;&gt;();</p>
+<p>for (int j = 0; j &lt; 9; j++) {</p>
+<p>​    if (board[j][i] != &lsquo;.&rsquo; &amp;&amp; !set.add(board[j][i])) {</p>
+<p>​     return false;</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<p>// check each box</p>
+<p>for (int i = 0; i &lt; 9; i++) { // 大格</p>
+<p>Set<!-- raw HTML omitted --> set = new HashSet&lt;&gt;();</p>
+<p>for (int j = 0; j &lt; 9; j++) { // 小格的index</p>
+<p>​    if (board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3] != &lsquo;.&rsquo; &amp;&amp; !set.add(board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3])) {</p>
+<p>​     return false;</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="39--combination-sum">39  Combination Sum</h1>
+<p>(Peiyu) DFS: find all combinations</p>
+<p>Example: [2, 3, 5] target 8</p>
+<p>leve = target / min(nums)</p>
+<p>N = len(nums)</p>
+<p>TC: a loose upper bound O(N^level) - total nodes of a N-arry tree of height level</p>
+<p>SC: O(level) - dfs stack depth</p>
+<p>​                  8 (target)</p>
+<p>​     (2) /        (3) |      (5)</p>
+<p>​         6               5          3</p>
+<p>(2) /   (3)|    (5)     (3)/   (5)       (5)</p>
+<p>4      3     1      2    0</p>
+<p>(2) /|(3)(5)  |(3)    |(5)</p>
+<p>2 1  -1  0</p>
+<p>(2)/</p>
+<p>0</p>
+<p>public List&lt;List<!-- raw HTML omitted -->&gt; combinationSum(int[] nums, int target) {</p>
+<p>​    List&lt;List<!-- raw HTML omitted -->&gt; res = new ArrayList();</p>
+<p>​</p>
+<p>​    helper(nums, target, res, new ArrayList(), 0);</p>
+<p>​</p>
+<p>​    return res;</p>
+<p>}</p>
+<p>private void helper(int[] nums, int target, List&lt;List<!-- raw HTML omitted -->&gt; res, List<!-- raw HTML omitted --> path, int idx) {</p>
+<p>​    if (target == 0) {</p>
+<p>​      res.add(new ArrayList(path));</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = idx; i &lt; nums.length; i++) {</p>
+<p>​      if (nums[i] &gt; target) continue;</p>
+<p>​      path.add(nums[i]);</p>
+<p>​      helper(nums, target - nums[i], res, path, i); // note: don’t increase index as nums[i] can be reused</p>
+<p>​      path.remove(path.size() - 1);</p>
+<p>​    }</p>
+<p>}</p>
+<h1 id="40--combination-sum-ii">40  Combination Sum II</h1>
+<p>(Peiyu) Difference is nums can contain <strong>duplicate</strong> numbers and each number can be <strong>used only once</strong></p>
+<ol>
+<li><strong>Sort array [9,1,1,1,3] -&gt; [0,0,1,3,9]</strong></li>
+<li><strong>If a number is the same as previous one, then no need to explore the combination starting from it</strong></li>
+</ol>
+<p><strong>Ex. [1,1,1,3] target = 8</strong></p>
+<p><strong>First 1, idx = 0, dfs will explore all possibilities starting from 0, i.e, based on [1,1,1,3]</strong></p>
+<p><strong>Second 1, idx = 1, dfs will explore all possibilities starting from 1, i.e, based on [1,1,3]</strong></p>
+<p><strong>Whatever combination found in [1,1,3] can be found with [1,1,1,3], so save it</strong></p>
+<p>N = len(nums)</p>
+<p>TC: Same as subset, each element, either pick or not pick it, total combinations O(2^n)</p>
+<p>SC: O(N) for stack</p>
+<p>​                     8 (target)</p>
+<p>​      (2) /          (3) |      (5)</p>
+<p>​       6                5      3</p>
+<p>(3) /   (5)             |(5)</p>
+<p>3      1             0</p>
+<p>(5) /</p>
+<p>-2</p>
+<p>public List&lt;List<!-- raw HTML omitted -->&gt; combinationSum2(int[] nums, int target) {</p>
+<p>​    List&lt;List<!-- raw HTML omitted -->&gt; res = new ArrayList();</p>
+<p>​    Arrays.sort(nums);</p>
+<p>​    helper(res, new ArrayList(), nums, target, 0);</p>
+<p>​    return res;</p>
+<p>}</p>
+<p>private void helper(List&lt;List<!-- raw HTML omitted -->&gt; res, List<!-- raw HTML omitted --> path, int[] nums, int target, int idx) {</p>
+<p>​    if (target == 0) {</p>
+<p>​      res.add(new ArrayList(path));</p>
+<p>​      return;</p>
+<p>​    }</p>
+<p>​    if (idx &gt;= nums.length) {</p>
+<p>​      return;</p>
+<p>​    }</p>
+<p>​    for (int i = idx; i &lt; nums.length; i++) {</p>
+<p>​      if (nums[i] &gt; target) continue; //early termination</p>
+<p>​      if (i &gt; idx &amp;&amp; nums[i] == nums[i - 1]) continue;</p>
+<p>​      path.add(nums[i]);</p>
+<p>​      helper(res, path, nums, target - nums[i], i + 1); //can&rsquo;t reuse</p>
+<p>​      path.remove(path.size() - 1);</p>
+<p>​    }</p>
+<p>}</p>
+<h1 id="41--first-missing-positive">41  First Missing Positive</h1>
+<p>/*</p>
+<p>step1: 看1是否在，如果不在，直接return 1</p>
+<p>Step2: 把负数和0全部改成1， 把大于array.length的数也都改成1，因为答案不会是他们</p>
+<p>Step3: 把出现过的数，的index那边标成负数，这样一圈下来，所以都被标负了</p>
+<p>Step4: 最小的那个没有被标负的index，就是缺的数</p>
+<p>*/</p>
+<p>// code by Luo</p>
+<p>class Solution {</p>
+<p>public int firstMissingPositive(int[] nums) {</p>
+<p>​    int n = nums.length;</p>
+<p>​    // base case</p>
+<p>​    int contains = 0;</p>
+<p>​    for (int i = 0; i &lt; n; i++) {</p>
+<p>​      if (nums[i] == 1) {</p>
+<p>​        contains++;</p>
+<p>​        break;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    if (contains == 0) {</p>
+<p>​      return 1;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; n; i++) {</p>
+<p>​      if (nums[i] &lt;= 0 || nums[i] &gt; n) {</p>
+<p>​        nums[i] = 1;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; n; i++) {</p>
+<p>​      int val = Math.abs(nums[i]); // 这个位置的value</p>
+<p>​      if (val == n) {</p>
+<p>​        nums[0] = -Math.abs(nums[0]);</p>
+<p>​      } else {</p>
+<p>​        nums[val] = -Math.abs(nums[val]);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = 1; i &lt; n; i++) {</p>
+<p>​      if (nums[i] &gt; 0) {</p>
+<p>​        return i;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    if (nums[0] &gt; 0) {</p>
+<p>​      return n;</p>
+<p>​    }</p>
+<p>​    return n + 1;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="42-trapping-rain-water">42. Trapping Rain Water</h1>
+<p>/* ************Method 1: Two pointer method with o(1) space complexity ************/   public int trap(int[] height) {     // time : O(n)     // space : O(1)     if (height.length&lt;3) return 0;      int left = 0, right = height.length-1;      int leftMax=0, rightMax=0;      int ans = 0;      while (left &lt; right) {       leftMax = Math.max(leftMax, height[left]);        rightMax = Math.max(rightMax, height[right]);       if (leftMax &lt; rightMax) {         ans += Math.max(0, leftMax-height[left]);          left++;        } else {         ans += Math.max(0, rightMax-height[right]);          right&ndash;;        }     }     return ans;    }   /* ************Method 2: Stack method with o(n) space complexity ************/   public int trap2(int[] height) {     // time : O(n)     // space : O(n)     if (height == null || height.length &lt; 2) return 0;          Stack<!-- raw HTML omitted --> stack = new Stack&lt;&gt;();     int water = 0, i = 0;     while (i &lt; height.length) {       if (stack.isEmpty() || height[i] &lt;= height[stack.peek()]) {         stack.push(i++);       } else {         int pre = stack.pop(); // (pre, i)         if (!stack.isEmpty()) {           // find the smaller height between the two sides           int minHeight = Math.min(height[stack.peek()], height[i]);           // calculate the area           water += (minHeight - height[pre]) * (i - stack.peek() - 1);         }       }     }     return water;   }</p>
+<h1 id="43-multiply-strings">43. Multiply Strings</h1>
+<p>/* ************ Method 2: Binary string multiply code added and tested in leetcode ************/   public String multiply(String num1, String num2) {     int m = num1.length(), n = num2.length();     String num1Binary = Integer.toBinaryString(Integer.parseInt(num1));     String num2Binary = Integer.toBinaryString(Integer.parseInt(num2));     String binRes = multiplyBinary(num1Binary, num2Binary);     System.out.print(&ldquo;String Binary Mutiply : &quot; + binRes + &ldquo;, &ldquo;);     int[] pos = new int[m + n];          for(int i = m - 1; i &gt;= 0; i&ndash;) {       for(int j = n - 1; j &gt;= 0; j&ndash;) {         int mul = (num1.charAt(i) - &lsquo;0&rsquo;) * (num2.charAt(j) - &lsquo;0&rsquo;);          int p1 = i + j, p2 = i + j + 1;         int sum = mul + pos[p2];            pos[p1] += sum / 10;         pos[p2] = (sum) % 10;       }     }           StringBuilder sb = new StringBuilder();     for(int p : pos) if(!(sb.length() == 0 &amp;&amp; p == 0)) sb.append(p);     String res = sb.length() == 0 ? &ldquo;0&rdquo; : sb.toString(); // special cases for empty     System.out.println( Integer.parseInt(binRes, 2) );     return res;   }    public String multiplyBinary(String num1, String num2) { // binary string multiply !!!     int m = num1.length(), n = num2.length();     int[] pos = new int[m + n];          for(int i = m - 1; i &gt;= 0; i&ndash;) {       for(int j = n - 1; j &gt;= 0; j&ndash;) {         int mul = (num1.charAt(i) - &lsquo;0&rsquo;) * (num2.charAt(j) - &lsquo;0&rsquo;);          int p1 = i + j, p2 = i + j + 1;         int sum = mul + pos[p2];            pos[p1] += sum / 2;         pos[p2] = (sum) % 2;       }     }           StringBuilder sb = new StringBuilder();     for(int p : pos) if(!(sb.length() == 0 &amp;&amp; p == 0)) sb.append(p);     return sb.length() == 0 ? &ldquo;0&rdquo; : sb.toString(); // special cases for empty   }</p>
+<h1 id="44-wildcard-matching">44. Wildcard Matching</h1>
+<p>//(zhang) recursion</p>
+<p>class Solution {</p>
+<p>public HashMap&lt;String, Boolean&gt; memoMap = new HashMap&lt;&gt;();</p>
+<p>public boolean isMatch(String s, String p) {</p>
+<p>​    if (s == null) return false;</p>
+<p>​    boolean match = dfs(s, 0, p, 0);</p>
+<p>​    return match;</p>
+<p>}</p>
+<p>private boolean dfs(String s, int i, String p, int j) {</p>
+<p>​    String key = i + &ldquo;#&rdquo; + j;</p>
+<p>​    if (memoMap.containsKey(key)) {</p>
+<p>​      return memoMap.get(key);</p>
+<p>​    }</p>
+<p>​    boolean match = false;</p>
+<p>​    if (j == p.length() &amp;&amp; i == s.length())</p>
+<p>​      return true;</p>
+<p>​      if (i &gt; s.length())</p>
+<p>​        return false;</p>
+<p>​</p>
+<p>​    if (i &lt; s.length() &amp;&amp; j &lt; p.length() &amp;&amp; (s.charAt(i) == p.charAt(j) || p.charAt(j) == &lsquo;?')) {</p>
+<p>​      match = dfs(s, i + 1, p, j + 1);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    if (j &lt; p.length() &amp;&amp; p.charAt(j) == &lsquo;*') {</p>
+<p>​      match = dfs(s, i + 1, p, j) || dfs(s, i, p, j + 1);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    memoMap.put(key, match);</p>
+<p>​    return match;</p>
+<p>}</p>
+<p>}</p>
+<p>//(Luo) DP</p>
+<p>class Solution {</p>
+<p>public boolean isMatch(String s, String p) {</p>
+<p>​    // s 可能为空，且只包含从 a-z 的小写字母。</p>
+<p>​    // p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。</p>
+<p>​    int lens = s.length();</p>
+<p>​    int lenp = p.length();</p>
+<p>​    char[] sArray = s.toCharArray();</p>
+<p>​    char[] pArray = p.toCharArray();</p>
+<p>​</p>
+<p>​    boolean[][] dp = new boolean[lens + 1][lenp + 1];</p>
+<p>​    dp[0][0] = true;</p>
+<p>​</p>
+<p>​    //当s的长度为0的情况</p>
+<p>​    for (int i = 1; i &lt;= lenp; i++) {</p>
+<p>​      dp[0][i] = pArray[i - 1] == &lsquo;*&rsquo; ? dp[0][i - 1] : false;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = 1; i &lt;= lens; i++) {</p>
+<p>​      for (int j = 1; j &lt;= lenp; j++) {</p>
+<p>​</p>
+<p>​        char sc = sArray[i - 1];</p>
+<p>​        char pc = pArray[j - 1];</p>
+<p>​</p>
+<p>​        if (sc == pc || pc == &lsquo;?') {</p>
+<p>​          dp[i][j] = dp[i - 1][j - 1];// 当前字符匹配,当前s[0..i-1]p[0..j-1]是否匹配取决于之前dp[i - 1][j - 1]</p>
+<p>​        } else {</p>
+<p>​          if (pc == &lsquo;*') {</p>
+<p>​            if (dp[i][j - 1] || dp[i - 1][j - 1] || dp[i - 1][j]) { // 这里是填表格的关键</p>
+<p>​              dp[i][j] = true;</p>
+<p>​            }</p>
+<p>​          }</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return dp[lens][lenp];</p>
+<p>}</p>
+<p>}</p>
+<p>/*</p>
+<p>i</p>
+<p>0 1 2 3 4 5</p>
+<p>0 a c d c b</p>
+<p>0  t f f f f f</p>
+<p>1 a f t f f f f</p>
+<p>2 * f t t t t t</p>
+<p>3 c f f t f t f</p>
+<p>4 ? f f f t f t</p>
+<p>5 b f f f f f f</p>
+<p>0 a a</p>
+<p>0 t f f</p>
+<p>* t</p>
+<p>*/</p>
+<h1 id="55-jump-game">55. Jump Game</h1>
+<p>(Luo)</p>
+<p>// DP, 从后往前，dp</p>
+<p>class Solution {</p>
+<p>public boolean canJump(int[] nums) {</p>
+<p>​    if (nums == null || nums.length &lt;= 1) return true;</p>
+<p>​</p>
+<p>​    int n = nums.length;</p>
+<p>​    boolean[] canJump = new boolean[n];</p>
+<p>​    canJump[n - 1] = true;</p>
+<p>​    for (int i = n - 2; i &gt;= 0; i&ndash;) {</p>
+<p>​      if (i + nums[i] &gt;= n - 1) {</p>
+<p>​        canJump[i] = true;</p>
+<p>​        //continue;</p>
+<p>​      } else {</p>
+<p>​        for (int j = 1; j &lt;= nums[i]; j++) {</p>
+<p>​          if (canJump[i + j]) {</p>
+<p>​            canJump[i] = true;</p>
+<p>​            break;</p>
+<p>​          }</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return canJump[0];</p>
+<p>}</p>
+<p>}</p>
+<p>//TC: O(n * max value of items)</p>
+<p>//SC: O(n)</p>
+<h1 id="45-jump-game-ii">45. Jump Game II</h1>
+<p>(luo)</p>
+<p>// method 1: DP O(n^2)</p>
+<p>// method 2: 类似BFS O（n）</p>
+<p>// dp</p>
+<p>class Solution {</p>
+<p>public int jump(int[] nums) {</p>
+<p>​    int n = nums.length;</p>
+<p>​    int[] dp = new int[n]; // dp[i] represents the min steps to reach the last index from index i</p>
+<p>​    Arrays.fill(dp, -1);</p>
+<p>​    dp[n - 1] = 0;// base case</p>
+<p>​    for (int i = n - 2; i &gt;= 0; i&ndash;) {</p>
+<p>​      // 直接能到</p>
+<p>​      if (nums[i] + i &gt;= n) {</p>
+<p>​        dp[i] = 1;</p>
+<p>​      } else {</p>
+<p>​        //不能直接到</p>
+<p>​        //找它所能到的所有的地方，最近的，加1，就是dp[i]</p>
+<p>​        for (int j = 1; j &lt;= nums[i]; j++) {</p>
+<p>​          if (dp[j + i] == -1) {</p>
+<p>​            continue;</p>
+<p>​          }</p>
+<p>​          if (dp[i] == -1) {</p>
+<p>​            dp[i] = dp[i + j] + 1;</p>
+<p>​          } else {</p>
+<p>​            dp[i] = Math.min(dp[i], dp[j + i] + 1);</p>
+<p>​          }</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return dp[0];</p>
+<p>}</p>
+<p>}</p>
+<p>// 类似BFS，O(n)</p>
+<p>class Solution {</p>
+<p>public int jump(int[] nums) {</p>
+<p>​    int jumps = 0;</p>
+<p>​    int currentJumpEnd = 0;</p>
+<p>​    int farthest = 0;</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; nums.length - 1; i++) {</p>
+<p>​      // we continuously find the how far we can reach in the current jump</p>
+<p>​      farthest = Math.max(farthest, i + nums[i]);</p>
+<p>​      // if we have come to the end of the current jump,</p>
+<p>​      // we need to make another jump</p>
+<p>​      if (i == currentJumpEnd) {</p>
+<p>​        jumps++;</p>
+<p>​        currentJumpEnd = farthest;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return jumps;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="1306-jump-game-iii">1306. Jump Game III</h1>
+<p>(luo)</p>
+<p>/*</p>
+<p>graph的最短路径问题</p>
+<p>从start，到length -1的位置，最短几步可以到达。</p>
+<p>BFS1求最短路径，用queue和visited</p>
+<p>TC: O(V + E) -&gt; O(n) where n is the length of input, each node visited once</p>
+<p>SC: O(n) for the queue</p>
+<p>0 1 2 3 4 5 6</p>
+<p>[4,2,3,0,3,1,2]</p>
+<p>​    i</p>
+<p>DFS 也可以</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public boolean canReach(int[] arr, int start) {</p>
+<p>​    Queue<!-- raw HTML omitted --> queue = new ArrayDeque&lt;&gt;();</p>
+<p>​    Set<!-- raw HTML omitted --> visited = new HashSet&lt;&gt;();</p>
+<p>​    queue.offer(start);</p>
+<p>​    visited.add(start);</p>
+<p>​</p>
+<p>​    while (!queue.isEmpty()) {</p>
+<p>​      int cur = queue.poll();</p>
+<p>​      visited.add(cur);</p>
+<p>​      int value = arr[cur];</p>
+<p>​      if (value == 0) {</p>
+<p>​        return true;</p>
+<p>​      }</p>
+<p>​</p>
+<p>​      int right = cur + value;</p>
+<p>​      int left = cur - value;</p>
+<p>​</p>
+<p>​      if (right &lt; arr.length &amp;&amp; !visited.contains(right)) {</p>
+<p>​        queue.offer(right);</p>
+<p>​      }</p>
+<p>​      if (left &gt;= 0 &amp;&amp; !visited.contains(left)) {</p>
+<p>​        queue.offer(left);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return false;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="43--multiply-strings">43  Multiply Strings</h1>
+<p>(Lynn)</p>
+<p>class Solution {</p>
+<p>public String multiply(String num1, String num2) {</p>
+<p>​    int m = num1.length();</p>
+<p>​    int n = num2.length();</p>
+<p>​    int[] res = new int[m + n];</p>
+<p>​</p>
+<p>​    // multiply each digit from two string, put the result in array</p>
+<p>​    for (int i = m - 1; i &gt;= 0; i&ndash;) {</p>
+<p>​      for (int j = n - 1; j &gt;= 0; j&ndash;) {</p>
+<p>​        int digit1 = num1.charAt(i) - &lsquo;0&rsquo;;</p>
+<p>​        int digit2 = num2.charAt(j) - &lsquo;0&rsquo;;</p>
+<p>​        int value = digit1 * digit2;</p>
+<p>​        res[i + j + 1] += value % 10;</p>
+<p>​        res[i + j] += value / 10;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    // deal with digit overflow</p>
+<p>​    for (int i = res.length - 1; i &gt;= 0; i&ndash;) {</p>
+<p>​      int val = res[i];</p>
+<p>​      if (val &gt;= 10) {</p>
+<p>​        res[i] = val % 10;</p>
+<p>​        if (i &gt; 0) {</p>
+<p>​          res[i - 1] += val / 10;</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    // convert int array into string to represent integer, avoid leading zero</p>
+<p>​    StringBuilder sb = new StringBuilder();</p>
+<p>​    for (int i = 0; i &lt; res.length; i++) {</p>
+<p>​      if (sb.length() == 0 &amp;&amp; res[i] == 0) {</p>
+<p>​        continue;</p>
+<p>​      }</p>
+<p>​      sb.append(res[i]);</p>
+<p>​    }</p>
+<p>​    return sb.length() == 0? &ldquo;0&rdquo; : sb.toString();</p>
+<p>}</p>
+<p>}</p>
+<h1 id="792-number-of-matching-subsequences">792. Number of Matching Subsequences</h1>
+<p>public int numMatchingSubseq(String s, String[] words) {</p>
+<p><strong>//Solution1 : HashMap to maintain each char and its index</strong></p>
+<p>//     Map&lt;Character, List<!-- raw HTML omitted -->&gt; map = new HashMap&lt;&gt;();</p>
+<p>//     for (int i = 0; i &lt; s.length(); i++) {</p>
+<p>//       if (!map.containsKey(s.charAt(i))) {</p>
+<p>//         map.put(s.charAt(i), new ArrayList&lt;&gt;());</p>
+<p>//       }</p>
+<p>//       //index of letter should be unique and sorted in acsending order</p>
+<p>//       map.get(s.charAt(i)).add(i);</p>
+<p>//     }</p>
+<p>​</p>
+<p>//     int count = 0;</p>
+<p>​</p>
+<p>//     for (String word : words) {</p>
+<p>//       int preIndex = -1;</p>
+<p>//       int i = 0;</p>
+<p>//       for (; i &lt; word.length(); i++) {</p>
+<p>//         char c = word.charAt(i);</p>
+<p>//         if (!map.containsKey(c)) break;</p>
+<p>​</p>
+<p>//         List<!-- raw HTML omitted --> indice = map.get(c);</p>
+<p>//         boolean foundValideIndex = false;</p>
+<p>//         for (int k = 0; k &lt; indice.size(); k++) {</p>
+<p>//           if (indice.get(k) &gt; preIndex) {</p>
+<p>//             preIndex = indice.get(k);</p>
+<p>//             foundValideIndex = true;</p>
+<p>//             break;</p>
+<p>//           }</p>
+<p>//         }</p>
+<p>//         if (!foundValideIndex) break;</p>
+<p>//       }</p>
+<p>//       if (i == word.length()) count++;</p>
+<p>//     }</p>
+<p>//     return count;</p>
+<p>​</p>
+<p><strong>//Solution2 : optimization</strong></p>
+<p>​    if (s == null || s.length() == 0) {</p>
+<p>​      return 0;</p>
+<p>​    }</p>
+<p>​    int count = 0;</p>
+<p>​    List&lt;int[]&gt;[] map = new List[26];</p>
+<p>​    for (int i = 0; i &lt; 26; i++) {</p>
+<p>​      map[i] = new ArrayList&lt;&gt;();</p>
+<p>​    }</p>
+<p>​    for (int i = 0; i &lt; words.length; i++) {</p>
+<p>​      String word = words[i];</p>
+<p>​      char c = word.charAt(0);</p>
+<p>​      <strong>//position in map should be c - &lsquo;a&rsquo;, position in words list should be i</strong></p>
+<p>​      map[c - &lsquo;a&rsquo;].add(new int[] {i, 1});</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (char c : s.toCharArray()) { //m</p>
+<p>​      List&lt;int[]&gt; listOfIndexInWords = map[c - &lsquo;a&rsquo;];</p>
+<p>​      map[c - &lsquo;a&rsquo;] = new ArrayList&lt;&gt;();</p>
+<p>​      for (int[] index : listOfIndexInWords) { //</p>
+<p>​        int indexOfWords = index[0];</p>
+<p>​        int indexOfNextLetter = index[1];</p>
+<p>​        if (indexOfNextLetter == words[indexOfWords].length()) {</p>
+<p>​          count++;</p>
+<p>​        } else {</p>
+<p>​          map[words[indexOfWords].charAt(indexOfNextLetter) - &lsquo;a&rsquo;].add(new int[] {indexOfWords, indexOfNextLetter + 1});</p>
+<p>​        }</p>
+<p>​</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return count;</p>
+<p>}</p>
+<h1 id="51--n-queens">51  N-Queens</h1>
+<p>(Luo)</p>
+<p>/*</p>
+<p>TC: O(n * n!) n for isValid, n! for DFS</p>
+<p>n</p>
+<p>n(n - 1)</p>
+<p>n(n - 1)(n - 2)</p>
+<p>..</p>
+<p>n!</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public List&lt;List<!-- raw HTML omitted -->&gt; solveNQueens(int n) {</p>
+<p>​    char[][] board = getBoard(n);</p>
+<p>​    List&lt;List<!-- raw HTML omitted -->&gt; res = new ArrayList&lt;&gt;();</p>
+<p>​    helper(board, n, 0, res);</p>
+<p>​    return res;</p>
+<p>}</p>
+<p>private char[][] getBoard(int n) {</p>
+<p>​    char[][] board = new char[n][n];</p>
+<p>​    for (int i = 0; i &lt; n; i++) {</p>
+<p>​      for (int j = 0; j &lt; n; j++) {</p>
+<p>​        board[i][j] = &lsquo;.';</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return board;</p>
+<p>}</p>
+<p>private void helper(char[][] board, int n, int row, List&lt;List<!-- raw HTML omitted -->&gt; res) {</p>
+<p>​    if (row == n) {</p>
+<p>​      res.add(convert(board));</p>
+<p>​      return;</p>
+<p>​    }</p>
+<p>​    for (int col = 0; col &lt; n; col++) {</p>
+<p>​      if (isValid(board, row, col, n)) {</p>
+<p>​        board[row][col] = &lsquo;Q&rsquo;;</p>
+<p>​        helper(board, n, row + 1, res);</p>
+<p>​        board[row][col] = &lsquo;.';</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>}</p>
+<p>private List<!-- raw HTML omitted --> convert(char[][] board) {</p>
+<p>​    List<!-- raw HTML omitted --> res = new ArrayList&lt;&gt;();</p>
+<p>​    for (int i = 0; i &lt; board.length; i++) {</p>
+<p>​      StringBuilder sb = new StringBuilder();</p>
+<p>​      for (int j = 0; j &lt; board.length; j++) {</p>
+<p>​        sb.append(board[i][j]);</p>
+<p>​      }</p>
+<p>​      res.add(sb.toString());</p>
+<p>​    }</p>
+<p>​    return res;</p>
+<p>}</p>
+<p>//根据现有的board，再放[row, col]这个位置是否valid</p>
+<p>private boolean isValid(char[][] board, int row, int col, int n) {</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt;= row; i++) {</p>
+<p>​</p>
+<p>​      //same col</p>
+<p>​      if (board[i][col] == &lsquo;Q&rsquo;) {</p>
+<p>​        return false;</p>
+<p>​      }</p>
+<p>​</p>
+<p>​      //same diagonal</p>
+<p>​      if ((row - i) &gt;= 0 &amp;&amp; (col - i) &gt;= 0 &amp;&amp; board[row - i][col - i] == &lsquo;Q&rsquo;) {</p>
+<p>​        return false;</p>
+<p>​      }</p>
+<p>​</p>
+<p>​      //same anti-diagonal</p>
+<p>​      if ((row - i) &gt;= 0 &amp;&amp; (col + i) &lt; n &amp;&amp; board[row - i][col + i] == &lsquo;Q&rsquo;) {</p>
+<p>​        return false;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return true;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="48--rotate-image">48  Rotate Image</h1>
+<p>// code by Luo, 分层做交换，每次换4个</p>
+<p>class Solution {</p>
+<p>public void rotate(int[][] matrix) {</p>
+<p>​    int n = matrix.length;</p>
+<p>​    int offset = n / 2;</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; offset; i++) { // i represents offset, which level</p>
+<p>​      int left = i;</p>
+<p>​      int right = n - i - 2;</p>
+<p>​      for (int j = left; j &lt;= right; j++) { // j represents from left to right, from first to last element</p>
+<p>​</p>
+<p>​        int temp = matrix[left][j]; // upper left position</p>
+<p>​</p>
+<p>​        matrix[left][j] = matrix[n - 1 - j][left];</p>
+<p>​        matrix[n - 1 - j][left] = matrix[n - 1 - left][n - 1 - j];</p>
+<p>​        matrix[n - 1- left][n - 1 - j] = matrix[j][n - 1- left];</p>
+<p>​        matrix[j][n - 1 - left] = temp;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<h1 id="49--group-anagrams">49  Group Anagrams</h1>
+<h1 id="50--powx-n">50  Pow(x, n)</h1>
+<h1 id="53--maximum-subarray">53  Maximum Subarray</h1>
+<h1 id="54--spiral-matrix">54  Spiral Matrix</h1>
+<p>public List<!-- raw HTML omitted --> spiralOrder(int[][] matrix) {     List ans = new ArrayList();     if (matrix.length == 0)       return ans;     int r1 = 0, r2 = matrix.length - 1;     int c1 = 0, c2 = matrix[0].length - 1;     while (r1 &lt;= r2 &amp;&amp; c1 &lt;= c2) {       for (int c = c1; c &lt;= c2; c++) ans.add(matrix[r1][c]);       for (int r = r1 + 1; r &lt;= r2; r++) ans.add(matrix[r][c2]);       if (r1 &lt; r2 &amp;&amp; c1 &lt; c2) {         for (int c = c2 - 1; c &gt; c1; c&ndash;) ans.add(matrix[r2][c]);         for (int r = r2; r &gt; r1; r&ndash;) ans.add(matrix[r][c1]);       }       r1++;       r2&ndash;;       c1++;       c2&ndash;;     }     return ans;   }</p>
+<p>36  Valid Sudoku</p>
+<p>(Aye)</p>
+<p>public boolean isValidSudoku(char[][] board) {</p>
+<p>​    for (int i = 0; i &lt; 9; i++) {</p>
+<p>​      Set<!-- raw HTML omitted --> dedupRow = new HashSet&lt;&gt;();</p>
+<p>​      Set<!-- raw HTML omitted --> dedupCol = new HashSet&lt;&gt;();</p>
+<p>​      Set<!-- raw HTML omitted --> dedupCube = new HashSet&lt;&gt;();</p>
+<p>​      for (int j = 0; j &lt; 9; j++) {</p>
+<p>​        if (board[i][j] != &lsquo;.&rsquo; &amp;&amp; !dedupRow.add(board[i][j])) {</p>
+<p>​          return false;</p>
+<p>​        }</p>
+<p>​        if (board[j][i] != &lsquo;.&rsquo; &amp;&amp; !dedupCol.add(board[j][i])) {</p>
+<p>​          return false;</p>
+<p>​        }</p>
+<p>​        if (board[j/3 + i/3<em>3][j%3 + i%3</em>3] != &lsquo;.&rsquo; &amp;&amp; !dedupCube.add(board[j/3 + i/3<em>3][j%3 + i%3</em>3])) {</p>
+<p>​          // System.out.print((i/3 + j/3) + &quot; &quot; + (j%3 + j%3));</p>
+<p>​          return false;</p>
+<p>​        }</p>
+<p>​        // System.out.println((j/3 + i/3<em>3) + &quot; &quot; + (j%3 + i%3</em>3) + &quot; &ldquo;);</p>
+<p>​      }</p>
+<p>​      // System.out.println(&quot;&mdash;&ndash;&quot;);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return true;</p>
+<p>}</p>
+<h1 id="1849-splitting-a-string-into-descending-consecutive-values">1849. Splitting a String Into Descending Consecutive Values</h1>
+<p>// （wu） O（n^2） ??</p>
+<p>def splitString(self, s: str) -&gt; bool:</p>
+<p>​    n = len(s)</p>
+<p>​    start = 0</p>
+<p>​    # 枚举第一个子字符串对应的初始值</p>
+<p>​    # 第一个子字符串不能包含整个字符串</p>
+<p>​    for i in range(n - 1):</p>
+<p>​      start = 10 * start + int(s[i])</p>
+<p>​      # 循环验证当前的初始值是否符合要求</p>
+<p>​      pval = start</p>
+<p>​      cval = 0</p>
+<p>​      cidx = i + 1</p>
+<p>​      for j in range(i + 1, n):</p>
+<p>​        if pval == 1:</p>
+<p>​          # 如果上一个值为 1，那么剩余字符串对应的数值只能为 0</p>
+<p>​          if all(s[k] == &lsquo;0&rsquo; for k in range(cidx, n)):</p>
+<p>​            return True</p>
+<p>​          else:</p>
+<p>​            break</p>
+<p>​        cval = 10 * cval + int(s[j])</p>
+<p>​        if cval &gt; pval - 1:</p>
+<p>​          # 不符合要求，提前结束</p>
+<p>​          break</p>
+<p>​        elif cval == pval - 1:</p>
+<p>​          if j + 1 == n:</p>
+<p>​            # 已经遍历到末尾</p>
+<p>​            return True</p>
+<p>​          pval = cval</p>
+<p>​          cval = 0</p>
+<p>​          cidx = j + 1</p>
+<p>​    return False</p>
+<p>//(Peiyu) 上面的java版本</p>
+<p>public boolean splitString(String s) {</p>
+<p>​    int n = s.length();</p>
+<p>​    long start = 0;</p>
+<p>​    // 枚举第一个子字符串对应的初始值</p>
+<p>​    // 第一个子字符串不能包含整个字符串</p>
+<p>​    for (int i = 0; i &lt; n; i++) { //O(N)</p>
+<p>​      start = 10 * start + s.charAt(i) - &lsquo;0&rsquo;;</p>
+<p>​      // 循环验证当前的初始值是否符合要求</p>
+<p>​      long prev = start;</p>
+<p>​      long current = 0;</p>
+<p>​</p>
+<p>​      for (int j = i + 1; j &lt; n; j++) { //O(N)</p>
+<p>​        if (prev == 1) {</p>
+<p>​          // 如果上一个值为 1，那么剩余字符串对应的数值只能为 0</p>
+<p>​          if (s.charAt(j) != &lsquo;0&rsquo;) break;</p>
+<p>​          else if (j == n - 1) return true;</p>
+<p>​          else continue;</p>
+<p>​        }</p>
+<p>​</p>
+<p>​        current = 10 * current + s.charAt(j) - &lsquo;0&rsquo;;</p>
+<p>​</p>
+<p>​        if (current &gt; prev - 1) {</p>
+<p>​          // 不符合要求，提前结束</p>
+<p>​          break;</p>
+<p>​        } else if (current == prev - 1) {</p>
+<p>​          if (j + 1 == n)</p>
+<p>​            // 已经遍历到末尾</p>
+<p>​            return true;</p>
+<p>​          prev = current;</p>
+<p>​          current = 0;</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return false;</p>
+<p>}</p>
+<p>(Peiyu) DFS</p>
+<p>//1|0009998</p>
+<p>// 0|009998</p>
+<p>//  0|09998 00|9998 009|998 0099|98 00999|8 009998</p>
+<p>// 00|09998</p>
+<p>//   0|9998 09|998 099|98 0999|8 09998</p>
+<p>// 000|9998</p>
+<p>//   9|998 99|98 999|8 9998</p>
+<p>// 0009|998 00099|98 000999|8 0009998</p>
+<p>//10|009998</p>
+<p>//  0|09998 00|9998 009|998      0099|98 00999|8 009998</p>
+<p>//            9|98 99|8 998</p>
+<p>//100|09998</p>
+<p>//  0|9998 09|998 099|98 -&gt; found 1, return true</p>
+<p>public boolean splitString(String s) {</p>
+<p>​    return helper(s, null);</p>
+<p>}</p>
+<p>private boolean helper(String s, Long prev) {</p>
+<p>​    long current = 0;</p>
+<p>​    for (int i = 0; i &lt; s.length(); i++) {</p>
+<p>​      current = current * 10 + s.charAt(i) - &lsquo;0&rsquo;;</p>
+<p>​</p>
+<p>​      if (prev == null) {</p>
+<p>​        if (helper(s.substring(i + 1), current)){</p>
+<p>​          return true;</p>
+<p>​        }</p>
+<p>​      } else {</p>
+<p>​        if (prev == current + 1 &amp;&amp; (i == s.length() - 1 || helper(s.substring(i + 1), current))) {</p>
+<p>​          return true;</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return false;</p>
+<p>}</p>
+<h1 id="1110--delete-nodes-and-return-forest">1110  Delete Nodes And Return Forest</h1>
+<p>（luo）</p>
+<p>// TC: O(n)</p>
+<p>// SC: O(height)</p>
+<p>class Solution {</p>
+<p>public List<!-- raw HTML omitted --> delNodes(TreeNode root, int[] to_delete) {</p>
+<p>​    Set<!-- raw HTML omitted --> set = new HashSet&lt;&gt;();</p>
+<p>​    for (int i : to_delete) {</p>
+<p>​      set.add(i);</p>
+<p>​    }</p>
+<p>​    List<!-- raw HTML omitted --> res = new ArrayList&lt;&gt;();</p>
+<p>​    // if (!set.contains(root.val)) {</p>
+<p>​    //   res.add(root); //先单独判断root</p>
+<p>​    // }</p>
+<p>​    dfs(root, true, set, res);</p>
+<p>​    return res;</p>
+<p>}</p>
+<p>//这个dfs，return的是自己，但是是在把自己和set对比之后，把新的自己return回去,就是自己或者null</p>
+<p>private TreeNode dfs(TreeNode node, boolean isRoot, Set<!-- raw HTML omitted --> set, List<!-- raw HTML omitted --> res) {</p>
+<p>​    if (node == null) {</p>
+<p>​      return null;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    node.left = dfs(node.left, false, set, res);</p>
+<p>​    node.right = dfs(node.right, false, set, res);</p>
+<p>​    if (set.contains(node.val)) {</p>
+<p>​      if (node.left != null) {</p>
+<p>​        res.add(node.left); //</p>
+<p>​      }</p>
+<p>​      if (node.right != null) {</p>
+<p>​        res.add(node.right);</p>
+<p>​      }</p>
+<p>​      return null;</p>
+<p>​</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    if (isRoot) { //把root的情况在这里cover了</p>
+<p>​      res.add(node);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return node;</p>
+<p>}</p>
+<p>}</p>
+<p>//（huang） 不需要把root单独出来，思路比较清晰的方法</p>
+<p>class Solution:</p>
+<p>def delNodes(self, root: TreeNode, to_delete: List[int]) -&gt; List[TreeNode]:</p>
+<p>​    to_delete = set(to_delete)</p>
+<p>​    ans = []</p>
+<p>​    self.findforest(root, False, to_delete, ans)</p>
+<p>​    return ans</p>
+<p>def findforest(self, root, parent_exist, to_delete, ans):</p>
+<p>​    if root == None:</p>
+<p>​      return None</p>
+<p>​</p>
+<p>​    if root.val in to_delete:</p>
+<p>​      root.left = self.findforest(root.left, False, to_delete, ans)</p>
+<p>​      root.right = self.findforest(root.right, False, to_delete, ans)</p>
+<p>​      return None</p>
+<p>​    else:</p>
+<p>​      if not parent_exist:</p>
+<p>​        ans.append(root)</p>
+<p>​      root.left = self.findforest(root.left, True, to_delete, ans)</p>
+<p>​      root.right = self.findforest(root.right, True, to_delete, ans)</p>
+<p>​      return root</p>
+<h1 id="56--merge-intervals">56  Merge Intervals</h1>
+<p><a href="https://leetcode.com/list/9rjh2ka1/">https://leetcode.com/list/9rjh2ka1/</a> 扫描线几个高频题list</p>
+<p>// pq sort</p>
+<p>public int[][] merge(int[][] intervals) {</p>
+<p>​    if (intervals.length &lt;= 1)</p>
+<p>​      return intervals;</p>
+<p>​    // Sort by ascending starting point</p>
+<p>​    Arrays.sort(intervals, (i1, i2) -&gt; Integer.compare(i1[0], i2[0]));</p>
+<p>​    List&lt;int[]&gt; result = new ArrayList&lt;&gt;();</p>
+<p>​    int[] newInterval = intervals[0];</p>
+<p>​    result.add(newInterval);</p>
+<p>​</p>
+<p>​    for (int[] interval : intervals) {</p>
+<p>​      if(interval[0] &lt;= newInterval[1]) // Overlapping intervals, move the end if need</p>
+<p>​        newInterval[1] = Math.max(newInterval[1], interval[1]); // [1, 6]</p>
+<p>​      else {              // Disjoint intervals, add the new interval to the list</p>
+<p>​        newInterval = interval;</p>
+<p>​        result.add(newInterval);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return result.toArray(new int[result.size()][]);</p>
+<p>}</p>
+<p>//(luo) 扫描线的方法</p>
+<p>/*</p>
+<p>1 1 -1. -1. 1. -1. 1.  -1</p>
+<p>1 2 3  6  8  10 15. 18</p>
+<p>-&mdash;&mdash;&ndash;</p>
+<p>\1. 2. 1. 0</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public int[][] merge(int[][] intervals) {</p>
+<p>​    List&lt;int[]&gt; result = new ArrayList&lt;&gt;();</p>
+<p>​</p>
+<p>​    List<!-- raw HTML omitted --> boundaries = new ArrayList&lt;&gt;();</p>
+<p>​    for (int[] interval : intervals) {</p>
+<p>​      boundaries.add(new Boundary(interval[0], 1));</p>
+<p>​      boundaries.add(new Boundary(interval[1], -1));</p>
+<p>​    }</p>
+<p>​    Collections.sort(boundaries, new MyComparator());</p>
+<p>​    int isMatched = 0;</p>
+<p>​    int left = 0;</p>
+<p>​    int right = 0;</p>
+<p>​</p>
+<p>​    for (Boundary boundary : boundaries) {</p>
+<p>​      if (isMatched == 0) {</p>
+<p>​        left = boundary.num;</p>
+<p>​      }</p>
+<p>​      isMatched += boundary.type;</p>
+<p>​      if (isMatched == 0) {</p>
+<p>​        right = boundary.num;</p>
+<p>​        result.add(new int[] {left, right}); //如何用单独的数字变成list</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return result.toArray(new int[result.size()][]); // 如何用list of int[] 变成int[][]</p>
+<p>}</p>
+<p>class Boundary {</p>
+<p>​    int num;</p>
+<p>​    int type; // 1 is start, -1 is end</p>
+<p>​    public Boundary(int num, int type) {</p>
+<p>​      this.num = num;</p>
+<p>​      this.type = type;</p>
+<p>​    }</p>
+<p>}</p>
+<p>public class MyComparator implements Comparator<!-- raw HTML omitted --> {</p>
+<p>​    @Override</p>
+<p>​    public int compare(Boundary one, Boundary two) {</p>
+<p>​      if (one.num == two.num) {</p>
+<p>​        return one.type &gt; two.type ? -1 : 1;</p>
+<p>​      }</p>
+<p>​      return one.num &lt; two.num ? -1: 1;</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<h1 id="57--insert-interval">57  Insert Interval</h1>
+<p>解法1：标准的插入</p>
+<p>将intervals的所有元素全部遍历一遍，可以想见会依次遇到这些情况：</p>
+<p>​    intervals[i]如果整体都在newInterval之前，则可以直接将intervals[i]加入results;</p>
+<p>​    intervals[i]如果和newInterval有交集，则与之融合生成新的newInterval；这样的融合可能会有若干次；</p>
+<p>​    intervals[i]如果整体都在newInterval之后，则将newInterval（可能经历了融合）加入results，并把未遍历的intervals[i]也都加入results;</p>
+<p>public int[][] insert(int[][] intervals, int[] newInterval) {</p>
+<p>​     LinkedList&lt;int[]&gt; result = new LinkedList&lt;int[]&gt;();</p>
+<p>​    int i = 0;</p>
+<p>​    // add all the intervals ending before newInterval starts</p>
+<p>​    while (i &lt; intervals.length &amp;&amp; intervals[i][1] &lt; newInterval[0])</p>
+<p>​      result.add(intervals[i++]);</p>
+<p>​</p>
+<p>​    // merge all overlapping intervals to one considering newInterval</p>
+<p>​    while (i &lt; intervals.length &amp;&amp; intervals[i][0] &lt;= newInterval[1]) {</p>
+<p>​      newInterval[0] = Math.min(newInterval[0], intervals[i][0]);</p>
+<p>​      newInterval[1] = Math.max(newInterval[1], intervals[i][1]);</p>
+<p>​      i++;</p>
+<p>​    }</p>
+<p>​    result.add(newInterval); // add the union of intervals we got</p>
+<p>​</p>
+<p>​    // add all the rest</p>
+<p>​    while (i &lt; intervals.length)</p>
+<p>​      result.add(intervals[i++]);</p>
+<p>​</p>
+<p>​    return result.toArray(new int[result.size()][2]);</p>
+<p>}</p>
+<h1 id="60--permutation-sequence">60  Permutation Sequence</h1>
+<h1 id="62--unique-paths">62  Unique Paths</h1>
+<h1 id="63--unique-paths-ii">63  Unique Paths II</h1>
+<h1 id="65--valid-number">65  Valid Number</h1>
+<p>(Aye)</p>
+<p>class Solution {   public boolean isNumber(String s) {     s = s.trim();     boolean pointSeen = false;     boolean eSeen = false;     boolean numberSeen = false;     for(int i=0; i&lt;s.length(); i++) {       if(&lsquo;0&rsquo; &lt;= s.charAt(i) &amp;&amp; s.charAt(i) &lt;= &lsquo;9&rsquo;) {         numberSeen = true;       } else if(s.charAt(i) == &lsquo;.') {         if(eSeen || pointSeen)           return false;         pointSeen = true;       } else if(s.charAt(i) == &lsquo;e&rsquo; || s.charAt(i) == &lsquo;E&rsquo;) {         if(eSeen || !numberSeen)           return false;         numberSeen = false;         eSeen = true;       } else if(s.charAt(i) == &lsquo;-&rsquo; || s.charAt(i) == &lsquo;+') {         if(i != 0 &amp;&amp; s.charAt(i-1) != &lsquo;e&rsquo;)           return false;       } else         return false;     }     return numberSeen;   } }</p>
+<h1 id="66--plus-one">66  Plus One</h1>
+<p>(luo)</p>
+<p>class Solution {</p>
+<p>public int[] plusOne(int[] digits) {</p>
+<p>​    int n = digits.length;</p>
+<p>​    boolean addDigit = false;</p>
+<p>​</p>
+<p>​    for (int i = digits.length - 1; i &gt;= 0; i&ndash;) {</p>
+<p>​      digits[i] += 1;</p>
+<p>​      if (digits[i] &lt;= 9) {</p>
+<p>​        addDigit = false;</p>
+<p>​        break;</p>
+<p>​      } else {</p>
+<p>​        digits[i] = digits[i] % 10;</p>
+<p>​        addDigit = true;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    if (!addDigit) {</p>
+<p>​      return digits;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    int[] res = new int[n + 1];</p>
+<p>​    res[0] = 1;</p>
+<p>​    for (int i = 1; i &lt; res.length; i++) {</p>
+<p>​      res[i] = digits[i - 1];</p>
+<p>​    }</p>
+<p>​    return res;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="67--add-binary">67  Add Binary</h1>
+<p>(luo)</p>
+<p>/*</p>
+<p>11:19</p>
+<p>从右往前加</p>
+<p>用StringBuilder往上粘，最后reverse sb</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public String addBinary(String a, String b) {</p>
+<p>​    int i = a.length() - 1;</p>
+<p>​    int j = b.length() - 1;</p>
+<p>​    int sum = 0;</p>
+<p>​    StringBuilder sb = new StringBuilder();</p>
+<p>​</p>
+<p>​    while (i &gt;= 0 || j &gt;= 0 || sum != 0) {</p>
+<p>​      if (i &gt;= 0) {</p>
+<p>​        sum += a.charAt(i) - &lsquo;0&rsquo;;</p>
+<p>​        i&ndash;;</p>
+<p>​      }</p>
+<p>​      if (j &gt;= 0) {</p>
+<p>​        sum += b.charAt(j) - &lsquo;0&rsquo;;</p>
+<p>​        j&ndash;;</p>
+<p>​      }</p>
+<p>​      sb.append(sum % 2);</p>
+<p>​      sum = sum / 2;</p>
+<p>​    }</p>
+<p>​    return sb.reverse().toString();</p>
+<p>}</p>
+<p>}</p>
+<p>\68. Text Justification</p>
+<p>class Solution { // ood,    // 1. find out line, line function -&gt; list of <!-- raw HTML omitted --> desired format -&gt; append format   public List<!-- raw HTML omitted --> fullJustify(String[] words, int L) {     List<!-- raw HTML omitted --> lines = new ArrayList<!-- raw HTML omitted -->();          int index = 0; // cur word index     while (index &lt; words.length) {       int count = words[index].length(); // # char count in cur line (most compact)       int last = index + 1; // next word       while (last &lt; words.length) {         if (words[last].length() + count + 1 &gt; L) break;         count += words[last].length() + 1; // words + &lsquo;_&rsquo;         last++;       }              StringBuilder builder = new StringBuilder();       int diff = last - index - 1; // [index, last), spaces # between words, #words - 1;       // if last line or number of words in the line is 1, left-justified       if (last == words.length || diff == 0) {         for (int i = index; i &lt; last; i++) {           builder.append(words[i] + &quot; &ldquo;);         }         builder.deleteCharAt(builder.length() - 1);         for (int i = builder.length(); i &lt; L; i++) {           builder.append(&rdquo; &ldquo;);         }       } else {         // middle justified         int spaces = (L - count) / diff; // extra space number for every space         int r = (L - count) % diff; // extra space on the right         for (int i = index; i &lt; last; i++) {           builder.append(words[i]);           if (i &lt; last - 1) {             for (int j = 0; j &lt;= (spaces + ((i - index) &lt; r ? 1 : 0)); j++) { //?               builder.append(&rdquo; &ldquo;);             }           }         }       }       lines.add(builder.toString());       index = last;     }               return lines;   }  }</p>
+<p>\71. Simplify Path</p>
+<p>class Solution {   public String simplifyPath(String path) {      // Initialize a stack     Deque<!-- raw HTML omitted --> stack = new ArrayDeque<!-- raw HTML omitted -->();     String[] components = path.split(&quot;/&quot;);      // Split the input string on &ldquo;/&rdquo; as the delimiter     // and process each portion one by one     for (String directory : components) {        // A no-op for a &ldquo;.&rdquo; or an empty string       if (directory.equals(&rdquo;.&quot;) || directory.isEmpty()) {         continue;       } else if (directory.equals(&rdquo;..&quot;)) {          // If the current component is a &ldquo;..&rdquo;, then         // we pop an entry from the stack if it&rsquo;s non-empty         if (!stack.isEmpty()) {           stack.pollLast();         }       } else {          // Finally, a legitimate directory name, so we add it         // to our stack         stack.offerLast(directory);       }     }      // Stich together all the directory names together     StringBuilder result = new StringBuilder();     for (String dir : stack) {       result.append(&quot;/&quot;);       result.append(dir);     }     return result.length() &gt; 0 ? result.toString() : &ldquo;/&rdquo; ;   } }</p>
+<h1 id="767-reorganize-string">767 Reorganize String</h1>
+<p>（luo）</p>
+<p>//TC: O(n), SC: O(n)</p>
+<p>//先数出个数最多的字母，隔着能放下的话，剩下的挨着放就可以。</p>
+<p>class Solution {</p>
+<p>public String reorganizeString(String s) {</p>
+<p>​    // step 1.1 : load char to int array</p>
+<p>​    int[] count = new int[26];</p>
+<p>​    for (char c : s.toCharArray()) {</p>
+<p>​      count[c - &lsquo;a&rsquo;]++;</p>
+<p>​    }</p>
+<p>​    // step 1.2 : find the most count char</p>
+<p>​    int maxIndex = 0;</p>
+<p>​    for (int i = 1; i &lt; count.length; i++) {</p>
+<p>​      if (count[i] &gt; count[maxIndex]) {</p>
+<p>​        maxIndex = i;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    // step 2. put the max index char to result array, 间隔放</p>
+<p>​    if (count[maxIndex] &gt; (s.length() + 1) / 2) {</p>
+<p>​      return &ldquo;&quot;;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    char[] res = new char[s.length()];</p>
+<p>​    int index = 0;</p>
+<p>​</p>
+<p>​    // 放最多的字母</p>
+<p>​    while (count[maxIndex] &gt; 0) {</p>
+<p>​      res[index] = (char) (maxIndex + &lsquo;a&rsquo;);</p>
+<p>​      index += 2;</p>
+<p>​      count[maxIndex]&ndash;;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; count.length; i++) {</p>
+<p>​      while (count[i] &gt; 0) {</p>
+<p>​        if (index &gt;= res.length) {</p>
+<p>​          index = 1;</p>
+<p>​        }</p>
+<p>​        res[index] = (char) (i + &lsquo;a&rsquo;);</p>
+<p>​        index += 2;</p>
+<p>​        count[i]&ndash;;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return new String(res);</p>
+<p>}</p>
+<p>}</p>
+<h1 id="209-minimum-size-subarray-sum">209. Minimum Size Subarray Sum</h1>
+<p>(luo)</p>
+<p>/*</p>
+<p>subarray sum, 本题采用 sliding window</p>
+<p>2 3 1 2 4 3</p>
+<p>​    s</p>
+<p>​     f</p>
+<p>T: O(n)</p>
+<p>S: O(1)</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public int minSubArrayLen(int target, int[] nums) {</p>
+<p>​    int sum = 0; // sliding window sum</p>
+<p>​    int min = Integer.MAX_VALUE;</p>
+<p>​    int left = 0; // left pointer</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; nums.length; i++) { // right pointer</p>
+<p>​      sum += nums[i];</p>
+<p>​</p>
+<p>​      while (left &lt;= i &amp;&amp; sum &gt;= target) {</p>
+<p>​        min = Math.min(min, i - left + 1);</p>
+<p>​        sum -= nums[left];</p>
+<p>​        left++;</p>
+<p>​      }</p>
+<p>​</p>
+<p>​    }</p>
+<p>​    return min == Integer.MAX_VALUE ? 0 : min;</p>
+<p>}</p>
+<p>}</p>
+<p>\366. Find Leaves of Binary Tree</p>
+<p>class Solution {   public List&lt;List<!-- raw HTML omitted -->&gt; findLeaves(TreeNode root) {     List&lt;List<!-- raw HTML omitted -->&gt; res = new ArrayList&lt;&gt;();     getHeight(root, res);     return res;   }   private int getHeight(TreeNode root, List&lt;List<!-- raw HTML omitted -->&gt; res) {     if (root == null) {       return -1;     }     int left = getHeight(root.left, res);     int right = getHeight(root.right, res);     int curHeight = Math.max(left, right) + 1;     if (curHeight == res.size()) {       res.add(new ArrayList<!-- raw HTML omitted -->());     }     res.get(curHeight).add(root.val);     // root.left = null;     // root.right = null;     return curHeight;   } }</p>
+<h1 id="380--insert-delete-getrandom-o1">380  Insert Delete GetRandom O(1)</h1>
+<p>(Luo)</p>
+<p>/*</p>
+<p>思路：需要的是insert,remove 可以用hashmap的得到O(1)</p>
+<p>getRandom需要一个index来看顺序，但是HashMap没有顺序</p>
+<p>HashMap ： value : index</p>
+<p>ArrayList: index : value</p>
+<p>*/</p>
+<p>class RandomizedSet {</p>
+<p>Map&lt;Integer, Integer&gt; dict; // value to index pair</p>
+<p>List<!-- raw HTML omitted --> list; // value</p>
+<p>Random rand;</p>
+<p>public RandomizedSet() {</p>
+<p>​    dict = new HashMap&lt;&gt;();</p>
+<p>​    list = new ArrayList&lt;&gt;();</p>
+<p>​    rand = new Random();</p>
+<p>}</p>
+<p>public boolean insert(int val) {</p>
+<p>​    if (dict.containsKey(val)) {</p>
+<p>​      return false;</p>
+<p>​    }</p>
+<p>​    //下面两句别写反了</p>
+<p>​    dict.put(val, list.size()); // 新的value的index是list.size() 因为是下一个</p>
+<p>​    list.add(val);</p>
+<p>​</p>
+<p>​    return true;</p>
+<p>}</p>
+<p>public boolean remove(int val) {</p>
+<p>​    if (!dict.containsKey(val)) {</p>
+<p>​      return false;</p>
+<p>​    }</p>
+<p>​    Integer idx = dict.get(val);</p>
+<p>​    int lastElement = list.get(list.size() - 1);</p>
+<p>​    list.set(idx, lastElement);</p>
+<p>​    dict.put(lastElement, idx); // remove index上的value后，从map里把val的entry删去，也要更新lastElement的index，在map里</p>
+<p>​    list.remove(list.size() - 1);</p>
+<p>​    dict.remove(val);</p>
+<p>​</p>
+<p>​    return true;</p>
+<p>}</p>
+<p>public int getRandom() {</p>
+<p>​    return list.get(rand.nextInt(list.size()));</p>
+<p>}</p>
+<p>}</p>
+<h1 id="398--random-pick-index">398  Random Pick Index</h1>
+<p>(Luo)</p>
+<p>/*</p>
+<p>HashMap - value: list<!-- raw HTML omitted --></p>
+<p>(1: [0])</p>
+<p>(2: [1])</p>
+<p>(3, [2, 3, 4])</p>
+<p>Runtime: 64 ms, faster than 69.62% of Java online submissions for Random Pick Index.</p>
+<p>Memory Usage: 49.3 MB, less than 54.89% of Java online submissions for Random Pick Index.</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>HashMap&lt;Integer, List<!-- raw HTML omitted -->&gt; map;</p>
+<p>Random rand = new Random();</p>
+<p>public Solution(int[] nums) {</p>
+<p>​    map = new HashMap&lt;&gt;();</p>
+<p>​    for (int i = 0; i &lt; nums.length; i++) {</p>
+<p>​      map.putIfAbsent(nums[i], new ArrayList&lt;&gt;());</p>
+<p>​      map.get(nums[i]).add(i);</p>
+<p>​    }</p>
+<p>}</p>
+<p>public int pick(int target) {</p>
+<p>​    List<!-- raw HTML omitted --> list = map.get(target);</p>
+<p>​    return list.get(rand.nextInt(list.size()));</p>
+<p>}</p>
+<p>}</p>
+<p>\493. Reverse Pairs</p>
+<p>(Tang)</p>
+<p>class Solution {   int[] helper;   public int reversePairs(int[] nums) {     this.helper = new int[nums.length];     return mergeSort(nums, 0, nums.length-1);   }   private int mergeSort(int[] nums, int s, int e){     if(s&gt;=e) return 0;      int mid = s + (e-s)/2;      int cnt = mergeSort(nums, s, mid) + mergeSort(nums, mid+1, e);      for(int i = s, j = mid+1; i&lt;=mid; i++){       while(j&lt;=e &amp;&amp; nums[i]/2.0 &gt; nums[j]) j++; //       cnt += j-(mid+1);      }     //Arrays.sort(nums, s, e+1);      myMerge(nums, s, mid, e);     return cnt;    }      private void myMerge(int[] nums, int s, int mid, int e){     for(int i = s; i&lt;=e; i++) helper[i] = nums[i];     int p1 = s;//pointer for left part     int p2 = mid+1;//pointer for right part     int i = s;//pointer for sorted array     while(p1&lt;=mid || p2&lt;=e){       if(p1&gt;mid || (p2&lt;=e &amp;&amp; helper[p1] &gt;= helper[p2])){         nums[i++] = helper[p2++];       }else{         nums[i++] = helper[p1++];       }     }   } } /*     0  2 3 4     1,3,2,|3, 1   /        \ 1,3,2      3, 1  /   \     / \ 1, 3  2    3  1  / \ 1 3    i   j    i   j 1, 3 | 2  |  3,  1  cnt: 1         +1   \  /            1, 2, 3     1, 3      i      j      +1        cnt: 2      \     /       1, 1, 2, 3, 3      MergeSort  Explanation: In each round, we divide our array into two parts and sort them. So after &ldquo;int cnt = mergeSort(nums, s, mid) + mergeSort(nums, mid+1, e); &ldquo;, the left part and the right part are sorted and now our only job is to count how many pairs of number (leftPart[i], rightPart[j]) satisfies leftPart[i] &lt;= 2*rightPart[j]. For example, left: 4 6 8 right: 1 2 3 so we use two pointers to travel left and right. For each leftPart[i], if j&lt;=e &amp;&amp; nums[i]/2.0 &gt; nums[j], we just continue to move j to the end, to increase rightPart[j], until it is valid. Like in our example, left&rsquo;s 4 can match 1 and 2; left&rsquo;s 6 can match 1, 2, 3, and left&rsquo;s 8 can match 1, 2, 3. So in this particular round, there are 8 pairs found, so we increase our total by 8.  */</p>
+<h1 id="528-random-pick-with-weight">528. Random Pick with Weight</h1>
+<p>(luo)</p>
+<p>class Solution {</p>
+<p>private int[] prefixSums;</p>
+<p>private int totalSum;</p>
+<p>public Solution(int[] w) {</p>
+<p>​    prefixSums = new int[w.length]; // constructor</p>
+<p>​    int prefixSum = 0;</p>
+<p>​    for (int i = 0; i &lt; w.length; i++) {</p>
+<p>​      prefixSum += w[i];</p>
+<p>​      prefixSums[i] = prefixSum;</p>
+<p>​    }</p>
+<p>​    totalSum = prefixSum;</p>
+<p>}</p>
+<p>public int pickIndex() {</p>
+<p>​    double target = totalSum * Math.random();// 0&hellip;4 -2.4</p>
+<p>​    // run a binary search to find the target zone</p>
+<p>​    int low = 0, high = prefixSums.length; // 0..2</p>
+<p>​    while (low &lt; high) {</p>
+<p>​      // better to avoid the overflow</p>
+<p>​      int mid = low + (high - low) / 2; // mid = 1</p>
+<p>​      if (target &gt; prefixSums[mid])</p>
+<p>​        low = mid + 1;</p>
+<p>​      else</p>
+<p>​        high = mid;</p>
+<p>​    }</p>
+<p>​    return low;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="78--subsets">78  Subsets</h1>
+<p>(Lynn)</p>
+<p>public void sortColors(int[] nums) {</p>
+<p>​    if (nums == null || nums.length == 0) {</p>
+<p>​      return;</p>
+<p>​    }</p>
+<p>​    int i = 0;</p>
+<p>​    int j = 0;</p>
+<p>​    int k = nums.length - 1;</p>
+<p>​    while (j &lt;= k) {</p>
+<p>​      if (nums[j] == 0) {</p>
+<p>​        //temp is 1, because i points to known part, we could just use 1 instead of temp</p>
+<p>​        int temp = nums[i];</p>
+<p>​        nums[i] = nums[j];</p>
+<p>​        nums[j] = temp; // now j points to 1, we move j forward, let j points to unknown</p>
+<p>​        i++;</p>
+<p>​        j++;</p>
+<p>​      } else if (nums[j] == 1) {</p>
+<p>​        j++;</p>
+<p>​      } else if (nums[j] == 2) {</p>
+<p>​        //at this point, we dont know what num k points to, so we need to recotd by temp</p>
+<p>​        int temp = nums[k];</p>
+<p>​        nums[k] = nums[j];</p>
+<p>​        nums[j] = temp;</p>
+<p>​        k&ndash;;</p>
+<p>​        //we dont move j because the number swaped to j is still unknown</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>}</p>
+<h1 id="815-bus-routes">815 Bus Routes</h1>
+<p>(huang)</p>
+<p>// c#</p>
+<p>public class Solution</p>
+<p>{</p>
+<p>private bool findStopToRoutes(int[][] routes, int source, int target, Dictionary &lt;int, List<!-- raw HTML omitted -->&gt; stopToroutes, HashSet<!-- raw HTML omitted --> startRoute, HashSet<!-- raw HTML omitted --> endRoute)</p>
+<p>{</p>
+<p>​</p>
+<p>​    for(int i = 0; i &lt; routes.Length; i++)</p>
+<p>​    {</p>
+<p>​      bool sourceFlag = false;</p>
+<p>​      bool targetFlag = false;</p>
+<p>​      foreach (var stop in routes[i])</p>
+<p>​      {</p>
+<p>​        if (stop == source)</p>
+<p>​        {</p>
+<p>​          sourceFlag = true;</p>
+<p>​          startRoute.Add(i);</p>
+<p>​        }</p>
+<p>​        if (stop == target)</p>
+<p>​        {</p>
+<p>​          targetFlag = true;</p>
+<p>​          endRoute.Add(i);</p>
+<p>​        }</p>
+<p>​        if (!stopToroutes.ContainsKey(stop))</p>
+<p>​        {</p>
+<p>​          stopToroutes[stop] = new List<!-- raw HTML omitted -->();</p>
+<p>​        }</p>
+<p>​        stopToroutes[stop].Add(i);</p>
+<p>​      }</p>
+<p>​      if (sourceFlag &amp;&amp; targetFlag)</p>
+<p>​      {</p>
+<p>​        return true;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return false;</p>
+<p>}</p>
+<p>private void findRouteGraph(Dictionary &lt;int, List<!-- raw HTML omitted -->&gt; stopToroutes, Dictionary &lt;int, HashSet<!-- raw HTML omitted -->&gt; routeG)</p>
+<p>{</p>
+<p>​    foreach( var keyValue in stopToroutes)</p>
+<p>​      {</p>
+<p>​        var key = keyValue.Key;</p>
+<p>​        var value = keyValue.Value;</p>
+<p>​        // Console.WriteLine(&ldquo;key in: {0}&rdquo;, key);</p>
+<p>​        for(int i = 0; i &lt; value.Count; i ++)</p>
+<p>​        {</p>
+<p>​          int start = value[i];</p>
+<p>​          for (int j = 0; j &lt; value.Count; j ++)</p>
+<p>​          {</p>
+<p>​            if (i != j)</p>
+<p>​            {</p>
+<p>​              int end = value[j];</p>
+<p>​              if ( ! routeG.ContainsKey(start))</p>
+<p>​              {</p>
+<p>​                routeG[start] = new HashSet<!-- raw HTML omitted -->();</p>
+<p>​              }</p>
+<p>​              routeG[start].Add(end);</p>
+<p>​            }</p>
+<p>​          }</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>}</p>
+<p>public int NumBusesToDestination(int[][] routes, int source, int target)</p>
+<p>{</p>
+<p>// bus stop to busroute number</p>
+<p>​    if (source == target)</p>
+<p>​    {</p>
+<p>​      return 0;</p>
+<p>​    }</p>
+<p>​    Dictionary &lt;int, List<!-- raw HTML omitted -->&gt; stopToroutes = new Dictionary &lt;int, List<!-- raw HTML omitted -->&gt;();</p>
+<p>​    HashSet<!-- raw HTML omitted --> startRoute = new HashSet<!-- raw HTML omitted -->();</p>
+<p>​    HashSet<!-- raw HTML omitted --> endRoute = new HashSet<!-- raw HTML omitted -->();</p>
+<p>​    if (findStopToRoutes(routes, source, target, stopToroutes, startRoute, endRoute))</p>
+<p>​    {</p>
+<p>​      return 1;</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    Dictionary &lt;int, HashSet<!-- raw HTML omitted -->&gt; routeG = new Dictionary &lt;int, HashSet<!-- raw HTML omitted -->&gt;();</p>
+<p>​    findRouteGraph(stopToroutes, routeG);</p>
+<p>​    Dictionary &lt;int, int&gt; distance = new Dictionary &lt;int, int&gt;();</p>
+<p>​    Queue<!-- raw HTML omitted --> Q = new Queue<!-- raw HTML omitted -->();</p>
+<p>​</p>
+<p>​    foreach(int route in startRoute)</p>
+<p>​    {</p>
+<p>​      Q.Enqueue(route);</p>
+<p>​      distance.Add(route, 1);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    while (Q.Count != 0)</p>
+<p>​    {</p>
+<p>​      int route = Q.Dequeue();</p>
+<p>​      //Console.WriteLine(&ldquo;route : {0}&quot;,route);</p>
+<p>​      if (endRoute.Contains(route))</p>
+<p>​      {</p>
+<p>​        return distance[route];</p>
+<p>​      }</p>
+<p>​      //Console.WriteLine(&ldquo;route : {0}&quot;,route);</p>
+<p>​      if (!routeG.ContainsKey(route))</p>
+<p>​      {</p>
+<p>​        break;</p>
+<p>​      }</p>
+<p>​      foreach (var nextroute in routeG[route])</p>
+<p>​      {</p>
+<p>​        if (distance.ContainsKey(nextroute))</p>
+<p>​        {</p>
+<p>​          continue;</p>
+<p>​        }</p>
+<p>​        Q.Enqueue(nextroute);</p>
+<p>​        distance[nextroute] = distance[route] + 1;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return -1;</p>
+<p>}</p>
+<p>}</p>
+<h1 id="76--minimum-window-substring">76  Minimum Window Substring</h1>
+<p>(code by Luo)</p>
+<p>/*</p>
+<p>sliding window</p>
+<p>*/</p>
+<p>class Solution {</p>
+<p>public String minWindow(String s, String t) {</p>
+<p>​    Map&lt;Character, Integer&gt; tMap = new HashMap&lt;&gt;();</p>
+<p>​    for (char c : t.toCharArray()) {</p>
+<p>​      tMap.putIfAbsent(c, 0);</p>
+<p>​      tMap.put(c, tMap.get(c) + 1);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    int counter = t.length(); //用于记录需要多少个match才能成功</p>
+<p>​</p>
+<p>​    int slow = 0;</p>
+<p>​    int minLength = Integer.MAX_VALUE;</p>
+<p>​    int left = 0;</p>
+<p>​    int right = 0;</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; s.length(); i++) { // fast pointer</p>
+<p>​      char c = s.charAt(i);</p>
+<p>​      if (tMap.containsKey(c)) {</p>
+<p>​</p>
+<p>​        tMap.put(c, tMap.get(c) - 1);</p>
+<p>​</p>
+<p>​        if (tMap.get(c) &gt;= 0) { //如果被减成了负数，则counter不用&ndash;，说明进来的多了。</p>
+<p>​          counter&ndash;; // 注意这里</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​      while (counter == 0) {</p>
+<p>​</p>
+<p>​        if (minLength &gt; i - slow + 1) {</p>
+<p>​          minLength = i - slow + 1;</p>
+<p>​          left = slow;</p>
+<p>​          right = i;</p>
+<p>​        }</p>
+<p>​</p>
+<p>​        char ch = s.charAt(slow);</p>
+<p>​</p>
+<p>​        if (tMap.containsKey(ch)) {</p>
+<p>​          tMap.put(ch, tMap.get(ch) + 1);</p>
+<p>​</p>
+<p>​          if (tMap.get(ch) &gt; 0) {//如果ch在tMap里目前是负的，说明目前的substring里的本char多了，则counter不需要++</p>
+<p>​            counter++;</p>
+<p>​          }</p>
+<p>​        }</p>
+<p>​</p>
+<p>​        slow++;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return minLength == Integer.MAX_VALUE? &quot;&rdquo; : s.substring(left, right + 1);</p>
+<p>}</p>
+<p>}</p>
+<h1 id="146-lru-cache">146. LRU Cache</h1>
+<p>(Luo)</p>
+<p>class LRUCache {   Map&lt;Integer, Node&gt; map;   DDList list;   int capacity;    public LRUCache(int capacity) {     map = new HashMap&lt;&gt;();     list = new DDList();     this.capacity = capacity;   }      public int get(int key) {     // get value for key from map     // update dd list position     Node node = map.get(key);     if (node == null) {       return -1;     }     int value = node.getValue();     list.update(node); // remove node, add to head of list     return value;   }      public void put(int key, int value) {     // if exist, update dd list and node value     // if not exist, create, add to map, adjust size, add to head of dd list     Node node = map.get(key);     if (node != null) {       map.get(key).value = value;       list.update(node);     } else {       node = new Node(key, value);       if (list.getSize() == capacity) {                  // map.remove(list.dummyTail.prev.key); //???         int tailKey = list.removeTail();         map.remove(tailKey);       }       map.put(key, node);       list.addHead(node);     }        } }  class Node {   int key, value;   Node prev, next;   Node (int key, int value) {     this.key = key;     this.value = value;   }   public int getValue() {     return value;   } }  class DDList {   int size;   Node dummyHead;   Node dummyTail;      public DDList() {     dummyHead = new Node(0, 0);     dummyTail = new Node(0, 0);     dummyHead.next = dummyTail;     dummyTail.prev = dummyHead;   }   public void update(Node node) { // remove node, add to head     remove(node);     addHead(node);   }   public void addHead(Node node) {     size++;     Node head = dummyHead.next;     dummyHead.next = node;     node.prev = dummyHead;     node.next = head;     head.prev = node;        }   public int removeTail() {     Node tail = dummyTail.prev;     remove(tail);     return tail.key;   }   private void remove(Node node) {     size&ndash;;     Node prev = node.prev;     Node next = node.next;     prev.next = next;     next.prev = prev;   }   public int getSize() {     return size;   } }</p>
+<h1 id="212-word-search">212. Word Search</h1>
+<p>(Luo)</p>
+<p>class Solution {     public List<!-- raw HTML omitted --> findWords(char[][] board, String[] words) {       Trie trie = new Trie(words);       int m = board.length;   int n = board[0].length;    StringBuilder sb = new StringBuilder();   Set<!-- raw HTML omitted --> res = new HashSet&lt;&gt;();   boolean[][] visited = new boolean[m][n];    for (int i = 0; i &lt; m; i++) {    for (int j = 0; j &lt; n; j++) {     helper(board, i, j, trie.root, sb, res, visited);    }   }   return new ArrayList&lt;&gt;(res);  }   private void helper(char[][] board, int i, int j, TrieNode root, StringBuilder sb, Set<!-- raw HTML omitted --> res, boolean[][] visited) {   // base case   if (i &lt; 0 || j &lt; 0 || i &gt;= board.length || j &gt;= board[0].length || visited[i][j]) {    return;   }   // recursion rule   char ch = board[i][j];   int index = ch - &lsquo;a&rsquo;;       if (root.children[index] == null) {    return;   }    sb.append(ch);   root = root.children[index];    if (root.isWord) {    res.add(sb.toString());   }    visited[i][j] = true;    helper(board, i + 1, j, root, sb, res, visited);   helper(board, i - 1, j, root, sb, res, visited);   helper(board, i, j + 1, root, sb, res, visited);   helper(board, i, j - 1, root, sb, res, visited);      sb.deleteCharAt(sb.length() - 1);   visited[i][j] = false;  }   }  class TrieNode {   TrieNode[] children = new TrieNode[26]; // index indicates which Character, node is children   boolean isWord;    }  class Trie {   TrieNode root;      public Trie(String[] words) {     root = new TrieNode();          buildTrie(words);   }      public void buildTrie(String[] words) {     for (String word : words) {       addWord(word, root);     }   }      private void addWord(String word, TrieNode root) {     TrieNode cur = root;     for (char c : word.toCharArray()) {       int index = c - &lsquo;a&rsquo;;       TrieNode node = cur.children[index];       if (node == null) {         cur.children[index] = new TrieNode();       }       cur = cur.children[index];            }     cur.isWord = true;   }   }</p>
+<h1 id="1057-campus-bikes">1057. Campus Bikes</h1>
+<p>class Solution {</p>
+<p>public int[] assignBikes(int[][] workers, int[][] bikes) {</p>
+<p>​    int[] result = new int[workers.length];</p>
+<p>​    List<!-- raw HTML omitted --> list = new ArrayList();</p>
+<p>​    //for every worker compute the distances to every bike O(n*m) and add them to the list</p>
+<p>​    for(int i = 0;i&lt;workers.length;i++){</p>
+<p>​      for(int j = 0;j&lt;bikes.length;j++) {</p>
+<p>​        list.add(new Node(i,j,getManhattan(workers[i],bikes[j])));</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    //sort by distance, sort by worker index, sort by bike</p>
+<p>​    // O(n<em>m</em>log(n*m))</p>
+<p>​    Collections.sort(list,(a,b)-&gt; {</p>
+<p>​      if(a.distance==b.distance) {</p>
+<p>​        if(a.worker==b.worker) {</p>
+<p>​          return a.bike-b.bike;</p>
+<p>​        }</p>
+<p>​        return a.worker-b.worker;</p>
+<p>​      } else {return a.distance-b.distance;}</p>
+<p>​    });</p>
+<p>​    //keep track of the workers that already have bike and of the bikes that have already been used</p>
+<p>​    // O(n*m)</p>
+<p>​    Set<!-- raw HTML omitted --> bikesSet = new HashSet();</p>
+<p>​    Set<!-- raw HTML omitted --> workersSet = new HashSet();</p>
+<p>​    for(int i = 0;i&lt; list.size();i++) {</p>
+<p>​      Node curr = list.get(i);</p>
+<p>​      if (bikesSet.size() == bikes.length) break;</p>
+<p>​      if(bikesSet.contains(curr.bike) || workersSet.contains(curr.worker)) continue;</p>
+<p>​      result[curr.worker] = curr.bike;</p>
+<p>​      bikesSet.add(curr.bike);</p>
+<p>​      workersSet.add(curr.worker);</p>
+<p>​    }</p>
+<p>​    return result;</p>
+<p>}</p>
+<p>private int getManhattan(int[] p1, int[] p2) {</p>
+<p>​    return Math.abs(p1[0]-p2[0]) + Math.abs(p1[1]-p2[1]);</p>
+<p>}</p>
+<p>private class Node{</p>
+<p>​    public int worker;</p>
+<p>​    public int bike;</p>
+<p>​    public int distance;</p>
+<p>​    public Node(int w, int b, int d) {</p>
+<p>​      worker = w;</p>
+<p>​      bike = b;</p>
+<p>​      distance = d;</p>
+<p>​    }</p>
+<p>}</p>
+<p>}</p>
+<h1 id="726-number-of-atoms">726. Number of Atoms</h1>
+<p>(luo)</p>
+<p>/*</p>
+<p>主要是getName 和 getCount 两个核心的函数，用于被调用</p>
+<p>遇到左括号时就可以进入recursion，注意出来时需要跟当前的map合并</p>
+<p>遇到右括号就结束recursion，return当前层</p>
+<p><a href="https://www.youtube.com/watch?v=6nQ2jfs7a7I">https://www.youtube.com/watch?v=6nQ2jfs7a7I</a></p>
+<p>TC: O(n) for main method, nlogn for sort</p>
+<p>*/</p>
+<p>class Solution {    public String countOfAtoms(String formula) {     int[] index = new int[1];     char[] input = formula.toCharArray();      Map&lt;String, Integer&gt; map = countOfAtoms(input, index);          StringBuilder sb = new StringBuilder();     List<!-- raw HTML omitted --> resList = new ArrayList&lt;&gt;();     for (String s : map.keySet()) {       if (map.get(s) &gt; 1) {         resList.add(s + map.get(s));       } else {         resList.add(s);       }            }     Collections.sort(resList);     for (String s : resList) {       sb.append(s);     }     return sb.toString();   }   private Map&lt;String, Integer&gt; countOfAtoms(char[] input, int[] index) {     Map&lt;String, Integer&gt; res = new HashMap&lt;&gt;();          if (index[0] == input.length) {       return res;     }          while (index[0] != input.length) { // 这里一定要要，why？            char cur = input[index[0]];       if (cur == &lsquo;(') {         index[0]++;         Map&lt;String, Integer&gt; tmp = countOfAtoms(input, index);         int count = getCount(input, index);         for (Map.Entry&lt;String, Integer&gt; entry : tmp.entrySet()) {           res.put(entry.getKey(), res.getOrDefault(entry.getKey(), 0) + entry.getValue() * count);         }       } else if (cur == &lsquo;)') {         index[0]++;         return res;       } else {         String name = getName(input, index);         res.put(name, res.getOrDefault(name, 0) + getCount(input, index));       }     }     return res;   }   private String getName(char[] input, int[] index) {     StringBuilder sb = new StringBuilder();     sb.append(input[index[0]]);          index[0]++;          if (index[0] &lt; input.length &amp;&amp; input[index[0]] &gt;= &lsquo;a&rsquo; &amp;&amp; input[index[0]] &lt;= &lsquo;z&rsquo;) {       sb.append(input[index[0]]);       index[0]++;     }          return sb.toString();   }   private int getCount(char[] input, int[] index) {     int count = 0;     while (index[0] &lt; input.length &amp;&amp; input[index[0]] &gt;= &lsquo;0&rsquo; &amp;&amp; input[index[0]] &lt;= &lsquo;9&rsquo;) {       count = count * 10 + input[index[0]] - &lsquo;0&rsquo;;       index[0]++;     }     return count == 0? 1 : count;   } }</p>
+<h1 id="1597-build-binary-expression-tree-from-infix-expression">1597. Build Binary Expression Tree From Infix Expression</h1>
+<p>(Tang)</p>
+<p>/**  * Definition for a binary tree node.  * class Node {  *   char val;  *   Node left;  *   Node right;  *   Node() {this.val = ' &lsquo;;}  *   Node(char val) { this.val = val; }  *   Node(char val, Node left, Node right) {  *     this.val = val;  *     this.left = left;  *     this.right = right;  *   }  * }  */ class Solution {   public Node expTree(String s) {     s = &lsquo;(&rsquo; + s + &lsquo;)';     Deque<!-- raw HTML omitted --> nodes = new LinkedList&lt;&gt;();     Deque<!-- raw HTML omitted --> ops = new LinkedList&lt;&gt;();     Map&lt;Character, Integer&gt; priority = Map.of('+&rsquo;, 0, &lsquo;-&rsquo;, 0, &lsquo;*&rsquo;, 1, &lsquo;/&rsquo;, 1);      for (char c : s.toCharArray())       if (Character.isDigit(c)) {         nodes.push(new Node(c));       } else if (c == &lsquo;(') {         ops.push(c);       } else if (c == &lsquo;)') {         while (ops.peek() != &lsquo;(')           nodes.push(buildNode(ops.pop(), nodes.pop(), nodes.pop()));         ops.pop(); // remove &lsquo;(&rsquo;       } else {    // c == &lsquo;+&rsquo; || c == &lsquo;-&rsquo; || c == &lsquo;*&rsquo; || c == &lsquo;/&rsquo;         while (ops.peek() != &lsquo;(&rsquo; &amp;&amp; priority.get(ops.peek()) &gt;= priority.get(c))           nodes.push(buildNode(ops.pop(), nodes.pop(), nodes.pop()));         ops.push(c);       }      return nodes.peek();   }    private Node buildNode(char op, Node right, Node left) {     return new Node(op, left, right);   } }</p>
+<h2 id="related-solution-for-772-basic-calculator-iii">Related solution for 772. Basic Calculator III</h2>
+<p>class Solution {   public int calculate(String s) {     if (s == null || s.length() == 0) return 0;     Stack<!-- raw HTML omitted --> nums = new Stack&lt;&gt;();       Stack<!-- raw HTML omitted --> ops = new Stack&lt;&gt;();     int num = 0;     Map&lt;Character, Integer&gt; priority = Map.of('+&rsquo;, 0, &lsquo;-&rsquo;, 0, &lsquo;<em>&rsquo;, 1, &lsquo;/&rsquo;, 1, &lsquo;(&rsquo;, 2, &lsquo;)&rsquo;, 2);     for (int i = 0; i &lt; s.length(); i++) {       char c = s.charAt(i);       if (c == ' &lsquo;) {         continue;       }        if (Character.isDigit(c)) {         num = c - &lsquo;0&rsquo;;         while (i + 1 &lt; s.length() &amp;&amp; Character.isDigit(s.charAt(i + 1))) {           num <em>= 10;           num += (s.charAt(i+1) - &lsquo;0&rsquo;);           i++;         }         nums.push(num);         num = 0;       } else if (c == &lsquo;(') {         ops.push(c);       } else if (c == &lsquo;)') {         while (!ops.isEmpty() &amp;&amp; ops.peek() != &lsquo;(') {           nums.push(calc(ops.pop(), nums.pop(), nums.pop()));         }         ops.pop();       } else if (c == &lsquo;+&rsquo; || c == &lsquo;-&rsquo; || c == &lsquo;</em>&rsquo; || c == &lsquo;/') {          while (!ops.isEmpty() &amp;&amp; ops.peek() != &lsquo;(&rsquo; &amp;&amp; priority.get(ops.peek()) &gt;= priority.get(c)) {            nums.push(calc(ops.pop(), nums.pop(), nums.pop()));          }          ops.push(c);       }     }     while (!ops.isEmpty()) {       nums.push(calc(ops.pop(), nums.pop(), nums.pop()));     }     return nums.peek();   }      private int calc(Character op, int num1, int num2) {     switch (op) {       case &lsquo;+': return num2 + num1;       case &lsquo;-': return num2 - num1;       case &lsquo;</em>': return num2 * num1;       case &lsquo;/': return num2 / num1;     }     throw new IllegalArgumentException();   } }</p>
+<h1 id="1231-divide-chocolate">1231. Divide Chocolate</h1>
+<p>public int maximizeSweetness(int[] sweetness, int k) {</p>
+<p>​    if (sweetness == null || sweetness.length == 0) {</p>
+<p>​      return 0;</p>
+<p>​    }</p>
+<p>​    k = k + 1; // add self</p>
+<p>​    int min = sweetness[0];</p>
+<p>​    int max = 0;</p>
+<p>​    for (int i = 0; i &lt; sweetness.length; i++) {</p>
+<p>​      min = Math.min(min, sweetness[i]);</p>
+<p>​      max += sweetness[i];</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    while (min &lt;= max) {</p>
+<p>​      int mid = (max + min) / 2;</p>
+<p>​      int cut = countCut(sweetness, mid);</p>
+<p>​      if (cut &gt; k) {</p>
+<p>​        min = mid + 1;</p>
+<p>​      } else if (cut &lt; k){</p>
+<p>​        max = mid - 1;</p>
+<p>​      } else {</p>
+<p>​        min = mid + 1;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return max;</p>
+<p>​</p>
+<p>}</p>
+<p>private int countCut(int[] sweetness, int target) {</p>
+<p>​    //we want to cut arr into subarray with sum &gt;= target</p>
+<p>​    //count how many cuts</p>
+<p>​    int cutCount = 0;</p>
+<p>​    int subArrSum = 0;</p>
+<p>​    for (int i = 0; i &lt; sweetness.length; i++) {</p>
+<p>​      subArrSum += sweetness[i];</p>
+<p>​      if (subArrSum &gt;= target) {</p>
+<p>​        subArrSum = 0;</p>
+<p>​        cutCount += 1;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return cutCount;</p>
+<p>}</p>
+<h1 id="875-koko-eating-bananas">875. Koko Eating Bananas</h1>
+<p>//M * logN</p>
+<p>public int minEatingSpeed(int[] piles, int h) {</p>
+<p>​    if (piles == null || piles.length == 0 || h &lt; piles.length) return -1;</p>
+<p>​</p>
+<p>​    int maxNum = piles[0];</p>
+<p>​    // int totalSum = 0;</p>
+<p>​</p>
+<p>​    for (int i = 0; i &lt; piles.length; i++) {</p>
+<p>​      // totalSum += piles[i];</p>
+<p>​      maxNum = Math.max(maxNum, piles[i]);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    int minK = 1;</p>
+<p>​    int maxK = maxNum;</p>
+<p>​    //logN, N the max number of banana</p>
+<p>​    while (minK &lt;= maxK) {</p>
+<p>​      int mid = minK + ((maxK - minK) / 2);</p>
+<p>​      if (canFinish(piles, mid, h)) {</p>
+<p>​        maxK = mid - 1;</p>
+<p>​      } else {</p>
+<p>​        minK = mid + 1;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return minK;</p>
+<p>}</p>
+<p>// M , M length of piles</p>
+<p>private boolean canFinish(int[] piles, int k, int h) {</p>
+<p>​    // if (k == 0) return true;</p>
+<p>​    int hourCost = 0;</p>
+<p>​    for (int num : piles) {</p>
+<p>​      hourCost += num / k;</p>
+<p>​      if (num % k &gt; 0) hourCost += 1;</p>
+<p>​    }</p>
+<p>​    return hourCost &lt;= h;</p>
+<p>}</p>
+<h1 id="935-knight-dialer">935. Knight Dialer</h1>
+<p>// dp , n * 10</p>
+<p>class Solution {</p>
+<p>public int knightDialer(int n) {</p>
+<p>​    int MOD = 1000000007;</p>
+<p>​    int paths[][] = {{4, 6}, {6, 8}, {7, 9}, {4, 8}, {0, 3, 9}, {}, {0, 1, 7}, {2, 6}, {1, 3}, {2, 4}};</p>
+<p>​    // Previous moves of knight-&gt; For instance, if a knight is at 0, it reached from either 4 or 6. Similarly if it is at 1, it is reached from 7 or 9 &amp; so on</p>
+<p>​      double dp[][] = new double[n + 1][10]; // rows -&gt; no of steps taken to reach row i   cols-&gt; no of digits</p>
+<p>​      for (int j = 0; j &lt; 10; j++)</p>
+<p>​        dp[1][j] = 1; //populate the base case for n =1</p>
+<p>​      for (int i = 2; i &lt; n + 1; i++) { // no of steps taken by knight to reach i</p>
+<p>​        for (int j = 0; j &lt; 10; j++) { // no of digits</p>
+<p>​          for (int p : paths[j]) { // Previous move of knight in order to reach digit j</p>
+<p>​            dp[i][j] += dp[i - 1][p]; // cumulatively add from the previous knight move. For instance., F(2, 0) -&gt; F(1,4) + F(1,6) F(2,6) -&gt; F(1,0) + F(1,1) + F(1,7)</p>
+<p>​          }</p>
+<p>​          dp[i][j] %= MOD;</p>
+<p>​        }</p>
+<p>​      }</p>
+<p>​      double sum = 0d;</p>
+<p>​    for (int j = 0; j &lt; 10; j++)</p>
+<p>​      sum += dp[n][j];</p>
+<p>​    return (int) (sum % MOD);</p>
+<p>}</p>
+<p>}</p>
+<p>// dfs</p>
+<p>class Solution {   int mod = 1000000007;   int[][] moves = {{-1, -2}, {-2, - 1}, {-2, 1}, {-1, 2}, {1, -2}, {2, -1}, {1, 2}, {2, 1}};   public int knightDialer(int n) {     int[][][] memo = new int[4][3][n + 1];     int res = 0;     for (int i = 0; i &lt; 4; i++) {       for (int j = 0; j &lt; 3; j++) {         res = (res + helper(i, j, n, memo) % mod ) % mod;       }     }     return res;   }         // 在i，j位置上，还剩n步可走，有多少种distinct的phone number   private int helper(int x, int y, int n, int[][][] memo) {     if (x &lt; 0 || y &lt; 0 || x &gt;= 4 || y &gt;= 3 || (x == 3 &amp;&amp; y != 1)) {       return 0;     }     // baes case     if (n == 1) {       return 1;     }          if (memo[x][y][n] != 0) {       return memo[x][y][n];     }          int cur = 0;     for (int i = 0; i &lt; 8; i++) {       int xx = x + moves[i][0];       int yy = y + moves[i][1];       cur = (cur + (helper(xx, yy, n - 1, memo) % mod)) % mod;     }          memo[x][y][n] = cur;          return cur;   } }</p>
+<h1 id="616-add-bold-tag-in-string">616. Add Bold Tag in String</h1>
+<p>/*</p>
+<p>TC: O(length of all characters in dict * length of s string)</p>
+<p>SC: O(length of input string)</p>
+<p>*/</p>
+<p>public class Solution {</p>
+<p>public String addBoldTag(String s, String[] dict) {</p>
+<p>​</p>
+<p>​    boolean[] bold = new boolean[s.length()];</p>
+<p>​</p>
+<p>​    for(String substr : dict) { // O(length of dict array)</p>
+<p>​      int start=0;</p>
+<p>​      while(start &gt;= 0) {</p>
+<p>​        start = s.indexOf(substr,start); // O(n, length of input string)</p>
+<p>​        if(start&lt;0) break;</p>
+<p>​        int end = start+substr.length();</p>
+<p>​        for(int i=start; i&lt;end; i++) {</p>
+<p>​          bold[i]=true;</p>
+<p>​        }</p>
+<p>​        start++; // Just start from next index, instead of iterating through entire string</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    StringBuilder sb = new StringBuilder();</p>
+<p>​    // O(n)</p>
+<p>​    for(int i=0; i&lt;s.length(); i++) {</p>
+<p>​      if(bold[i] &amp;&amp; (i-1&lt;0 || !bold[i-1])) {</p>
+<p>​        sb.append(&quot;<!-- raw HTML omitted -->&quot;);</p>
+<p>​      }</p>
+<p>​      sb.append(s.charAt(i)); // Just go character by character rather than cutting up the string</p>
+<p>​      if(bold[i] &amp;&amp; (i+1==s.length() || !bold[i+1])) {</p>
+<p>​        sb.append(&quot;<!-- raw HTML omitted -->&quot;);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return sb.toString();</p>
+<p>}</p>
+<p>}</p>
+<h1 id="126-word-ladder-ii">126. Word Ladder II</h1>
+<p>class Solution {   public List&lt;List<!-- raw HTML omitted -->&gt; findLadders(String beginWord, String endWord, List<!-- raw HTML omitted --> wordList) {     List&lt;List<!-- raw HTML omitted -->&gt; ans = new ArrayList&lt;&gt;();     Set<!-- raw HTML omitted --> wordSet = new HashSet&lt;&gt;(wordList);     if (!wordSet.contains(endWord)) return ans;          Queue&lt;List<!-- raw HTML omitted -->&gt; queue = new LinkedList&lt;&gt;();  // each element in queue is a path     queue.offer(Arrays.asList(beginWord));     Set<!-- raw HTML omitted --> visited = new HashSet&lt;&gt;();     visited.add(beginWord);     // list(hit-&gt;)          while (!queue.isEmpty()) {        int sz = queue.size();       while (sz&ndash; &gt; 0) { // m*n steps (26k2)         List<!-- raw HTML omitted --> currPath = queue.poll();         String lastWord = currPath.get(currPath.size()-1);         List<!-- raw HTML omitted --> neighbors = getNeighbors(lastWord, wordSet); //26k2         for (String neigh : neighbors) {           List<!-- raw HTML omitted --> newPath = new ArrayList&lt;&gt;(currPath);           newPath.add(neigh);           visited.add(neigh);           if (neigh.equals(endWord)) {             ans.add(newPath);           } else {             queue.offer(newPath);           }         }       }       for (String s : visited)  // remove used words from wordSet to avoid going back         wordSet.remove(s);     }          return ans;   }      private List<!-- raw HTML omitted --> getNeighbors(String word, Set<!-- raw HTML omitted --> wordSet) { // 26k2     List<!-- raw HTML omitted --> neighbors = new LinkedList&lt;&gt;();     for (int i = 0; i &lt; word.length(); i++) {       char[] ch = word.toCharArray();       for (char c = &lsquo;a&rsquo;; c &lt;= &lsquo;z&rsquo;; c++) {         ch[i] = c;         String str = new String(ch);         if (wordSet.contains(str)) // only get valid neighbors           neighbors.add(str);       }     }     return neighbors;   } }</p>
+<h1 id="127-word-ladder">127. Word Ladder</h1>
+<p>class Solution {   public int ladderLength(String beginWord, String endWord, List<!-- raw HTML omitted --> wordList) {     Set<!-- raw HTML omitted --> dict = new HashSet&lt;&gt;(wordList);     Queue<!-- raw HTML omitted --> queue = new ArrayDeque&lt;&gt;();     Set<!-- raw HTML omitted --> visited = new HashSet&lt;&gt;();     int level = 0;     // 1. init     queue.offer(beginWord);     visited.add(beginWord);     while (!queue.isEmpty()) { // n(26k2)       int size = queue.size();       while (size &gt; 0) {         String tmp = queue.poll();         size&ndash;;         if (tmp.equals(endWord)) {           return level + 1;         }         // generate next word         List<!-- raw HTML omitted --> nei = getNei(tmp, visited, dict);         for (String neiWord : nei) {           queue.offer(neiWord);           visited.add(neiWord);         }       }       level++;     }     return 0;   }   private List<!-- raw HTML omitted --> getNei(String tmp, Set<!-- raw HTML omitted --> visited, Set<!-- raw HTML omitted --> dict) { // 26k2      List<!-- raw HTML omitted --> nei = new ArrayList&lt;&gt;(); //      char[] arr = tmp.toCharArray(); // k          for (int i = 0; i &lt; arr.length; i++) { // k       char orig = arr[i];       for (char j = &lsquo;a&rsquo;; j &lt;= &lsquo;z&rsquo;; j++) { // 26         if (j != orig) {           arr[i] = j;           String newStr = new String(arr); // k           if (dict.contains(newStr) &amp;&amp; !visited.contains(newStr)) { //              nei.add(newStr);           }           arr[i] = orig;         }       }     }     return nei;   } }</p>
+<h1 id="102-binary-tree-level-order-traversal">102. Binary Tree Level Order Traversal</h1>
+<p>class Solution {    List&lt;List<!-- raw HTML omitted -->&gt; levels = new ArrayList&lt;List<!-- raw HTML omitted -->&gt;();    public void helper(TreeNode node, int level) {     // start the current level     if (levels.size() == level)       levels.add(new ArrayList<!-- raw HTML omitted -->());       // fulfill the current level      levels.get(level).add(node.val);       // process child nodes for the next level      if (node.left != null)       helper(node.left, level + 1);      if (node.right != null)       helper(node.right, level + 1);   }      public List&lt;List<!-- raw HTML omitted -->&gt; levelOrder(TreeNode root) {     if (root == null) return levels;     helper(root, 0);     return levels;   } }  // Method 2: iterative   public List&lt;List<!-- raw HTML omitted -->&gt; levelOrder(TreeNode root) {     Queue<!-- raw HTML omitted --> queue = new LinkedList<!-- raw HTML omitted -->();     List&lt;List<!-- raw HTML omitted -->&gt; wrapList = new LinkedList&lt;List<!-- raw HTML omitted -->&gt;();     if(root == null) return wrapList;     queue.offer(root);     while(!queue.isEmpty()){       int levelNum = queue.size();       List<!-- raw HTML omitted --> subList = new LinkedList<!-- raw HTML omitted -->();       for(int i=0; i&lt;levelNum; i++) {         if(queue.peek().left != null) queue.offer(queue.peek().left);         if(queue.peek().right != null) queue.offer(queue.peek().right);         subList.add(queue.poll().val);       }       wrapList.add(subList);     }     return wrapList;   }</p>
+<h1 id="103-binary-tree-zigzag-level-order-traversal">103. Binary Tree Zigzag Level Order Traversal</h1>
+<p>(Tang)</p>
+<p>// dfs recursion: tc/sc: o(n)  protected void DFS(TreeNode node, int level, List&lt;List<!-- raw HTML omitted -->&gt; results) {   if (level == results.size()) {    LinkedList<!-- raw HTML omitted --> newLevel = new LinkedList<!-- raw HTML omitted -->();    results.add(newLevel);   }     if (level % 2 == 0)     results.get(level).add(node.val);    else     results.get(level).add(0, node.val);       if (node.left != null) DFS(node.left, level + 1, results);   if (node.right != null) DFS(node.right, level + 1, results);  }   public List&lt;List<!-- raw HTML omitted -->&gt; zigzagLevelOrder(TreeNode root) {    List&lt;List<!-- raw HTML omitted -->&gt; results = new ArrayList&lt;List<!-- raw HTML omitted -->&gt;();   if (root == null) {    return results;   }   DFS(root, 0, results);   return results;  }   // iterative, bfs, tc/sc: o(n) class Solution {  public List&lt;List<!-- raw HTML omitted -->&gt; zigzagLevelOrder(TreeNode root) {   List&lt;List<!-- raw HTML omitted -->&gt; res = new ArrayList&lt;&gt;();   if (root == null) return res;   Queue<!-- raw HTML omitted --> queue = new LinkedList&lt;&gt;();   queue.add(root);   boolean zigzag = false;   while (!queue.isEmpty()) {     List<!-- raw HTML omitted --> level = new ArrayList&lt;&gt;();     int cnt = queue.size();     for (int i = 0; i &lt; cnt; i++) {       TreeNode node = queue.poll();       if (zigzag) {         level.add(0, node.val);       } else {         level.add(node.val);       }       if (node.left != null) {         queue.add(node.left);       }       if (node.right != null) {         queue.add(node.right);       }     }     res.add(level);     zigzag = !zigzag;   }   return res;  } }</p>
+<h1 id="108-convert-sorted-array-to-binary-search-tree"><strong>108. Convert Sorted Array to Binary Search Tree</strong></h1>
+<p>(Tang)</p>
+<p>/*</p>
+<p>ambiguity of choosing root happens when the number of input is even.</p>
+<p>*/</p>
+<table>
+<thead>
+<tr>
+<th>class Solution { // tc: o(n), sc: o(height), height = log(n)   int[] nums;   public TreeNode helper(int left, int right) {   if (left &gt; right) return null;    // always choose left middle node as a root   int p = (left + right) / 2;    // always choose right middle node as a root   // if ((left + right) % 2 == 1) ++p;   // choose random middle node as a root   // if ((left + right) % 2 == 1) p += rand.nextInt(2);     // preorder traversal: node -&gt; left -&gt; right   TreeNode root = new TreeNode(nums[p]);   root.left = helper(left, p - 1);   root.right = helper(p + 1, right);   return root;  }   public TreeNode sortedArrayToBST(int[] nums) {   this.nums = nums;   return helper(0, nums.length - 1);  } }</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="979-distribute-coins-in-binary-tree">979. Distribute Coins in Binary Tree</h1>
+<p>(Tang)</p>
+<p>class Solution {   int ans;   public int distributeCoins(TreeNode root) {     ans = 0;     dfs(root);     return ans;   }    public int dfs(TreeNode node) { // dfs 当前节点需要 拿给子节点的金币个数     if (node == null) return 0;     int L = dfs(node.left);     int R = dfs(node.right);     ans += Math.abs(L) + Math.abs(R);     return node.val + L + R - 1;   }  // <a href="https://leetcode-cn.com/problems/distribute-coins-in-binary-tree/solution/zai-er-cha-shu-zhong-fen-pei-ying-bi-by-leetcode/">https://leetcode-cn.com/problems/distribute-coins-in-binary-tree/solution/zai-er-cha-shu-zhong-fen-pei-ying-bi-by-leetcode/</a>   /*   node.val + L + R - 1 表示当前节点需要 拿给子节点的金币个数 或者 从子节点拿给自己的金币的个数，即当前节点的金币的移动次数。因为是后序遍历，所以能保证子节点已经都得到了需要的金币，同时 ans += Math.abs(L) + Math.abs(R);记录了子节点的移动次数，故累加后即是最终结果。          0(0+2-1-1=0) +2+|-1| = 3     /       \  +0 3(3+0+0-1=2)  0(0+0+0-1=-1) +0        */ }</p>
+<h1 id="股票买卖专题">股票买卖专题</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>k transaction</th>
+<th>no limit transactions</th>
+<th>cooldown time</th>
+<th>transaction fee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>121</td>
+<td>x(k == 1)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>122</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>714</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td>x</td>
+</tr>
+<tr>
+<td>123</td>
+<td>x(k&lt;=2)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>188</td>
+<td>x(&lt;= n-1)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>309</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="121-best-time-to-buy-and-sell-stockhttpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-only-one-time-transaction"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">121. Best Time to Buy and Sell Stock</a> (only one time transaction)</h2>
+<p><img src="https://lh4.googleusercontent.com/J7AXyDTN_xlUHI_35PodLx3vrXUx7Dt9c-nkw9WsD_uejgfqsO2kFf6rpsNXoIvTAl76f1FqxM1n8UZPUort7xsystc1DFAvAHP3rkylI-PYQVFQvVuWbOccsqygEksgWeVhvzuf" alt="img"></p>
+<p>public int maxProfit(int[] prices) {     if (prices == null || prices.length == 0) {       return 0;     }     int len = prices.length;     int[] buy = new int[len]; // max profit at i     int[] sell = new int[len];     buy[0] = -prices[0];     for (int i = 1; i &lt; len; i++) {       buy[i] = Math.max(buy[i-1], -prices[i]);       sell[i] = Math.max(sell[i-1], buy[i-1] + prices[i]);     }     return sell[len - 1];   }</p>
+<p>public int maxProfit(int[] prices) {
+if (prices == null || prices.length == 0) {
+return 0;
+}
+int len = prices.length;
+int buy = -prices[0];
+int sell = 0;
+for (int i = 1; i &lt; len; i++) {
+int tmp = buy;
+buy = Math.max(buy, -prices[i]);
+sell = Math.max(sell, tmp + prices[i]);
+}
+return sell;
+}</p>
+<p>public class Solution {   public int maxProfit(int prices[]) {     int minprice = Integer.MAX_VALUE;     int maxprofit = 0;     for (int i = 0; i &lt; prices.length; i++) {       if (prices[i] &lt; minprice)         minprice = prices[i];       else if (prices[i] - minprice &gt; maxprofit)         maxprofit = prices[i] - minprice;     }     return maxprofit;   } } // tc: o(n), sc: o(1)   public int maxProfit(int[] prices) {     if (prices == null || prices.length == 0) {       return 0;     }     int len = prices.length;     int buy = -prices[0];     int sell = 0;     for (int i = 1; i &lt; len; i++) {       //int tmp = buy;       buy = Math.max(buy, -prices[i]);       sell = Math.max(sell, buy + prices[i]);     }     return sell;   }</p>
+<h2 id="122-best-time-to-buy-and-sell-stock-iihttpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-ii-no-limit-on-transaction-times"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">122. Best Time to Buy and Sell Stock II</a> (no limit on transaction times)</h2>
+<p><img src="https://lh6.googleusercontent.com/C8s6j6VXcHrJapyaKE9PrV_ZmsTyZSx9KEC_TCbpfG3gcUqC7nwPByKpwhNZkpxEnaSPPBAb0JJAbf--05NXS1RrGiE9lr_aCEDFM-XTqZunDgJBeS6xkFX0cjS5ZqzlGrSPhx3c" alt="img"></p>
+<p>class Solution {   public int maxProfit(int[] prices) {     int maxprofit = 0;     for (int i = 1; i &lt; prices.length; i++) {       if (prices[i] &gt; prices[i - 1])         maxprofit += prices[i] - prices[i - 1];     }     return maxprofit;   } }</p>
+<p>DP method</p>
+<p>/* dp[i][0] 表示第 ii 天交易完后手里没有股票的最大利润， dp[i][1] 表示第 ii 天交易完后手里持有一支股票的最大利润（i从 00 开始）有第i天。 */</p>
+<p>public int maxProfit(int[] prices) {     int n = prices.length;     int[][] dp = new int[n][2];     dp[0][0] = 0;     dp[0][1] = -prices[0];     for (int i = 1; i &lt; n; ++i) {       dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);       dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);     }     return dp[n - 1][0];   }</p>
+<p>/*
+space optimization
+*/</p>
+<p>class Solution {   public int maxProfit(int[] prices) {     int n = prices.length;     int dp0 = 0, dp1 = -prices[0];     for (int i = 1; i &lt; n; ++i) {       int newDp0 = Math.max(dp0, dp1 + prices[i]);       int newDp1 = Math.max(dp1, dp0 - prices[i]);       dp0 = newDp0;       dp1 = newDp1;     }     return dp0;   } }</p>
+<h2 id="714-best-time-to-buy-and-sell-stock-with-transaction-feehttpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-with-transaction-fee-122--transaction-fee"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. Best Time to Buy and Sell Stock with Transaction Fee</a> (122 + transaction fee)</h2>
+<p><img src="https://lh3.googleusercontent.com/J4aIfqpqrRD12s9t5HPbc8qK3F-z37hjMwtJud5hs30Dlhx8EPZVSJj4Nh1-awEOJURSR6_3ISDCbgxRwmnmKa_ZOnHEvI0JZK3968RQP6fXrHak_jtq-fv5ZZdtNMyzss_WASA_" alt="img"></p>
+<table>
+<thead>
+<tr>
+<th>class Solution { /* dp[i][0] 表示第 ii 天交易完后手里没有股票的最大利润， dp[i][1] 表示第 ii 天交易完后手里持有一支股票的最大利润（i从 00 开始）。 */   public int maxProfit0(int[] prices, int fee) {     int n = prices.length;     int[][] dp = new int[n][2];     dp[0][0] = 0;     dp[0][1] = -prices[0];     for (int i = 1; i &lt; n; ++i) {       dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee);       dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);     }     return dp[n - 1][0];   } /* space optimization, greedy methodproofs from dp to greedy: when current i is minimum so far, buy1 will update, while sell1 cannot be larger than history largest. Example: see code 121 */   public int maxProfit(int[] prices, int fee) {     int n = prices.length;     int sell = 0, buy = -prices[0];     for (int i = 1; i &lt; n; ++i) {        buy = Math.max(buy, sell - prices[i]);            sell = Math.max(sell, buy + prices[i] - fee);     }     return sell;   }/* space optimization, correct */   public int maxProfit(int[] prices, int fee) {    int n = prices.length;    int sell = 0, buy = -prices[0], tmp = 0;    for (int i = 1; i &lt; n; ++i) {      tmp = sell;      sell = Math.max(sell, buy + prices[i] - fee);      buy = Math.max(buy, tmp - prices[i]);    }    return sell;  }  }</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="123-best-time-to-buy-and-sell-stock-iiihttpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-iii-at-most-2-times-transaction-hard"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/">123. Best Time to Buy and Sell Stock III</a> (at most 2 times transaction, hard)</h2>
+<p><img src="https://lh6.googleusercontent.com/z0mYaoJm7YOVwCrIUzMYy4xFpY1G0tAtQTwVV6i3IcrhEnd89hch8TU1pb6QJTJXnXo5JJAC0JW733c0wALaYBfFJtKYAaMZbvlWoqjV7lH7cZz95LwjR9Xdw8CkIqiLAGdFv2fq" alt="img"></p>
+<p>class Solution { // greedy, DP method see 188   public int maxProfit(int[] prices) {     int n = prices.length;     int buy1 = -prices[0], sell1 = 0; // profit     int buy2 = -prices[0], sell2 = 0;     for (int i = 1; i &lt; n; ++i) {       buy1 = Math.max(buy1, -prices[i]); // min prices [0, i)       sell1 = Math.max(sell1, buy1 + prices[i]); // hist, sell at ith d       buy2 = Math.max(buy2, sell1 - prices[i]); // hist, buy at ith d       sell2 = Math.max(sell2, buy2 + prices[i]); // hist, sell at ith d     }     return sell2;   } }</p>
+<p>/* Ambiguity resolved, DP method with dimension optimization,proofs from dp to greedy: when current i is minimum so far, buy1 will update, while sell1 cannot be larger than history largest. Example: see code 121 */   public int maxProfit(int[] prices) {     int n = prices.length;     int buy1 = -prices[0], sell1 = 0, pbuy1 = -prices[0], psell1 = 0;     int buy2 = -prices[0], sell2 = 0, pbuy2 = -prices[0], psell2 = 0;     for (int i = 1; i &lt; n; ++i) {         buy1 = Math.max(pbuy1, -prices[i]);       sell1 = Math.max(psell1, pbuy1 + prices[i]);       buy2 = Math.max(pbuy2, sell1 - prices[i]);       sell2 = Math.max(psell2, pbuy2 + prices[i]);               pbuy1 = buy1;       pbuy2 = buy2;       psell1 = sell1;       psell2 = sell2;     }     return sell2;   }</p>
+<h2 id="188-best-time-to-buy-and-sell-stock-ivhttpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-iv-at-most-k-times-transaction-hard"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/">188. Best Time to Buy and Sell Stock IV</a> (at most K times transaction, hard)</h2>
+<p><img src="https://lh5.googleusercontent.com/HlE8W5qR_X0U9XOXIx7nSBC8FV6hg1q020RljjrSCCm6rHbJXfzALDaUNJJkZkB4ibBQrITxyahSJ1nxbEIIiu11JMQKtS9uNjQWfPEWAzQ__uUavswqfITOn1zrsPsKgEDiE-83" alt="img"></p>
+<p>/**  * dp[i, j] represents the max profit up until prices[j] using at most i transactions. (times &lt;= i)   * dp[i, j] = max(dp[i, j-1], prices[j] - prices[jj] + dp[i-1, jj]) { jj in range of [0, j-1] }  *     = max(dp[i, j-1], prices[j] + max(dp[i-1, jj] - prices[jj]))  * dp[0, j] = 0; 0 transactions makes 0 profit  * dp[i, 0] = 0; if there is only one price data point you can&rsquo;t make any transaction.  */  class Solution {   public int maxProfit(int k, int[] prices) {     int n = prices.length;     if (n &lt;= 1)       return 0;      int[][] dp = new int[k+1][n];     for (int i = 1; i &lt;= k; i++) {       int localMax = dp[i-1][0] - prices[0]; // -cost [0, i-1]       for (int j = 1; j &lt; n; j++) {         dp[i][j] = Math.max(dp[i][j-1], prices[j] + localMax);         localMax = Math.max(localMax, dp[i-1][j] - prices[j]);// profit at j, buy at j       }     }     return dp[k][n-1];   } }</p>
+<p>// Time complexity: O(n*k). Space complexity: O(k).</p>
+<p>class Solution {</p>
+<p>public int maxProfit(int k, int[] prices) {</p>
+<p>​    if (k == 0) return 0;</p>
+<p>​</p>
+<p>​    int[] profit = new int[k+1];</p>
+<p>​    int[] cost = new int[k+1];</p>
+<p>​    profit[0] = 0;</p>
+<p>​    Arrays.fill(cost, Integer.MAX_VALUE);</p>
+<p>​</p>
+<p>​    for (int price: prices) {</p>
+<p>​      for (int i = 0; i &lt; k; i++) {</p>
+<p>​        cost[i+1] = Math.min(cost[i+1], price - profit[i]);</p>
+<p>​        profit[i+1] = Math.max(profit[i+1], price - cost[i+1]);</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return profit[k];</p>
+<p>}</p>
+<p>}</p>
+<h2 id="309-best-time-to-buy-and-sell-stock-with-cooldownhttpsleetcodecomproblemsbest-time-to-buy-and-sell-stock-with-cooldown"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. Best Time to Buy and Sell Stock with Cooldown</a></h2>
+<p><img src="https://lh6.googleusercontent.com/cU1FVY5vQHrNxb-kWG9VlhxatKrEUV3hgsQh2_G-9-VYCz8OebL55FFclDjDO8RFEWFWdHMjPZV-XX995h9fV9hLwuFUp-4Vl8Srdx0gzu8FqRBLPEx1689otZCOvQtt-UNA4Kz1" alt="img"></p>
+<p>class Solution {   public int maxProfit0(int[] prices) {     if (prices.length == 0) {       return 0;     }      int n = prices.length;     // f[i][0]: 手上持有股票的最大收益     // f[i][1]: 手上不持有股票，并且处于冷冻期中的累计最大收益     // f[i][2]: 手上不持有股票，并且不在冷冻期中的累计最大收益     int[][] f = new int[n][3];     f[0][0] = -prices[0];     for (int i = 1; i &lt; n; ++i) {       f[i][0] = Math.max(f[i - 1][0], f[i - 1][2] - prices[i]);       f[i][1] = f[i - 1][0] + prices[i];       f[i][2] = Math.max(f[i - 1][1], f[i - 1][2]);     }     return Math.max(f[n - 1][1], f[n - 1][2]);   }// Optimization w space   public int maxProfit(int[] prices) {     int sold = Integer.MIN_VALUE, held = Integer.MIN_VALUE, reset = 0;     for (int price : prices) {      int preSold = sold;         sold = held + price;      held = Math.max(held, reset - price);      reset = Math.max(reset, preSold);     }        return Math.max(sold, reset);   }   }</p>
+<h1 id="437-path-sum-iii">437. Path Sum III</h1>
+<p>public int pathSum(TreeNode root, int targetSum) {</p>
+<p>​    if (root == null) return 0;</p>
+<p>​    Map&lt;Integer, Integer&gt; prefixSum = new HashMap&lt;&gt;();</p>
+<p>​    //map root to cur node prefixsum, frequency</p>
+<p>​    int[] count = new int[1];</p>
+<p>​    //initial with a pair of (0, 1) in case we have valid path from root to current node</p>
+<p>​    prefixSum.put(0,1);</p>
+<p>​    dfs(root, 0, targetSum, prefixSum, count);</p>
+<p>​    return count[0];</p>
+<p>}</p>
+<p>/*</p>
+<p>Time : O(n)</p>
+<p>Space: O(n)</p>
+<p>*/</p>
+<p>private void dfs(TreeNode root, int pathSum, int targetSum, Map&lt;Integer, Integer&gt; prefixSum, int[] count) {</p>
+<p>​    if (root == null) return;</p>
+<p>​</p>
+<p>​    pathSum = root.val + pathSum;</p>
+<p>​</p>
+<p>​    if (prefixSum.containsKey(pathSum - targetSum)) {</p>
+<p>​      count[0] += prefixSum.get(pathSum - targetSum);</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    prefixSum.put(pathSum, prefixSum.getOrDefault(pathSum, 0) + 1);</p>
+<p>​</p>
+<p>​    dfs(root.left, pathSum, targetSum, prefixSum, count);</p>
+<p>​    dfs(root.right, pathSum, targetSum, prefixSum, count);</p>
+<p>​</p>
+<p>​    //prefixSum at least have key of pathSum with value 1, just remove by deducting 1</p>
+<p>​    prefixSum.put(pathSum, prefixSum.get(pathSum) - 1);</p>
+<p>​</p>
+<p>}</p>
+<h1 id="96-unique-binary-search-trees">96. Unique Binary Search Trees</h1>
+<p>class Solution {</p>
+<p>/**</p>
+<p>* 1, 2, 3, 4 &hellip;. n</p>
+<p>* root = 1 root.left = null and root.right = [2, &hellip;. n]</p>
+<p>* root = 2 root.left = [1] and root.right = [3, 4, &hellip;n]</p>
+<p>* root = 3 root.left = [1, 2] and root.right = [4, &hellip;n]</p>
+<p>* &hellip;</p>
+<p>* root = i root.left = [1, .. i -1] and root.right = [i+1 .. n]</p>
+<p>* &hellip;</p>
+<p>* root = n root.left = [1, &hellip; n-1] and root.right = null</p>
+<ul>
+<li></li>
+</ul>
+<p>* f(n) = f(0) * f(n - 1) + f(1)*f(n-2) + f(2)*f(n - 2) +&hellip;&hellip;+ f(n-1) * f(0)</p>
+<p>* unit case f(0) = 1 [multiple] f(1) = 1</p>
+<p>**/</p>
+<p>public int numTrees(int n) {</p>
+<p>​    if (n &lt; 1) {</p>
+<p>​      throw new IllegalStateException();</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    int[] dp = new int[n+1];</p>
+<p>​    dp[0] = 1;</p>
+<p>​    dp[1] = 1;</p>
+<p>​</p>
+<p>​    for (int i = 2; i &lt;= n; i++) {</p>
+<p>​      int start = 0;</p>
+<p>​      int end = i - 1;</p>
+<p>​      while (start &lt;= end) {</p>
+<p>​        if (start == end) {</p>
+<p>​           dp[i] += (dp[start]*dp[end]);</p>
+<p>​        } else {</p>
+<p>​           dp[i] += (dp[start]*dp[end]*2);</p>
+<p>​        }</p>
+<p>​        start++;</p>
+<p>​        end&ndash;;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​</p>
+<p>​    return dp[n];</p>
+<p>}</p>
+<p>}</p>
+<h1 id="1120-maximum-average-subtree">1120. Maximum Average Subtree</h1>
+<p>class Solution {   public double maximumAverageSubtree(TreeNode root) {     double[] maxAvg = {Integer.MIN_VALUE};     helper(root, maxAvg);     return maxAvg[0];   }      private double[] helper(TreeNode root, double[] maxAvg) {     if (root == null) {       return new double[]{0.0, 0.0};     }     double[] left, right;     left = helper(root.left, maxAvg);     right = helper(root.right, maxAvg);     double counts = left[0] + right[0] + 1.0;     double sum = left[1] + right[1] + (double) root.val;     maxAvg[0] = Math.max(maxAvg[0], (double) sum / counts);     return new double[]{counts, sum};   } }</p>
+<h1 id="1339-maximum-product-of-splitted-binary-tree">1339. Maximum Product of Splitted Binary Tree</h1>
+<p>class Solution { // tc/sc: O(n)   private static final int MOD = 1000000007;   public int maxProduct(TreeNode root) {     List<!-- raw HTML omitted --> sumVals = new ArrayList&lt;&gt;();     long totSum = helper(root, sumVals);          long maxProd = Integer.MIN_VALUE;     for (int sum : sumVals) {       maxProd = Math.max(maxProd, sum * (totSum - sum));     }     return (int) (maxProd % MOD);   }      private int helper(TreeNode root, List<!-- raw HTML omitted --> sumVals) {     if (root == null) {       return 0;     }     int left = helper(root.left, sumVals);     int right = helper(root.right, sumVals);     int curSum = left + right + root.val;     sumVals.add(curSum);     return curSum % MOD;   } }</p>
+<h1 id="151--reverse-words-in-a-string">151  Reverse Words in a String</h1>
+<p>//luo</p>
+<p>step 1: remove spaces</p>
+<p>step 2: reverse overall</p>
+<p>step 3: reverse each word</p>
+<p>// TC: O(n) SC: O(1) 除了换char array外没有额外空间</p>
+<p>class Solution {
+public String reverseWords(String s) {
+char[] array = s.toCharArray();
+int slow = 0; // 0..slow - 1 to keep*
+for (int i = 0; i &lt; array.length; i++) { // fast pointer
+char cur = array[i];
+if (cur != ' &lsquo;) {
+array[slow++] = cur;
+} else if (i &gt;= 1 &amp;&amp; array[i - 1] != ' &lsquo;) {
+array[slow++] = cur;
+}
+}
+if (slow - 1 &lt; array.length &amp;&amp; array[slow - 1] == ' &lsquo;) { //1. 这里是slow-1，不是slow
+slow&ndash;;
+}</p>
+<pre><code>int start = 0;
+int end = 0;
+for (int i = 0; i &lt; slow; i++) {
+  if (i == 0 || array[i - 1] == ' ') {
+    start = i;
+  }
+  if (i == slow - 1 || array[i + 1] == ' ') {
+    end = i;
+    reverse(array, start, end);
+  }
+}
+reverse(array, 0, slow - 1);
+return new String(array, 0, slow);
+</code></pre>
+<p>}
+private void reverse(char[] array, int start, int end) {
+while (start &lt; end) { // 2.
+char tmp = array[start];
+array[start] = array[end];
+array[end] = tmp;<br>
+start++;
+end&ndash;;
+}</p>
+<p>}
+}</p>
+<h1 id="152--maximum-product-subarray">152  Maximum Product Subarray</h1>
+<p>//luo</p>
+<p>// TC: O(n) SC:O(1)</p>
+<p>class Solution {   public int maxProduct(int[] nums) {     int n = nums.length; //     int[] dpMax = new int[n]; //     int[] dpMin = new int[n];      //     dpMax[0] = nums[0]; //     dpMin[0] = nums[0];          int dpMax = nums[0];     int dpMin = nums[0];     int max = nums[0];          for (int i = 1; i &lt; n; i++) {       // dpMax[i] = Math.max(nums[i], Math.max(dpMax[i - 1] * nums[i], dpMin[i - 1] * nums[i]));       // dpMin[i] = Math.min(nums[i], Math.min(dpMin[i - 1] * nums[i], dpMax[i - 1] * nums[i]));       int tmpMax = dpMax;       dpMax = Math.max(nums[i], Math.max(dpMax * nums[i], dpMin * nums[i]));       dpMin = Math.min(nums[i], Math.min(tmpMax * nums[i], dpMin * nums[i]));       max = Math.max(max, dpMax);     }     return max;   } }</p>
+<h1 id="158--read-n-characters-given-read4-ii---call-multiple-times">158  Read N Characters Given read4 II - Call Multiple Times</h1>
+<h1 id="lowest-common-ancestors-专题">Lowest Common Ancestors 专题</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>two existed nodes</th>
+<th>two nodes</th>
+<th>tree node w parent</th>
+<th>k nodes LCA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>236</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1644</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1650</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr>
+<td>1676</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<h2 id="236-lowest-common-ancestor-of-a-binary-treehttpsleetcodecomproblemslowest-common-ancestor-of-a-binary-tree"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">236. Lowest Common Ancestor of a Binary Tree</a></h2>
+<p>(Tang)</p>
+<p><img src="https://lh3.googleusercontent.com/BbzojzJqtz-c8vX066iJyeRdIFC8nS0A2jbMRZj5Dkh8xObsuCwdnXJrB1bfl6FRBlZ3NSl19w7t8euvTVL8gmHxBQj96M7YX7M8mO76N3iUNjOeUC-55VBPpJhiaPZZ1pf_77QX" alt="img"></p>
+<p>class Solution { // tc/sc: o(N)   public TreeNode lowestCommonAncestor0(TreeNode root, TreeNode p, TreeNode q) {     if(root == null || root == p || root == q) return root;     TreeNode left = lowestCommonAncestor(root.left, p, q);     TreeNode right = lowestCommonAncestor(root.right, p, q);     if(left != null &amp;&amp; right != null)  return root;     return left != null ? left : right;   }    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {     // Stack for tree traversal     Deque<!-- raw HTML omitted --> stack = new ArrayDeque&lt;&gt;();      // 1. HashMap for parent pointers     Map&lt;TreeNode, TreeNode&gt; parent = new HashMap&lt;&gt;();      parent.put(root, null);     stack.push(root);      // Iterate until we find both the nodes p and q     while (!parent.containsKey(p) || !parent.containsKey(q)) {        TreeNode node = stack.pop();        // While traversing the tree, keep saving the parent pointers.       if (node.left != null) {         parent.put(node.left, node);         stack.push(node.left);       }       if (node.right != null) {         parent.put(node.right, node);         stack.push(node.right);       }     }      // 2. Ancestors set() for node p.     Set<!-- raw HTML omitted --> ancestors = new HashSet&lt;&gt;();      // Process all ancestors for node p using parent pointers.     while (p != null) {       ancestors.add(p);       p = parent.get(p);     }      // 3. The first ancestor of q which appears in     // p&rsquo;s ancestor set() is their lowest common ancestor.     while (!ancestors.contains(q))       q = parent.get(q);     return q;   }  }</p>
+<h2 id="1644-lowest-common-ancestor-of-a-binary-tree-iihttpsleetcodecomproblemslowest-common-ancestor-of-a-binary-tree-ii"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/">1644. Lowest Common Ancestor of a Binary Tree II</a></h2>
+<p>/* <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/discuss/933835/Java.-Difference-from-236-is-you-need-to-search-the-entire-tree">https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/discuss/933835/Java.-Difference-from-236-is-you-need-to-search-the-entire-tree</a>.  Time Complexity: O(N) Space Complexity: O(H), H is the height of the tree  This question is similar to 236. Last Common Ancestor of Binary Tree. Question 236 has two important premises:   1. It is guaranteed that both p and q are in the tree.   2. A node can be a descendant of itself.  But for this question, the premises are different:  It is NOT guaranteed that both p and q are in the tree. A node can still be a descendant of itself. Hence,  We need a way to record if we&rsquo;ve seen both p and q We need to traverse the entire tree even after we&rsquo;ve found one of them. */  class Solution0 {   boolean pFound = false;   boolean qFound = false;    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {     TreeNode LCA = LCA(root, p, q);     return pFound &amp;&amp; qFound ? LCA : null;   }      public TreeNode LCA(TreeNode root, TreeNode p, TreeNode q) {     if (root == null) return root;     TreeNode left = LCA(root.left, p, q);        TreeNode right = LCA(root.right, p, q);     if (root == p) {       pFound = true;       return root;     }     if (root == q) {       qFound = true;       return root;     }     return left == null ? right : right == null ? left : root;   } }   class Solution {   int count = 0;      public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {     TreeNode LCA = LCA(root, p, q);     return count == 2 ? LCA : null;   }      public TreeNode LCA(TreeNode root, TreeNode p, TreeNode q) {     if (root == null) return root;     TreeNode left = LCA(root.left, p, q);        TreeNode right = LCA(root.right, p, q);     if (root == p || root == q) {       count++;       return root;     }     return left == null ? right : right == null ? left : root;   } }</p>
+<p>/* Iterative solution */class Solution {   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {     Map&lt;TreeNode, TreeNode&gt; parents = new HashMap&lt;&gt;();      Stack<!-- raw HTML omitted --> stack = new Stack&lt;&gt;();     parents.put(root, null);      stack.push(root);     while (!stack.isEmpty() &amp;&amp; (!parents.containsKey(p) || !parents.containsKey(q))) {       TreeNode curr = stack.pop();       if (curr.left != null) {         parents.put(curr.left, curr); stack.push(curr.left);       }       if (curr.right != null) {         parents.put(curr.right, curr); stack.push(curr.right);       }     }     if(!parents.containsKey(q) || !parents.containsKey(q)){       return null;     }     Set<!-- raw HTML omitted --> pAns = new HashSet&lt;&gt;();     while (p != null) {       pAns.add(p);       p = parents.get(p);     }     while (!pAns.contains(q)) {       q = parents.get(q);       if (q == null) break; // prevent the infinite loop     }     return q;   } }</p>
+<h2 id="1650-lowest-common-ancestor-of-a-binary-tree-iiihttpsleetcodecomproblemslowest-common-ancestor-of-a-binary-tree-iii"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/">1650. Lowest Common Ancestor of a Binary Tree III</a></h2>
+<p>/* // Definition for a Node. class Node {   public int val;   public Node left;   public Node right;   public Node parent; }; */</p>
+<p>class Solution {   public Node lowestCommonAncestor(Node p, Node q) {     int pDepth = getDepth(p);      int qDepth = getDepth(q);          Node x = pDepth &lt; qDepth ? p : q;     Node y = pDepth &lt; qDepth ? q : p;          int diff = Math.abs(qDepth - pDepth);     while(diff&ndash; &gt; 0) {       y = y.parent;     }          while(x != y) {       x = x.parent;       y = y.parent;     }          return x;   }      private int getDepth(Node node) {     if (node == null) return 0;     int count = 0;      while(node != null) {       node = node.parent;       count++;     }          return count;   } }</p>
+<p>class Solution {   public Node lowestCommonAncestor0(Node p, Node q) {     Set<!-- raw HTML omitted --> set = new HashSet();     while(p!=null){       if(set.contains(p)) return p;       set.add(p);       p = p.parent;       Node t = p;       p = q;       q = t;     }          while(q!=null){       if(set.contains(q)) return q;       // set.add(q);       q = q.parent;     }     return null;   } /* Proofs: Leetcode 160, two pointers */   public Node lowestCommonAncestor(Node p, Node q) {     Node a = p, b = q;     while (a != b) {       a = a == null? q : a.parent;       b = b == null? p : b.parent;       }     return a;   } }</p>
+<p><img src="https://lh3.googleusercontent.com/pet2nqko4A9PCvKwMwvZt3ZXTSSaIXvqVU7ki49EkNHG_7YfArPeIRq-ofNNw50Z2ZZkW-vMqfcPDoo4zg_Zsyxgbkd0xrIhRe_M4wLjQBqMbL6_RAl-KYrfXauiJRs5onJ3VQIC" alt="img"></p>
+<p>class Solution { // DFS   public Node lowestCommonAncestor(Node p, Node q) {     Node root = p;     while(root.parent != null) {       root = root.parent;     }     return helper(root, p, q);   }   Node helper(Node root, Node p, Node q) {     if (root == null) return null;     if (root == p || root == q) return root;          Node left = helper(root.left, p, q);     Node right = helper(root.right, p, q);     if (left != null &amp;&amp; right != null) return root;     if (left == null &amp;&amp; right != null) return right;     if (left != null &amp;&amp; right == null) return left;     return null;   } }</p>
+<h2 id="1676-lowest-common-ancestor-of-a-binary-tree-ivhttpsleetcodeca2020-07-02-1676-lowest-common-ancestor-of-a-binary-tree-iv"><a href="https://leetcode.ca/2020-07-02-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV/">1676. Lowest Common Ancestor of a Binary Tree IV</a></h2>
+<p>class Solution { // need iterative method   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {   Set<!-- raw HTML omitted --> set = new HashSet<!-- raw HTML omitted -->();   for (TreeNode n : nodes) set.add(n);   return helper(root, set);  }  private TreeNode helper(TreeNode root, Set<!-- raw HTML omitted --> set) {   // base case   if (root == null || set.contains(root)) {    return root;   }   TreeNode lr = helper(root.left, set);   TreeNode rr = helper(root.right, set);   if (lr != null &amp;&amp; rr != null) {    return root;   }   return lr != null ? lr : rr;  } }</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  My New Hugo Site 2021 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>
