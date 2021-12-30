@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on LeetCode Group Solution</title>
+    <link>https://openview2017.github.io/posts/</link>
+    <description>Recent content in Posts on LeetCode Group Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Dec 2021 14:28:28 -0800</lastBuildDate><atom:link href="https://openview2017.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Solution Blog via Hugo</title>
+      <link>https://openview2017.github.io/posts/setup-solution-blog-via-hugo/</link>
+      <pubDate>Thu, 30 Dec 2021 14:28:28 -0800</pubDate>
+      
+      <guid>https://openview2017.github.io/posts/setup-solution-blog-via-hugo/</guid>
+      <description>Leetcode group solution openview2017.github.io/</description>
+    </item>
+    
+  </channel>
+</rss>

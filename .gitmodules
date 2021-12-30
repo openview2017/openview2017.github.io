@@ -1,3 +1,6 @@
 [submodule "lc-solution/themes/ananke"]
 	path = lc-solution/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "leetcode-solution/themes/ananke"]
+	path = leetcode-solution/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
