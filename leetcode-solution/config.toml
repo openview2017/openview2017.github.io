@@ -1,4 +1,0 @@
-baseURL = 'https://openview2017.github.io/'
-languageCode = 'en-us'
-title = 'LeetCode Group Solution'
-theme = "ananke"
