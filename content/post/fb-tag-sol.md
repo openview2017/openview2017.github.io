@@ -93,129 +93,82 @@ class Solution:
 
 follow up：减法
 
-java
-
+```java
 class Solution {
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-​    return addTwoNumbers(l1, l2, false);
+     return addTwoNumbers(l1, l2, false);
 
   }
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2, boolean flip) {
+     ListNode dummyHead = new ListNode(0);
+     boolean allEqual = false;
+     //ListNode prev = dummyHead;
+     ListNode p = l1, q = l2, curr = dummyHead;
 
+     int carry = 0;
+     int last = 0;
 
+     while (p != null || q != null) {
+       if (p == null) {
+         return addTwoNumbers(l2, l1, true);
+       }      
 
-​    ListNode dummyHead = new ListNode(0);
+       int x = (p != null) ? p.val : 0;
+       int y = (q != null) ? q.val : 0;
+       if (x == y) {
+         allEqual = true;
+       } else {
+         allEqual = false;
+       }
 
-​    boolean allEqual = false;
+       int sum = x + carry - y;
+       carry = 0;
+       while (p.next != null && sum < 0) {
+         carry--;
+         sum += 10;
+       }
 
-​    //ListNode prev = dummyHead;
+       last = sum;
+       if (p.next != null) {  
+         curr.next = new ListNode(sum);
+         curr = curr.next;      
+       }
+       if (p != null) p = p.next;
+       if (q != null) q = q.next;
+     }
 
-​    ListNode p = l1, q = l2, curr = dummyHead;
+     if (carry < 0) {
+       last = carry;
+     } 
 
-​    int carry = 0;
+      if (carry == 0 && allEqual) {
+        return new ListNode(0);
+     }
+  
 
-​    int last = 0;
+     if (last < 0 && !flip) {
+      return addTwoNumbers(l2, l1, true);
+     }
 
-​    while (p != null || q != null) {
+     if (flip)
+       curr.next = new ListNode(-last);
+     else 
+       curr.next = new ListNode(last);
 
-​      if (p == null) {
-
-​        return addTwoNumbers(l2, l1, true);
-
-​      }      
-
-​      int x = (p != null) ? p.val : 0;
-
-​      int y = (q != null) ? q.val : 0;
-
-​      if (x == y) {
-
-​        allEqual = true;
-
-​      } else {
-
-​        allEqual = false;
-
-​      }
-
-​      int sum = x + carry - y;
-
-​      carry = 0;
-
-​      while (p.next != null && sum < 0) {
-
-​        carry--;
-
-​        sum += 10;
-
-​      }
-
-​      last = sum;
-
-​      if (p.next != null) {  
-
-​        curr.next = new ListNode(sum);
-
-​        curr = curr.next;      
-
-​      }
-
-
-
-​      if (p != null) p = p.next;
-
-​      if (q != null) q = q.next;
-
-​    }
-
-​    if (carry < 0) {
-
-​      last = carry;
-
-​    } 
-
-​     if (carry == 0 && allEqual) {
-
-​       return new ListNode(0);
-
-​    }
-
-​    
-
-​    if (last < 0 && !flip) {
-
-​      return addTwoNumbers(l2, l1, true);
-
-​    }
-
-​    if (flip)
-
-​      curr.next = new ListNode(-last);
-
-​    else 
-
-​      curr.next = new ListNode(last);
-
-​    
-
-​    return dummyHead.next;
-
+     return dummyHead.next;
   }
-
 }
 
-
-
 // 342 - 465 = -123
-
 // 9999999 - 9999 = 9990000
-
 // 999 - 999 = 0
-
 // 9999 - 9999999= -9990000
+```
+
+
 
 
 
@@ -225,37 +178,36 @@ High Level: 双指针, 慢指针跳着走
 
 (huang)
 
-C#
-
+```c#
 public class Solution {
 
   public int LengthOfLongestSubstring(string s) {
 
-​    Dictionary<int, int> slow_map = new Dictionary<int, int>();
+     Dictionary<int, int> slow_map = new Dictionary<int, int>();
 
-​    int slow = 0;
+     int slow = 0;
 
-​    int maxlen = 0;
+     int maxlen = 0;
 
-​    for(int fast = 0; fast < s.Length; fast ++)
+     for(int fast = 0; fast < s.Length; fast ++)
 
-​    {
+     {
 
-​      char ch = s[fast];
+       char ch = s[fast];
 
-​      if (slow_map.ContainsKey(ch)){
+       if (slow_map.ContainsKey(ch)){
 
-​        slow = Math.Max(slow, slow_map[ch] + 1);
+         slow = Math.Max(slow, slow_map[ch] + 1);
 
-​      }
+       }
 
-​      maxlen = Math.Max(maxlen, fast - slow + 1);
+       maxlen = Math.Max(maxlen, fast - slow + 1);
 
-​      slow_map[ch] = fast;
+       slow_map[ch] = fast;
 
-​    }
+     }
 
-​    return maxlen;
+     return maxlen;
 
   }
 
@@ -330,6 +282,9 @@ private static List<String> longestSubstr(String s) {
 }
 
 }
+```
+
+
 
 
 
@@ -415,8 +370,6 @@ High Level: 找第k个数 + recursion
 
 High Level：
 
-
-
 Java:
 
 ```java
@@ -487,8 +440,6 @@ class Solution {
 # 6. Zigzag Conversion
 
 （tang）
-
-
 
 High Level: 
 
@@ -586,6 +537,7 @@ class Solution {
 
 Java:
 
+```java
 Time O(n) n is the length of input string
 
 Space : O(1)
@@ -594,73 +546,76 @@ class Solution {
 
   public int myAtoi(String s) {
 
-​    if (s == null || s.length() == 0) {
+      if (s == null || s.length() == 0) {
 
-​      return 0;
+        return 0;
 
-​    }
+      }
 
-​    //maintain an index to loop the char in string
+      //maintain an index to loop the char in string
 
-​    int index = 0;
+      int index = 0;
 
   
 
-​    //Step1: remove leading space
+      //Step1: remove leading space
 
-​    while (index < s.length() && s.charAt(index) == ' ') {
+      while (index < s.length() && s.charAt(index) == ' ') {
 
-​      index++;
+        index++;
 
-​    } 
+      } 
 
-​    
+      
 
-​    //Step2: check the sign
+      //Step2: check the sign
 
-​    int sign = 1;
+      int sign = 1;
 
-​    if (index < s.length() && (s.charAt(index) == '-' || s.charAt(index) == '+')) {
+      if (index < s.length() && (s.charAt(index) == '-' || s.charAt(index) == '+')) {
 
-​      sign = s.charAt(index) == '-' ? -1 : 1;
+        sign = s.charAt(index) == '-' ? -1 : 1;
 
-​      index++;
+        index++;
 
-​    }
+      }
 
-​    
+      
 
-​    //Step3: read the digit until non-digit
+      //Step3: read the digit until non-digit
 
-​    int result = 0;
+      int result = 0;
 
-​    while (index < s.length() && s.charAt(index) >= '0' && s.charAt(index) <= '9') {
+      while (index < s.length() && s.charAt(index) >= '0' && s.charAt(index) <= '9') {
 
-​      int digit = s.charAt(index) - '0';
+        int digit = s.charAt(index) - '0';
 
-​      
+        
 
-​      **if (result > Integer.MAX_VALUE / 10** 
+        **if (result > Integer.MAX_VALUE / 10** 
 
-​        **|| (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {**
+          **|| (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {**
 
-​        **return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;**
+          **return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;**
 
-​      **}**
+        **}**
 
-​      result = result * 10 + digit;;
+        result = result * 10 + digit;;
 
-​      index++;
+        index++;
 
-​    }
+      }
 
-​    return sign * result;
+      return sign * result;
 
-​    
+      
 
   }
 
 }
+```
+
+
 
 
 
@@ -676,37 +631,41 @@ High Level: 取%，取/
 
 Java:
 
+```java
 //方法一：
 
 class Solution {
 
   public boolean isPalindrome(int x) {
 
-​    if (x < 0) return false;
+      if (x < 0) return false;
 
-​     
+       
 
-​    int rev = 0;
+      int rev = 0;
 
-​    int y = x;
+      int y = x;
 
  
 
-​    while ( y != 0) {
+      while ( y != 0) {
 
-​        rev = rev * 10 + y % 10;
+          rev = rev * 10 + y % 10;
 
-​        System.out.println(rev);
+          System.out.println(rev);
 
-​        y = y / 10;
+          y = y / 10;
 
-​    }
+      }
 
-​    return rev == x; // -1126087180 overflow return false;
+      return rev == x; // -1126087180 overflow return false;
 
   }
 
 }
+
+
+```
 
 
 
@@ -714,33 +673,37 @@ class Solution {
 
 c#
 
+```c#
 public class Solution {
 
   public bool IsPalindrome(int x) {
 
-​    if(x < 0 || (x % 10 == 0 && x != 0)) {
+      if(x < 0 || (x % 10 == 0 && x != 0)) {
 
-​      return false;
+        return false;
 
-​    }
+      }
 
-​    int half = 0;
+      int half = 0;
 
-​    while( x > half){
+      while( x > half){
 
-​      half = half *10 + x % 10;
+        half = half *10 + x % 10;
 
-​      x /= 10;
+        x /= 10;
 
-​    }
+      }
 
-​    return half == x || ( x == half /10);
+      return half == x || ( x == half /10);
 
   }
 
 
 
 }
+```
+
+
 
 
 
@@ -750,6 +713,7 @@ public class Solution {
 
 (luo)
 
+```java
 /*
 
 dp的方法
@@ -768,77 +732,80 @@ class Solution {
 
   public boolean isMatch(String s, String p) {
 
-​    int lenS = s.length();
+      int lenS = s.length();
 
-​    int lenP = p.length();
+      int lenP = p.length();
 
-​    char[] sArray = s.toCharArray();
+      char[] sArray = s.toCharArray();
 
-​    char[] pArray = p.toCharArray();
+      char[] pArray = p.toCharArray();
 
-​    
+      
 
-​    boolean[][] dp = new boolean[lenS + 1][lenP + 1];
+      boolean[][] dp = new boolean[lenS + 1][lenP + 1];
 
-​    dp[0][0] = true;
+      dp[0][0] = true;
 
-​    
+      
 
-​    //当s的长度为0的情况
+      //当s的长度为0的情况
 
-​    for (int i = 2; i <= lenP; i++) {
+      for (int i = 2; i <= lenP; i++) {
 
-​      dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 2] : false;
+        dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 2] : false;
 
-​    }
+      }
 
-​    
+      
 
-​    for (int i = 1; i <= lenS; i++) {
+      for (int i = 1; i <= lenS; i++) {
 
-​      for (int j = 1; j <= lenP; j++) {
+        for (int j = 1; j <= lenP; j++) {
 
-​        
+          
 
-​        char sc = sArray[i - 1];
+          char sc = sArray[i - 1];
 
-​        char pc = pArray[j - 1];
+          char pc = pArray[j - 1];
 
-​        
+          
 
-​        if (sc == pc || pc == '.') {
+          if (sc == pc || pc == '.') {
 
-​          dp[i][j] = dp[i - 1][j - 1];
+            dp[i][j] = dp[i - 1][j - 1];
 
-​        } else {
+          } else {
 
-​          if (pc == '*') { // 前面的字母重复0次，直接看j-2的位置
+            if (pc == '*') { // 前面的字母重复0次，直接看j-2的位置
 
-​            if (dp[i][j - 2]) {
+              if (dp[i][j - 2]) {
 
-​              dp[i][j] = true;
+                dp[i][j] = true;
 
-​            } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') {// 前面的字母重复1次
+              } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') {// 前面的字母重复1次
 
-​              dp[i][j] = dp[i - 1][j];
+                dp[i][j] = dp[i - 1][j];
 
-​            }
+              }
 
-​          }
+            }
 
-​        } 
+          } 
 
-​      }
+        }
 
-​    }
+      }
 
-​    return dp[lenS][lenP];
+      return dp[lenS][lenP];
 
  
 
   }
 
 }
+```
+
+
 
 
 
@@ -858,35 +825,39 @@ TC: O((lenS+lenP) * 2^(lenS + lenP))
 
 */
 
+```java
 // recursion的方法，代码简短
 
 class Solution {
 
   public boolean isMatch(String s, String p) {
 
-​    // corner case check, if p length is 0 but s length is not 0, return false
+      // corner case check, if p length is 0 but s length is not 0, return false
 
-​    if (p.length() == 0) return s.length() == 0;
+      if (p.length() == 0) return s.length() == 0;
 
-​    
+      
 
-​    boolean firstMatch = s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
+      boolean firstMatch = s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
 
-​    
+      
 
-​    if (p.length() >= 2 && p.charAt(1) == '*' ) {
+      if (p.length() >= 2 && p.charAt(1) == '*' ) {
 
-​      return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
+        return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
 
-​    } else {
+      } else {
 
-​      return firstMatch && isMatch(s.substring(1), p.substring(1));
+        return firstMatch && isMatch(s.substring(1), p.substring(1));
 
-​    }
+      }
 
   }
 
 }
+```
+
+
 
 
 
@@ -898,56 +869,59 @@ class Solution {
 
 双指针
 
-
-
+```java
 public int maxArea(int[] height) {
 
-​    if (height == null || height.length == 0) {
+      if (height == null || height.length == 0) {
 
-​      return 0;
+        return 0;
 
-​    }
+      }
 
-​    
+      
 
-​    int start = 0;
+      int start = 0;
 
-​    int end = height.length - 1;
+      int end = height.length - 1;
 
-​    int maxArea = 0;
+      int maxArea = 0;
 
-​    while (start < end) {
+      while (start < end) {
 
-​      int current = Math.min(height[start], height[end]);
+        int current = Math.min(height[start], height[end]);
 
-​      maxArea = Math.max(maxArea, current * (end - start));
+        maxArea = Math.max(maxArea, current * (end - start));
 
-​      while (start < end && height[start] <= current) {
+        while (start < end && height[start] <= current) {
 
-​        start++;
+          start++;
 
-​      }
+        }
 
-​      
+        
 
-​      while (start < end && height[end] <= current) {
+        while (start < end && height[end] <= current) {
 
-​        end--;
+          end--;
 
-​      }
+        }
 
-​    }
+      }
 
-​    
+      
 
-​    return maxArea;
+      return maxArea;
 
   }
+```
+
+
 
 # 14. Longest Common Prefix
 
 (zhang)
 
+```java
 class Solution {
 
  // Horizontal scanning
@@ -960,13 +934,13 @@ class Solution {
 
   for (int i = 1; i < strs.length; i++)
 
-​    while (strs[i].indexOf(prefix) != 0) {
+      while (strs[i].indexOf(prefix) != 0) {
 
-​      prefix = prefix.substring(0, prefix.length() - 1);
+        prefix = prefix.substring(0, prefix.length() - 1);
 
-​      if (prefix.isEmpty()) return "";
+        if (prefix.isEmpty()) return "";
 
-​    }     
+      }     
 
   return prefix;
 
@@ -974,7 +948,7 @@ class Solution {
 
   
 
-​    // Vertical scanning
+      // Vertical scanning
 
  public String longestCommonPrefix_Vertical(String[] strs) {
 
@@ -982,15 +956,15 @@ class Solution {
 
   for (int i = 0; i < strs[0].length() ; i++){
 
-​    char c = strs[0].charAt(i);
+      char c = strs[0].charAt(i);
 
-​    for (int j = 1; j < strs.length; j ++) {
+      for (int j = 1; j < strs.length; j ++) {
 
-​      if (i == strs[j].length() || strs[j].charAt(i) != c)
+        if (i == strs[j].length() || strs[j].charAt(i) != c)
 
-​        return strs[0].substring(0, i);       
+          return strs[0].substring(0, i);       
 
-​    }
+      }
 
   }
 
@@ -1002,25 +976,26 @@ class Solution {
 
 public String longestCommonPrefix_sort(String[] strs) {
 
-​    if (strs == null || strs.length == 0) return "";
+      if (strs == null || strs.length == 0) return "";
 
-​    Arrays.sort(strs);
+      Arrays.sort(strs);
 
-​     
+       
 
-​    int len = Math.min(strs[0].length(), strs[strs.length - 1].length());
+      int len = Math.min(strs[0].length(), strs[strs.length - 1].length());
 
-​    int i = 0;
+      int i = 0;
 
-​    while (i < len && strs[0].charAt(i) == strs[strs.length - 1].charAt(i))
+      while (i < len && strs[0].charAt(i) == strs[strs.length - 1].charAt(i))
 
-​        i++;
+          i++;
 
-​    return strs[0].substring(0, i);
+      return strs[0].substring(0, i);
 
   }
 
 }
+```
 
 
 
@@ -1176,6 +1151,7 @@ C#
 
 
 
+```java
 //(luo) DFS
 
 class Solution {
@@ -1186,51 +1162,54 @@ class Solution {
 
   public List<String> letterCombinations(String digits) {
 
-​    if (digits == null || digits.length() == 0) {
+      if (digits == null || digits.length() == 0) {
 
-​      return new ArrayList<>();
+        return new ArrayList<>();
 
-​    }
+      }
 
-​    String[] numChar = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+      String[] numChar = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-​    char[] input = digits.toCharArray();
+      char[] input = digits.toCharArray();
 
-​    List<String> result = new ArrayList<>();
+      List<String> result = new ArrayList<>();
 
-​    StringBuilder sb = new StringBuilder();
+      StringBuilder sb = new StringBuilder();
 
-​    helper(input, numChar, sb, result, 0);
+      helper(input, numChar, sb, result, 0);
 
-​    return result;
+      return result;
 
   }
 
   private void helper(char[] input, String[] numChar, StringBuilder sb, List<String> result, int index) {
 
-​    if (index == input.length) {
+      if (index == input.length) {
 
-​      result.add(sb.toString());
+        result.add(sb.toString());
 
-​      return;
+        return;
 
-​    }
+      }
 
-​    char[] chars = numChar[input[index] - '0'].toCharArray(); // 注意这里
+      char[] chars = numChar[input[index] - '0'].toCharArray(); // 注意这里
 
-​    for (int i = 0; i < chars.length; i++) {
+      for (int i = 0; i < chars.length; i++) {
 
-​      sb.append(chars[i]);
+        sb.append(chars[i]);
 
-​      helper(input, numChar, sb, result, index + 1);
+        helper(input, numChar, sb, result, index + 1);
 
-​      sb.deleteCharAt(sb.length() - 1);
+        sb.deleteCharAt(sb.length() - 1);
 
-​    }
+      }
 
   }
 
 }
+
+
+```
 
 
 
@@ -1276,59 +1255,63 @@ class Solution {
 
 High Level: stack
 
+```java
 public boolean isValid(String s) {
 
-​    if (s == null || s.length() == 0) {
+      if (s == null || s.length() == 0) {
 
-​      return true;
+        return true;
 
-​    }
+      }
 
-​    int index = 0;
+      int index = 0;
 
-​    Deque<Character> stack = new ArrayDeque<>();
+      Deque<Character> stack = new ArrayDeque<>();
 
-​    while (index < s.length()) {
+      while (index < s.length()) {
 
-​      char c = s.charAt(index);
+        char c = s.charAt(index);
 
-​      if (c == '(' || c =='{' || c == '[') {
+        if (c == '(' || c =='{' || c == '[') {
 
-​        stack.push(c);
+          stack.push(c);
 
-​      } else if (c == ')') {
+        } else if (c == ')') {
 
-​        if (stack.isEmpty() || stack.pop() != '(') {
+          if (stack.isEmpty() || stack.pop() != '(') {
 
-​          return false;
+            return false;
 
-​        }
+          }
 
-​      } else if (c == ']') {
+        } else if (c == ']') {
 
-​        if (stack.isEmpty() || stack.pop() != '[') {
+          if (stack.isEmpty() || stack.pop() != '[') {
 
-​          return false;
+            return false;
 
-​        }
+          }
 
-​      } else if (c == '}') {
+        } else if (c == '}') {
 
-​        if (stack.isEmpty() || stack.pop() != '{') {
+          if (stack.isEmpty() || stack.pop() != '{') {
 
-​          return false;
+            return false;
 
-​        }
+          }
 
-​      }
+        }
 
-​      index++;
+        index++;
 
-​    }
+      }
 
-​    return stack.isEmpty();
+      return stack.isEmpty();
 
   }
+```
+
+
 
 
 
@@ -1336,53 +1319,57 @@ public boolean isValid(String s) {
 
 (Lynn)
 
+```java
 public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-​    if (l1 == null || l2 == null) {
+      if (l1 == null || l2 == null) {
 
-​      return l1 == null ? l2 : l1;
+        return l1 == null ? l2 : l1;
 
-​    }
+      }
 
-​    ListNode dummy = new ListNode(0);
+      ListNode dummy = new ListNode(0);
 
-​    ListNode cur = dummy;
+      ListNode cur = dummy;
 
-​    while (l1 != null && l2 != null) {
+      while (l1 != null && l2 != null) {
 
-​      **if (l1.val <= l2.val) {**
+        **if (l1.val <= l2.val) {**
 
-​        **cur.next = l1;**
+          **cur.next = l1;**
 
-​        **l1 = l1.next;**
+          **l1 = l1.next;**
 
-​      **} else {**
+        **} else {**
 
-​        **cur.next = l2;**
+          **cur.next = l2;**
 
-​        **l2 = l2.next;**
+          **l2 = l2.next;**
 
-​      **}**
+        **}**
 
-​      cur = cur.next;
+        cur = cur.next;
 
-​    }
+      }
 
-​    if (l1 != null) {
+      if (l1 != null) {
 
-​      cur.next = l1;
+        cur.next = l1;
 
-​    }
+      }
 
-​    if (l2 != null) {
+      if (l2 != null) {
 
-​      cur.next = l2;
+        cur.next = l2;
 
-​    }
+      }
 
-​    return dummy.next;
+      return dummy.next;
 
   }
+```
+
+
 
 
 
@@ -1392,51 +1379,55 @@ public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
 (Lynn)
 
+ ```java
  public ListNode mergeKLists(ListNode[] lists) {
+ 
+       ListNode dummy = new ListNode(0);
+ 
+       ListNode cur = dummy;
+ 
+       **PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);**
+ 
+       
+ 
+       for (ListNode head : lists) {
+ 
+         if (head != null) {
+ 
+           minHeap.offer(head);
+ 
+         }
+ 
+       } 
+ 
+       while (!minHeap.isEmpty()) {
+ 
+         **//pop top out and add to result**
+ 
+         ListNode node = minHeap.poll();
+ 
+         cur.next = node;
+ 
+         cur = cur.next;
+ 
+         
+ 
+         **//offer a next node to the queue**
+ 
+         if (node.next != null) {
+ 
+           minHeap.offer(node.next);
+ 
+         }
+ 
+       }
+ 
+       return dummy.next;
+ 
+   }
+ ```
 
-​    ListNode dummy = new ListNode(0);
 
-​    ListNode cur = dummy;
-
-​    **PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);**
-
-​    
-
-​    for (ListNode head : lists) {
-
-​      if (head != null) {
-
-​        minHeap.offer(head);
-
-​      }
-
-​    } 
-
-​    while (!minHeap.isEmpty()) {
-
-​      **//pop top out and add to result**
-
-​      ListNode node = minHeap.poll();
-
-​      cur.next = node;
-
-​      cur = cur.next;
-
-​      
-
-​      **//offer a next node to the queue**
-
-​      if (node.next != null) {
-
-​        minHeap.offer(node.next);
-
-​      }
-
-​    }
-
-​    return dummy.next;
-
-  }
 
 
 
@@ -1446,6 +1437,7 @@ public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
 (luo)
 
+```java
 /*https://www.youtube.com/watch?v=dlATMslQ6Uc 
 
 从右往前依次处理
@@ -1459,60 +1451,60 @@ TC：O（n）从右到左一遍
 SC：O（1）
 
 */
-
-
-
 class Solution {
 
   public int romanToInt(String s) {
 
-​    Map<Character, Integer> map = new HashMap<>();
+      Map<Character, Integer> map = new HashMap<>();
 
-​    map.put('I', 1);
+      map.put('I', 1);
 
-​    map.put('V', 5);
+      map.put('V', 5);
 
-​    map.put('X', 10);
+      map.put('X', 10);
 
-​    map.put('L', 50);
+      map.put('L', 50);
 
-​    map.put('C', 100);
+      map.put('C', 100);
 
-​    map.put('D', 500);
+      map.put('D', 500);
 
-​    map.put('M', 1000);
+      map.put('M', 1000);
 
-​    
+      
 
-​    int n = s.length();
+      int n = s.length();
 
-​    int result = map.get(s.charAt(n - 1));
+      int result = map.get(s.charAt(n - 1));
 
 
 
-​    for (int i = n - 2; i >= 0; i--) {
+      for (int i = n - 2; i >= 0; i--) {
 
-​      int currentValue = map.get(s.charAt(i));
+        int currentValue = map.get(s.charAt(i));
 
-​      
+        
 
-​      if (currentValue < map.get(s.charAt(i + 1))) {
+        if (currentValue < map.get(s.charAt(i + 1))) {
 
-​        result -= currentValue;
+          result -= currentValue;
 
-​      } else {
+        } else {
 
-​        result += currentValue;
+          result += currentValue;
 
-​      }
+        }
 
-​    }
+      }
 
-​    return result;
+      return result;
 
   }
 
 }
+
+
+```
 
 
 
@@ -1522,45 +1514,45 @@ class Solution {
 
 (Huang)
 
-
-
-
-
+```java
 // (Luo) TC: O(n) SC: O(1) recursively swap the nodes
 
 class Solution {
 
   public ListNode swapPairs(ListNode head) {
 
-​    if (head == null || head.next == null) {
+      if (head == null || head.next == null) {
 
-​      return head;
+        return head;
 
-​    }
+      }
 
-​    ListNode node1 = head;
+      ListNode node1 = head;
 
-​    ListNode node2 = head.next;
+      ListNode node2 = head.next;
 
-​    ListNode node3 = head.next.next;
+      ListNode node3 = head.next.next;
 
-​    
+      
 
-​    ListNode node = swapPairs(node3);
+      ListNode node = swapPairs(node3);
 
-​    
+      
 
-​    node2.next = node1;
+      node2.next = node1;
 
-​    node1.next = node;
+      node1.next = node;
 
-​    
+      
 
-​    return node2;
+      return node2;
 
   }
 
 }
+```
+
+
 
 
 
@@ -1604,39 +1596,43 @@ class Solution {
 
 # 26  Remove Duplicates from Sorted Array
 
+```java
 // code by Luo, 快慢指针
 
 class Solution {
 
   public int removeDuplicates(int[] nums) {
 
-​    if (nums.length <= 1) {
+      if (nums.length <= 1) {
 
-​      return nums.length;
+        return nums.length;
 
-​    }
+      }
 
-​    int slow = 1; // **[0...slow-1] to keep**
+      int slow = 1; // **[0...slow-1] to keep**
 
-​    
+      
 
-​    for (int i = 1; i < nums.length; i++) {**// fast pointer to traverse**
+      for (int i = 1; i < nums.length; i++) {**// fast pointer to traverse**
 
-​      if (nums[i] != nums[slow - 1]) {
+        if (nums[i] != nums[slow - 1]) {
 
-​        nums[slow] = nums[i];
+          nums[slow] = nums[i];
 
-​        slow++;
+          slow++;
 
-​      }
+        }
 
-​    }
+      }
 
-​    return slow;
+      return slow;
 
   }
 
 }
+
+
+```
 
 
 
@@ -1650,27 +1646,31 @@ class Solution {
 
 High Level: bit operation
 
-
-
+```java
 public int divide(int A, int B) {
 
-​    if (A == 1 << 31 && B == -1) return (1 << 31) - 1;
+      if (A == 1 << 31 && B == -1) return (1 << 31) - 1;
 
-​    int a = Math.abs(A), b = Math.abs(B), res = 0;
+      int a = Math.abs(A), b = Math.abs(B), res = 0;
 
-​    for (int x = 31; x >= 0; x--)
+      for (int x = 31; x >= 0; x--)
 
-​      if ((a >>> x) - b >= 0) {
+        if ((a >>> x) - b >= 0) {
 
-​        res += 1 << x;
+          res += 1 << x;
 
-​        a -= b << x;
+          a -= b << x;
 
-​      }
+        }
 
-​    return (A > 0) == (B > 0) ? res : -res;
+      return (A > 0) == (B > 0) ? res : -res;
 
   }
+```
+
+
+
+
 
 
 
@@ -1684,7 +1684,43 @@ public int divide(int A, int B) {
 
 reference: https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/
 
- // Java code by Tang   public void nextPermutation(int[] nums) {      int i = nums.length - 2;     while (i >= 0 && nums[i + 1] <= nums[i]) {       i--;     }     if (i >= 0) {       int j = nums.length - 1;       while (nums[j] <= nums[i]) {         j--;       }       swap(nums, i, j);     }     reverse(nums, i + 1);   }    private void reverse(int[] nums, int start) {     int i = start, j = nums.length - 1;     while (i < j) {       swap(nums, i, j);       i++;       j--;     }   }    private void swap(int[] nums, int i, int j) {     int temp = nums[i];     nums[i] = nums[j];     nums[j] = temp;   }
+ // Java code by Tang   
+
+```java
+class Solution {
+	public void nextPermutation(int[] nums) {
+		int i = nums.length - 2;
+		while (i >= 0 && nums[i + 1] <= nums[i]) {
+			i--;
+		}
+		if (i >= 0) {
+			int j = nums.length - 1;
+			while (nums[j] <= nums[i]) {
+				j--;
+			}
+			swap(nums, i, j);
+		}
+		reverse(nums, i + 1);
+	}
+
+	private void reverse(int[] nums, int start) {
+		int i = start, j = nums.length - 1;
+		while (i < j) {
+			swap(nums, i, j);
+			i++;
+			j--;
+		}
+	}
+
+	private void swap(int[] nums, int i, int j) {
+		int temp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = temp;
+	}
+}
+```
+
+
 
 
 
@@ -1743,7 +1779,78 @@ class solution {
 
 # 32  Longest Valid Parentheses
 
-(huang) Java code by Tang /* ************Method 1: two times traversal with o(1) space complexity ************/   public int longestValidParentheses(String s) {     int left = 0, right = 0, maxlength = 0;     for (int i = 0; i < s.length(); i++) {       if (s.charAt(i) == '(') {         left++;       } else {         right++;       }       if (left == right) {         maxlength = Math.max(maxlength, 2 * right);       } else if (right >= left) {         left = right = 0;       }     }     left = right = 0;     for (int i = s.length() - 1; i >= 0; i--) {       if (s.charAt(i) == '(') {         left++;       } else {         right++;       }       if (left == right) {         maxlength = Math.max(maxlength, 2 * left);       } else if (left >= right) {         left = right = 0;       }     }     return maxlength;   } /* ************Method 2: Stack method with o(n) space complexity ************/ /* ************common stack setting with consideration on corner cases ************/   public int longestValidParentheses(String s) {     int max = 0;     Deque<Integer> stack = new ArrayDeque<>();     for (int i = 0; i < s.length(); i++) {       char c = s.charAt(i);       if (c == '(') {         stack.offerLast(i);       } else {         if (!stack.isEmpty() && s.charAt(stack.peekLast()) == '(') {            stack.pollLast();           int left = stack.isEmpty() ? -1 : Math.abs(stack.peekLast());           max = Math.max(max, i - left); // (peekLast(), i]         } else { // don't forgot to add ')' if necessary           stack.offerLast(i);         }       }     }     return max;   }  
+(huang) Java code by Tang
+
+```java
+class Solution {
+	// Method 1: two times traversal with o(1) space complexity
+		public int longestValidParentheses(String s) {
+		int left = 0, right = 0, maxlength = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '(') {
+				left++;
+			} else {
+				right++;
+			}
+			if (left == right) {
+				maxlength = Math.max(maxlength, 2 * right);
+			} else if (right >= left) {
+				left = right = 0;
+			}
+		}
+		left = right = 0;
+		for (int i = s.length() - 1; i >= 0; i--) {
+			if (s.charAt(i) == '(') {
+				left++;
+			} else {
+				right++;
+			}
+			if (left == right) {
+				maxlength = Math.max(maxlength, 2 * left);
+			} else if (left >= right) {
+				left = right = 0;
+			}
+		}
+		return maxlength;
+	}
+
+}
+```
+
+
+
+
+
+```java
+ /* ************Method 2: Stack method with o(n) space complexity ************/ 
+
+/* ************common stack setting with consideration on corner cases ************/   
+class Solution {
+	public int longestValidParentheses(String s) {
+		int max = 0;
+		Deque<Integer> stack = new ArrayDeque<>();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (c == '(') {
+				stack.offerLast(i);
+			} else {
+				if (!stack.isEmpty() && s.charAt(stack.peekLast()) == '(') {
+					stack.pollLast();
+					int left = stack.isEmpty() ? -1 : Math.abs(stack.peekLast());
+					max = Math.max(max, i - left); // (peekLast(), i]
+				} else {
+					// don't forgot to add ')' if necessary
+					stack.offerLast(i);
+				}
+			}
+		}
+		return max;
+	}
+
+}
+```
+
+
 
 
 
@@ -1755,85 +1862,89 @@ class solution {
 
  
 
+```java
 public int search(int[] nums, int target) { // code by Tang
 
-​    if (nums == null || nums.length == 0) {
+      if (nums == null || nums.length == 0) {
 
-​      return -1;
+        return -1;
 
-​    }
+      }
 
-​    int lo = 0;
+      int lo = 0;
 
-​    int hi = nums.length - 1;
+      int hi = nums.length - 1;
 
-​    int mid;
+      int mid;
 
-​    while (lo < hi - 1) {
+      while (lo < hi - 1) {
 
-​      mid = lo + (hi - lo) / 2;
+        mid = lo + (hi - lo) / 2;
 
-​      // if you use double side binary search protocol
+        // if you use double side binary search protocol
 
-​      if (nums[lo] == target) {
+        if (nums[lo] == target) {
 
-​        return lo;
+          return lo;
 
-​      } else if (nums[hi] == target) {
+        } else if (nums[hi] == target) {
 
-​        return hi;
+          return hi;
 
-​      } else if (nums[mid] == target) {
+        } else if (nums[mid] == target) {
 
-​        return mid;
+          return mid;
 
-​      }
+        }
 
-​      // boundary must be check to avoid error, e.g. [1,2,3], target 1
+        // boundary must be check to avoid error, e.g. [1,2,3], target 1
 
-​      if (nums[mid] > nums[lo]) { // left mono-increasing
+        if (nums[mid] > nums[lo]) { // left mono-increasing
 
-​        if (target > nums[lo] && target < nums[mid]) {
+          if (target > nums[lo] && target < nums[mid]) {
 
-​          hi = mid;
+            hi = mid;
 
-​        } else {
+          } else {
 
-​          lo = mid;
+            lo = mid;
 
-​        }
+          }
 
-​      } else {
+        } else {
 
-​        if (target > nums[mid] && target < nums[hi]) {
+          if (target > nums[mid] && target < nums[hi]) {
 
-​          lo = mid;
+            lo = mid;
 
-​        } else {
+          } else {
 
-​          hi = mid;
+            hi = mid;
 
-​        }
+          }
 
-​      }
+        }
 
-​    }
+      }
 
-​    if (nums[lo] == target) {
+      if (nums[lo] == target) {
 
-​      return lo;
+        return lo;
 
-​    }
+      }
 
-​    if (nums[hi] == target) {
+      if (nums[hi] == target) {
 
-​      return hi;
+        return hi;
 
-​    }
+      }
 
-​    return -1;
+      return -1;
 
   }
+```
+
+
 
 
 
@@ -1841,161 +1952,165 @@ public int search(int[] nums, int target) { // code by Tang
 
 //(Zhang)
 
+ ```java
  public int[] searchRange(int[] A, int target) {
-
-   int start = firstGreaterEqual(A, target);
-
-   if (start == A.length || A[start] != target) {
-
-​       return new int[]{-1, -1};
-
-   }
-
-   int second = firstGreaterEqual(A, target + 1) - 1;
-
-   return new int[]{start, second};
-
+ 
+    int start = firstGreaterEqual(A, target);
+ 
+    if (start == A.length || A[start] != target) {
+ 
+          return new int[]{-1, -1};
+ 
+    }
+ 
+    int second = firstGreaterEqual(A, target + 1) - 1;
+ 
+    return new int[]{start, second};
+ 
+  }
+ 
+ 
+ 
+  //find the first number that is greater than or equal to target.
+ 
+  //could return A.length if target is greater than A[A.length-1].
+ 
+  //actually this is the same as lower_bound in C++ STL.
+ 
+  private int firstGreaterEqual(int[] A, int target) {
+ 
+    int low = 0, high = A.length;
+ 
+    while (low < high) {
+ 
+        int mid = low + ((high - low) >> 1);
+ 
+        //low <= mid < high
+ 
+        if (A[mid] < target) {
+ 
+          low = mid + 1;
+ 
+        } else {
+ 
+          //should not be mid-1 when A[mid]==target.
+ 
+          //could be mid even if A[mid]>target because mid<high.
+ 
+          high = mid;
+ 
+        }
+ 
+    }
+ 
+    return low;
+ 
+  }
+ 
  }
-
-
-
- //find the first number that is greater than or equal to target.
-
- //could return A.length if target is greater than A[A.length-1].
-
- //actually this is the same as lower_bound in C++ STL.
-
- private int firstGreaterEqual(int[] A, int target) {
-
-   int low = 0, high = A.length;
-
-   while (low < high) {
-
-​     int mid = low + ((high - low) >> 1);
-
-​     //low <= mid < high
-
-​     if (A[mid] < target) {
-
-​       low = mid + 1;
-
-​     } else {
-
-​       //should not be mid-1 when A[mid]==target.
-
-​       //could be mid even if A[mid]>target because mid<high.
-
-​       high = mid;
-
-​     }
-
+ 
+ 
+ 
+ // double-sided binary search by Tang
+ 
+   public int[] searchRange(int[] nums, int target) {
+ 
+       int[] res = new int[]{-1, -1};
+ 
+       if (nums == null || nums.length == 0) {
+ 
+         return res;
+ 
+       }
+ 
+       int left = firstBS(nums, target, 0, nums.length - 1);
+ 
+       if (left == -1) {
+ 
+         return res;
+ 
+       }
+ 
+       int right = lastBS(nums, target, left, nums.length - 1);
+ 
+         return new int[]{left, right};
+ 
    }
+ 
+   private int firstBS(int[] array, int target, int lo, int hi) {
+ 
+       int mid;
+ 
+       while (lo < hi - 1) {
+ 
+         mid = lo + (hi - lo) / 2;
+ 
+         if (array[mid] >= target) {
+ 
+           hi = mid;
+ 
+         } else {
+ 
+           lo = mid;
+ 
+         }
+ 
+       }
+ 
+       if (array[lo] == target) {
+ 
+         return lo;
+ 
+       }
+ 
+       if (array[hi] == target) {
+ 
+         return hi;
+ 
+       }
+ 
+       return -1;
+ 
+   }
+ 
+   private int lastBS(int[] array, int target, int lo, int hi) {
+ 
+       int mid;
+ 
+       while (lo < hi - 1) {
+ 
+         mid = lo + (hi - lo) / 2;
+ 
+         if (array[mid] <= target) {
+ 
+           lo = mid;
+ 
+         } else {
+ 
+           hi = mid;
+ 
+         }
+ 
+       }
+ 
+       if (array[hi] == target) {
+ 
+         return hi;
+ 
+       }    
+ 
+       if (array[lo] == target) {
+ 
+         return lo;
+ 
+       }
+ 
+       return -1;
+ 
+   }
+ ```
 
-   return low;
 
- }
-
-}
-
-
-
-// double-sided binary search by Tang
-
-  public int[] searchRange(int[] nums, int target) {
-
-​    int[] res = new int[]{-1, -1};
-
-​    if (nums == null || nums.length == 0) {
-
-​      return res;
-
-​    }
-
-​    int left = firstBS(nums, target, 0, nums.length - 1);
-
-​    if (left == -1) {
-
-​      return res;
-
-​    }
-
-​    int right = lastBS(nums, target, left, nums.length - 1);
-
-​      return new int[]{left, right};
-
-  }
-
-  private int firstBS(int[] array, int target, int lo, int hi) {
-
-​    int mid;
-
-​    while (lo < hi - 1) {
-
-​      mid = lo + (hi - lo) / 2;
-
-​      if (array[mid] >= target) {
-
-​        hi = mid;
-
-​      } else {
-
-​        lo = mid;
-
-​      }
-
-​    }
-
-​    if (array[lo] == target) {
-
-​      return lo;
-
-​    }
-
-​    if (array[hi] == target) {
-
-​      return hi;
-
-​    }
-
-​    return -1;
-
-  }
-
-  private int lastBS(int[] array, int target, int lo, int hi) {
-
-​    int mid;
-
-​    while (lo < hi - 1) {
-
-​      mid = lo + (hi - lo) / 2;
-
-​      if (array[mid] <= target) {
-
-​        lo = mid;
-
-​      } else {
-
-​        hi = mid;
-
-​      }
-
-​    }
-
-​    if (array[hi] == target) {
-
-​      return hi;
-
-​    }    
-
-​    if (array[lo] == target) {
-
-​      return lo;
-
-​    }
-
-​    return -1;
-
-  }
 
 
 
@@ -2011,63 +2126,67 @@ Binary Search 找target，或者找应该插入的位置
 
 
 
+```java
 class Solution {
 
   public int searchInsert(int[] nums, int target) {
 
-​    // pre-process提前处理target小于最小值，大于最大值的情况
+      // pre-process提前处理target小于最小值，大于最大值的情况
 
-​    if (target < nums[0]) {
+      if (target < nums[0]) {
 
-​      return 0;
+        return 0;
 
-​    }
+      }
 
-​    if (target > nums[nums.length - 1]) {
+      if (target > nums[nums.length - 1]) {
 
-​      return nums.length;
+        return nums.length;
 
-​    }
+      }
 
-​    
+      
 
-​    int left = 0;
+      int left = 0;
 
-​    int right = nums.length - 1;
+      int right = nums.length - 1;
 
-​    
+      
 
-​    while (left + 1 < right) {
+      while (left + 1 < right) {
 
-​      int mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2;
 
-​      if (nums[mid] == target) {
+        if (nums[mid] == target) {
 
-​        return mid;
+          return mid;
 
-​      } else if (nums[mid] < target) {
+        } else if (nums[mid] < target) {
 
-​        left = mid;
+          left = mid;
 
-​      } else {
+        } else {
 
-​        right = mid;
+          right = mid;
 
-​      }
+        }
 
-​    }
+      }
 
-​    
+      
 
-​    if (target == nums[left]) return left;
+      if (target == nums[left]) return left;
 
-​    if (target == nums[right]) return right;
+      if (target == nums[right]) return right;
 
-​    return left + 1;
+      return left + 1;
 
   }
 
 }
+
+
+```
 
 
 
@@ -2075,6 +2194,7 @@ class Solution {
 
 // code by Luo, 分别看行，列，和每一个box
 
+```java
 class Solution {
 
  public boolean isValidSudoku(char[][] board) {
@@ -2089,11 +2209,11 @@ class Solution {
 
    for (int j = 0; j < 9; j++) {    
 
-​    if (board[i][j] != '.' && !set.add(board[i][j])) {
+      if (board[i][j] != '.' && !set.add(board[i][j])) {
 
-​     return false;
+       return false;
 
-​    } 
+      } 
 
    }
 
@@ -2107,11 +2227,11 @@ class Solution {
 
    for (int j = 0; j < 9; j++) {
 
-​    if (board[j][i] != '.' && !set.add(board[j][i])) {
+      if (board[j][i] != '.' && !set.add(board[j][i])) {
 
-​     return false;
+       return false;
 
-​    } 
+      } 
 
    }
 
@@ -2127,11 +2247,11 @@ class Solution {
 
    for (int j = 0; j < 9; j++) { // 小格的index
 
-​    if (board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3] != '.' && !set.add(board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3])) {
+      if (board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3] != '.' && !set.add(board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3])) {
 
-​     return false;
+       return false;
 
-​    }    
+      }    
 
    }
 
@@ -2146,6 +2266,9 @@ class Solution {
  }
 
 }
+```
+
+
 
 
 
