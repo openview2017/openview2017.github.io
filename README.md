@@ -1,211 +1,12 @@
-# openview2017.github.io
-[**1. Two Sum**  **4**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.c1shqcpbdft1)
+---
+title: "Leetcode problems with Facebook tags"
+date: 2021-12-30T15:25:08-08:00
+draft: false
+---
 
-[**2. Add Two Numbers**  **4**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.9v1b2paxy2b6)
 
-[**3. longest substring without repeating characters**  **6**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ee7nobsh30i)
 
-[**4. Median of Two Sorted Arrays**  **7**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.s0lbh97zmrnj)
-
-[**5. Longest Palindromic Substring**  **9**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.u73zy9v3j8j1)
-
-[**6. Zigzag Conversion**  **10**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.gqysvdu3nb2u)
-
-[**7. Reverse Integer**  **11**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.5dzkhabrrb5b)
-
-[**8. String to Integer (atoi)**  **11**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8g2mcm6odvo6)
-
-[**9. Palindrome Number**  **12**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.nspomwx1r13a)
-
-[**10. Regular Expression Matching**  **13**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.9un3e23amjuw)
-
-[**11. Container With Most Water**  **14**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.o2ikophf7soc)
-
-[**14. Longest Common Prefix**  **15**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.kyo0d5ybqu8c)
-
-[**15. 3Sum**  **16**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.i01a1rmsu99u)
-
-[**16. 3Sum Closest**  **16**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.l3juj9ua1daw)
-
-[**259. 3Sum Smaller**  **16**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.crjzzqyr7402)
-
-[**17. Letter Combinations of a Phone Number**  **19**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.5n4o408v121w)
-
-[**19. Remove Nth Node From End of List**  **20**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.fql9x5ituio1)
-
-[**20. Valid Parentheses**  **20**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.d04ojn2vl0i8)
-
-[**21. Merge Two Sorted Lists**  **21**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ip0d2f5x6rrb)
-
-[**23. Merge k Sorted Lists**  **22**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.n5szxeu9mavs)
-
-[**13. Roman to Integer**  **22**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.2cn9feqoodr)
-
-[**24 Swap Nodes in Pairs**  **23**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.bm8iiut4s5qx)
-
-[**25 Reverse Nodes in k-Group**  **24**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.yryfm23fuzy3)
-
-[**26 Remove Duplicates from Sorted Array**  **25**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tp9hom4w1vhg)
-
-[**29 Divide Two Integers**  **26**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.pr4h4ut6016q)
-
-[**31 Next Permutation**  **26**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.brgtsdgl529m)
-
-[**46. Permutations**  **28**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.1uri4p54zdj0)
-
-[**32 Longest Valid Parentheses**  **29**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.2l92fo3a35kh)
-
-[**33 Search in Rotated Sorted Array**  **31**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tpvwhbsw002x)
-
-[**34 Find First and Last Position of Element in Sorted Array**  **32**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.1dqinnkhznsj)
-
-[**35 Search Insert Position**  **33**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.947xnr64ccjr)
-
-[**36 Valid Sudoku**  **34**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.xx3691x4a78)
-
-[**39 Combination Sum**  **35**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ndc1baxk915x)
-
-[**40 Combination Sum II**  **36**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.yixjmrk57mq2)
-
-[**41 First Missing Positive**  **37**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.vrynnl4x4i8)
-
-[**42. Trapping Rain Water**  **38**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ujt651a277kp)
-
-[**43. Multiply Strings**  **39**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.adwui369d63z)
-
-[**44. Wildcard Matching**  **40**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.rmq5c2eomu6t)
-
-[**55. Jump Game**  **42**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.qdm52bqmecc5)
-
-[**45. Jump Game II**  **42**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.3m6p8mn8hyap)
-
-[**1306. Jump Game III**  **44**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.svgxc1jtme6y)
-
-[**43 Multiply Strings**  **45**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8x575vodla0a)
-
-[**792. Number of Matching Subsequences**  **46**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.841yr6ga8kx3)
-
-[**51 N-Queens**  **47**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.t4oggot1m39c)
-
-[**48 Rotate Image**  **49**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8nq3lcsjaldn)
-
-[**49 Group Anagrams**  **50**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.f3znmibqqawr)
-
-[**50 Pow(x, n)**  **50**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.gj40ayg97rx6)
-
-[**53 Maximum Subarray**  **50**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.cnj3kroddh93)
-
-[**54 Spiral Matrix**  **50**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.q9vnhgo5zw9i)
-
-[**1849. Splitting a String Into Descending Consecutive Values**  **51**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.xcnffhtpygxi)
-
-[**1110 Delete Nodes And Return Forest**  **53**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.t06tw29jgx7p)
-
-[**56 Merge Intervals**  **55**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.dqcdq2uhipba)
-
-[**57 Insert Interval**  **56**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.cfk317cx03l1)
-
-[**60 Permutation Sequence**  **57**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.si67oy5issb2)
-
-[**62 Unique Paths**  **57**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.xp9ktfi4smge)
-
-[**63 Unique Paths II**  **57**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.otk3uhf6kiw5)
-
-[**65 Valid Number**  **57**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tyq94jpxj4l5)
-
-[**66 Plus One**  **58**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.by0dj45jizp0)
-
-[**67 Add Binary**  **59**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8wkjgqufsxu4)
-
-[**767 Reorganize String**  **61**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ma3doienanc8)
-
-[**209. Minimum Size Subarray Sum**  **62**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.4ttjp55tml2q)
-
-[**380 Insert Delete GetRandom O(1)**  **63**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.mb3dvqm9su9v)
-
-[**398 Random Pick Index**  **64**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.kq6adl6bcgk2)
-
-[**528. Random Pick with Weight**  **67**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.wm72j8a5mrsi)
-
-[**78 Subsets**  **67**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.h60zy8pe6l9v)
-
-[**815 Bus Routes**  **68**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.p0zihe9zcis6)
-
-[**76 Minimum Window Substring**  **70**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ywirn4p2w4lz)
-
-[**146. LRU Cache**  **72**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.ys6a37me6wiz)
-
-[**212. Word Search**  **74**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.htxq23e6lg5)
-
-[**1057. Campus Bikes**  **76**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.7tuimykd2xj2)
-
-[**726. Number of Atoms**  **77**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.j5en6sx73l5v)
-
-[**1597. Build Binary Expression Tree From Infix Expression**  **79**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.q4azv1fxq40m)
-
-[Related solution for 772. Basic Calculator III  80](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.qzma8yf6o6jj)
-
-[**1231. Divide Chocolate**  **81**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.utitnuc7f83g)
-
-[**875. Koko Eating Bananas**  **82**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.chf67hurlip4)
-
-[**935. Knight Dialer**  **83**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.b2tglaeo55wr)
-
-[**616. Add Bold Tag in String**  **85**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.mrc8zkq01zdh)
-
-[**126. Word Ladder II**  **85**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.8toa6jabzaf5)
-
-[**127. Word Ladder**  **87**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.eyj5f46si527)
-
-[**102. Binary Tree Level Order Traversal**  **88**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.al1zaylw92c8)
-
-[**103. Binary Tree Zigzag Level Order Traversal**  **89**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.qavmsml521v4)
-
-[108. Convert Sorted Array to Binary Search Tree  **90**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.lxgnd0bg9g8q)
-
-[**979. Distribute Coins in Binary Tree**  **91**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.laybq13bec12)
-
-[**股票买卖专题**  **92**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.6d5so045mwkh)
-
-[121. Best Time to Buy and Sell Stock (only one time transaction)  92](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.enukbh5ainwy)
-
-[122. Best Time to Buy and Sell Stock II (no limit on transaction times)  94](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.hjsayf9d0kjz)
-
-[714. Best Time to Buy and Sell Stock with Transaction Fee (122 + transaction fee)  96](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.6wmzfn2nnfjb)
-
-[123. Best Time to Buy and Sell Stock III (at most 2 times transaction, hard)  98](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.vlfr6aog7xha)
-
-[188. Best Time to Buy and Sell Stock IV (at most K times transaction, hard)  99](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.7lcslf25n4ra)
-
-[309. Best Time to Buy and Sell Stock with Cooldown  101](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.4gyu6jvps179)
-
-[**437. Path Sum III**  **102**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.h05awufz42zo)
-
-[96. Unique Binary Search Trees  **103**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.fmr9m33mtp7u)
-
-[**1120. Maximum Average Subtree**  **104**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.n4hwpjiwuqva)
-
-[**1339. Maximum Product of Splitted Binary Tree**  **104**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.kf79ctrcvs5h)
-
-[**151 Reverse Words in a String**  **105**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.w3dy7e67yqk5)
-
-[**152 Maximum Product Subarray**  **106**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.2srgzv9b5ezs)
-
-[**158 Read N Characters Given read4 II - Call Multiple Times**  **107**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.srsl8spp1qp2)
-
-[**Lowest Common Ancestors 专题**  **107**](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.o9tnqwdruwwf)
-
-[236. Lowest Common Ancestor of a Binary Tree  107](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.gaiox9izz77j)
-
-[1644. Lowest Common Ancestor of a Binary Tree II  109](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.66k76zkekw4d)
-
-[1650. Lowest Common Ancestor of a Binary Tree III  111](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.jdj5yund139o)
-
-[1676. Lowest Common Ancestor of a Binary Tree IV  114](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.tanyquvgvt4e)
-
-
-
-
+解法原始链接 - [Google Doc](https://docs.google.com/document/d/1Kztr5mk2xkEZip3t7cyOQPbUwLUIw_XvETDWRwO-Bms/edit#heading=h.c1shqcpbdft1) 
 
 
 
@@ -213,21 +14,18 @@
 
 (Wu)
 
-python
-
+```python
 class Solution:
 
   def twoSum(self, nums: List[int], target: int) -> List[int]:
+		s = {}
+		for i, e in enumerate(nums):
+			if target - e in s:
+				return [i, s[target-e]]
+		s[e] = i
 
-​    s = {}
 
-​    for i, e in enumerate(nums):
-
-​      if target - e in s:
-
-​        return [i, s[target-e]]
-
-​      s[e] = i
+```
 
 
 
@@ -253,167 +51,124 @@ Step 4: 外排的方法是 - 分成k份，分别到内存里排序，再merge k 
 
 python
 
+```python
 class Solution:
 
   def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
-​    dummy = temp = ListNode()
+    dummy = temp = ListNode()
 
-​    carry = 0
+    carry = 0
 
-​    while l1 or l2 or carry:
+    while l1 or l2 or carry:
 
-​      val1 = val2 = 0
+      val1 = val2 = 0
 
-​      if l1:
+      if l1:
 
-​        val1 = l1.val
+        val1 = l1.val
 
-​        l1 = l1.next
+        l1 = l1.next
 
-​      if l2:
+      if l2:
 
-​        val2 = l2.val
+        val2 = l2.val
 
-​        l2 = l2.next
+        l2 = l2.next
 
-​      temp.next = ListNode((val1 + val2 + carry)%10)
+      temp.next = ListNode((val1 + val2 + carry)%10)
 
-​      carry = (val1 + val2 + carry)//10
+      carry = (val1 + val2 + carry)//10
 
-​      temp = temp.next
+      temp = temp.next
 
-​      
+      
 
-​    return dummy.next
+    return dummy.next
+```
+
+
 
 
 
 follow up：减法
 
-java
-
+```java
 class Solution {
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-​    return addTwoNumbers(l1, l2, false);
+     return addTwoNumbers(l1, l2, false);
 
   }
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2, boolean flip) {
+     ListNode dummyHead = new ListNode(0);
+     boolean allEqual = false;
+     //ListNode prev = dummyHead;
+     ListNode p = l1, q = l2, curr = dummyHead;
 
+     int carry = 0;
+     int last = 0;
 
+     while (p != null || q != null) {
+       if (p == null) {
+         return addTwoNumbers(l2, l1, true);
+       }      
 
-​    ListNode dummyHead = new ListNode(0);
+       int x = (p != null) ? p.val : 0;
+       int y = (q != null) ? q.val : 0;
+       if (x == y) {
+         allEqual = true;
+       } else {
+         allEqual = false;
+       }
 
-​    boolean allEqual = false;
+       int sum = x + carry - y;
+       carry = 0;
+       while (p.next != null && sum < 0) {
+         carry--;
+         sum += 10;
+       }
 
-​    //ListNode prev = dummyHead;
+       last = sum;
+       if (p.next != null) {  
+         curr.next = new ListNode(sum);
+         curr = curr.next;      
+       }
+       if (p != null) p = p.next;
+       if (q != null) q = q.next;
+     }
 
-​    ListNode p = l1, q = l2, curr = dummyHead;
+     if (carry < 0) {
+       last = carry;
+     } 
 
-​    int carry = 0;
+      if (carry == 0 && allEqual) {
+        return new ListNode(0);
+     }
+  
 
-​    int last = 0;
+     if (last < 0 && !flip) {
+      return addTwoNumbers(l2, l1, true);
+     }
 
-​    while (p != null || q != null) {
+     if (flip)
+       curr.next = new ListNode(-last);
+     else 
+       curr.next = new ListNode(last);
 
-​      if (p == null) {
-
-​        return addTwoNumbers(l2, l1, true);
-
-​      }      
-
-​      int x = (p != null) ? p.val : 0;
-
-​      int y = (q != null) ? q.val : 0;
-
-​      if (x == y) {
-
-​        allEqual = true;
-
-​      } else {
-
-​        allEqual = false;
-
-​      }
-
-​      int sum = x + carry - y;
-
-​      carry = 0;
-
-​      while (p.next != null && sum < 0) {
-
-​        carry--;
-
-​        sum += 10;
-
-​      }
-
-​      last = sum;
-
-​      if (p.next != null) {  
-
-​        curr.next = new ListNode(sum);
-
-​        curr = curr.next;      
-
-​      }
-
-
-
-​      if (p != null) p = p.next;
-
-​      if (q != null) q = q.next;
-
-​    }
-
-​    if (carry < 0) {
-
-​      last = carry;
-
-​    } 
-
-​     if (carry == 0 && allEqual) {
-
-​       return new ListNode(0);
-
-​    }
-
-​    
-
-​    if (last < 0 && !flip) {
-
-​      return addTwoNumbers(l2, l1, true);
-
-​    }
-
-​    if (flip)
-
-​      curr.next = new ListNode(-last);
-
-​    else 
-
-​      curr.next = new ListNode(last);
-
-​    
-
-​    return dummyHead.next;
-
+     return dummyHead.next;
   }
-
 }
 
-
-
 // 342 - 465 = -123
-
 // 9999999 - 9999 = 9990000
-
 // 999 - 999 = 0
-
 // 9999 - 9999999= -9990000
+```
+
+
 
 
 
@@ -423,37 +178,36 @@ High Level: 双指针, 慢指针跳着走
 
 (huang)
 
-C#
-
+```c#
 public class Solution {
 
   public int LengthOfLongestSubstring(string s) {
 
-​    Dictionary<int, int> slow_map = new Dictionary<int, int>();
+     Dictionary<int, int> slow_map = new Dictionary<int, int>();
 
-​    int slow = 0;
+     int slow = 0;
 
-​    int maxlen = 0;
+     int maxlen = 0;
 
-​    for(int fast = 0; fast < s.Length; fast ++)
+     for(int fast = 0; fast < s.Length; fast ++)
 
-​    {
+     {
 
-​      char ch = s[fast];
+       char ch = s[fast];
 
-​      if (slow_map.ContainsKey(ch)){
+       if (slow_map.ContainsKey(ch)){
 
-​        slow = Math.Max(slow, slow_map[ch] + 1);
+         slow = Math.Max(slow, slow_map[ch] + 1);
 
-​      }
+       }
 
-​      maxlen = Math.Max(maxlen, fast - slow + 1);
+       maxlen = Math.Max(maxlen, fast - slow + 1);
 
-​      slow_map[ch] = fast;
+       slow_map[ch] = fast;
 
-​    }
+     }
 
-​    return maxlen;
+     return maxlen;
 
   }
 
@@ -528,6 +282,9 @@ private static List<String> longestSubstr(String s) {
 }
 
 }
+```
+
+
 
 
 
@@ -537,7 +294,71 @@ High Level: 找第k个数 + recursion
 
 (huang)
 
- public double median(int[] a, int[] b) {   // Write your solution here   //time : O(nlogn)   //space : O(1)   Arrays.sort(a);   Arrays.sort(b);   int length = a.length + b.length;   int mid0 = (length - 1 )/ 2;   int mid1 = length / 2;   int left = 0;   int right = length - 1;   while(left < mid0 || right > mid1) {//quick select + binary search or whatever    int pivot = quickSelectIndex(a, b, left, right);    if(pivot <= mid0) {     left = pivot + 1;    } else {     right = pivot - 1;    }   }   return (double)(num(a, b, mid0) + num(a, b, mid1)) /2;  }  private int num(int[] a, int[] b, int i) {//2-array mapping function   return i < a.length ? a[i] : b[i - a.length];  }  private void swap(int[] a, int[] b, int i, int j) {//2-array mapping and swap function   int[] numi = i < a.length ? a : b;   int[] numj = j < a.length ? a : b;   i = i < a.length ? i : i - a.length;   j = j < a.length ? j : j - a.length;   int tmp = numi[i];   numi[i] = numj[j];   numj[j] = tmp;   return;  }  private int quickSelectIndex(int[] a, int[] b, int left, int right) {   int pivot = left + (int)(Math.random() * (right + 1 - left) );   int i = left;   int j = right - 1;   swap(a, b, pivot, right);   while(i <= j) {    if(num(a, b, i) > num(a, b, right)) {     if(num(a, b, j) >= num(a, b, right)) {      j--;     } else {      swap(a, b, i, j);      i++;      j--;     }    } else {     i++;    }   }   swap(a, b, i, right);   return i ;  }
+```java
+	public double median(int[] a, int[] b) {
+		// Write your solution here
+		// time : O(nlogn)
+		// space : O(1)
+		Arrays.sort(a);
+		Arrays.sort(b);
+		int length = a.length + b.length;
+		int mid0 = (length - 1) / 2;
+		int mid1 = length / 2;
+		int left = 0;
+		int right = length - 1;
+		while (left < mid0 || right > mid1) {
+			// quick select + binary search or whatever
+			int pivot = quickSelectIndex(a, b, left, right);
+			if (pivot <= mid0) {
+				left = pivot + 1;
+			} else {
+				right = pivot - 1;
+			}
+		}
+		return (double) (num(a, b, mid0) + num(a, b, mid1)) / 2;
+	}
+
+	private int num(int[] a, int[] b, int i) {
+		// 2-array mapping function
+		return i < a.length ? a[i] : b[i - a.length];
+	}
+
+	private void swap(int[] a, int[] b, int i, int j) {
+		// 2-array mapping and swap function
+		int[] numi = i < a.length ? a : b;
+		int[] numj = j < a.length ? a : b;
+		i = i < a.length ? i : i - a.length;
+		j = j < a.length ? j : j - a.length;
+		int tmp = numi[i];
+		numi[i] = numj[j];
+		numj[j] = tmp;
+		return;
+	}
+
+	private int quickSelectIndex(int[] a, int[] b, int left, int right) {
+		int pivot = left + (int) (Math.random() * (right + 1 - left));
+		int i = left;
+		int j = right - 1;
+		swap(a, b, pivot, right);
+		while (i <= j) {
+			if (num(a, b, i) > num(a, b, right)) {
+				if (num(a, b, j) >= num(a, b, right)) {
+					j--;
+				} else {
+					swap(a, b, i, j);
+					i++;
+					j--;
+				}
+			} else {
+				i++;
+			}
+		}
+		swap(a, b, i, right);
+		return i;
+	}
+```
+
+
 
 
 
@@ -549,21 +370,76 @@ High Level: 找第k个数 + recursion
 
 High Level：
 
-
-
 Java:
 
+```java
 // TC: O(n^2) SC: O(1) 空间优化的方法
+class Solution {
+	public String longestPalindrome(String s) {
+		if (s == null || s.length() < 1)
+			return "";
+		int start = 0, end = 0;
+		for (int i = 0; i < s.length(); i++) {
+			int len1 = expandAroundCenter(s, i, i);
+			int len2 = expandAroundCenter(s, i, i + 1);
+			int len = Math.max(len1, len2);
+			if (len > end - start) {
+				start = i - (len - 1) / 2;
+				end = i + len / 2;
+			}
+		}
+		return s.substring(start, end + 1);
+	}
 
-class Solution { public String longestPalindrome(String s) {   if (s == null || s.length() < 1) return "";   int start = 0, end = 0;   for (int i = 0; i < s.length(); i++) {     int len1 = expandAroundCenter(s, i, i);     int len2 = expandAroundCenter(s, i, i + 1);     int len = Math.max(len1, len2);     if (len > end - start) {       start = i - (len - 1) / 2;       end = i + len / 2;     }   }   return s.substring(start, end + 1); }  private int expandAroundCenter(String s, int left, int right) {   int L = left, R = right;   while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {     L--;     R++; // (L, R)   }   return R - L - 1; } }  // dp的方法 SC O(n^2) class Solution { public String longestPalindrome(String s) {   if (s == null || s.length() < 1) return "";   int start = 0, end = 0;   for (int i = 0; i < s.length(); i++) {     int len1 = expandAroundCenter(s, i, i);     int len2 = expandAroundCenter(s, i, i + 1);     int len = Math.max(len1, len2);     if (len > end - start) {       start = i - (len - 1) / 2;       end = i + len / 2;     }   }   return s.substring(start, end + 1); }  private int expandAroundCenter(String s, int left, int right) {   int L = left, R = right;   while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {     L--;     R++; // (L, R)   }   return R - L - 1; } }
+	private int expandAroundCenter(String s, int left, int right) {
+		int L = left, R = right;
+		while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+			L--;
+			R++;
+			// (L, R)
+		}
+		return R - L - 1;
+	}
+}
+```
+
+
+
+```java
+	// dp的方法 SC O(n^2) 
+		class Solution {
+			public String longestPalindrome(String s) {
+				if (s == null || s.length() < 1)
+					return "";
+				int start = 0, end = 0;
+				for (int i = 0; i < s.length(); i++) {
+					int len1 = expandAroundCenter(s, i, i);
+					int len2 = expandAroundCenter(s, i, i + 1);
+					int len = Math.max(len1, len2);
+					if (len > end - start) {
+						start = i - (len - 1) / 2;
+						end = i + len / 2;
+					}
+				}
+				return s.substring(start, end + 1);
+			}
+
+			private int expandAroundCenter(String s, int left, int right) {
+				int L = left, R = right;
+				while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+					L--;
+					R++; // (L, R) } return R - L - 1; } }
+				}
+	}
+```
+
+
 
 
 
 # 6. Zigzag Conversion
 
 （tang）
-
-
 
 High Level: 
 
@@ -575,55 +451,38 @@ TC: O(1)
 
 
 
+```java
 class Solution {
 
-public String longestPalindrome(String s) {
+  public String longestPalindrome(String s) {
 
-  if (s == null || s.length() < 1) return "";
+    if (s == null || s.length() < 1) return "";
+    int start = 0, end = 0;
+    for (int i = 0; i < s.length(); i++) {
+      int len1 = expandAroundCenter(s, i, i);
+      int len2 = expandAroundCenter(s, i, i + 1);
+      int len = Math.max(len1, len2);
 
-  int start = 0, end = 0;
-
-  for (int i = 0; i < s.length(); i++) {
-
-​    int len1 = expandAroundCenter(s, i, i);
-
-​    int len2 = expandAroundCenter(s, i, i + 1);
-
-​    int len = Math.max(len1, len2);
-
-​    if (len > end - start) {
-
-​      start = i - (len - 1) / 2;
-
-​      end = i + len / 2;
-
-​    }
-
+      if (len > end - start) {
+        start = i - (len - 1) / 2;
+        end = i + len / 2;
+      }
+    }
+    return s.substring(start, end + 1);
   }
 
-  return s.substring(start, end + 1);
+  private int expandAroundCenter(String s, int left, int right) {
 
-}
-
-
-
-private int expandAroundCenter(String s, int left, int right) {
-
-  int L = left, R = right;
-
-  while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
-
-​    L--;
-
-​    R++; // (L, R)
-
+    int L = left, R = right;
+    while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+      L--;
+      R++; // (L, R)
+    }
+    return R - L - 1;
   }
-
-  return R - L - 1;
-
 }
 
-}
+```
 
 
 
@@ -641,49 +500,32 @@ Time : O(1) max should be the digit number of Integer_MAX_VALUE
 
 Space : O(1)
 
+```java
 class Solution {
 
   public int reverse(int x) {
 
-​    int result = 0;
+     int result = 0;
+     long longRes = 0;
+     boolean negative = x > 0 ? false : true;
 
-​    long longRes = 0;
-
-​    boolean negative = x > 0 ? false : true;
-
-​    x = x > 0 ? x : -1 * x;
-
-​    while (x != 0) {
-
-​      int digit = x % 10;
-
-​      int curResult = result * 10 + digit; 
-
-​      
-
-​      //curResult might be overflow
-
-​      //check overflow, if we calculate back to match result failed, represent there is an overflow
-
-​      if ((curResult - digit) / 10 != result) {
-
-​        return 0;
-
-​      }
-
-​      result = curResult;
-
-​      x = x / 10;
-
-​    }
-
-​    
-
-​    return negative ? -1 * result : result;
-
+     x = x > 0 ? x : -1 * x;
+     while (x != 0) {
+       int digit = x % 10;
+       int curResult = result * 10 + digit; 
+       //curResult might be overflow
+       //check overflow, if we calculate back to match result failed, represent there is an overflow
+       if ((curResult - digit) / 10 != result) {
+         return 0;
+       }
+       result = curResult;
+       x = x / 10;
+     }
+     return negative ? -1 * result : result;
   }
-
 }
+
+```
 
 
 
@@ -695,6 +537,7 @@ class Solution {
 
 Java:
 
+```java
 Time O(n) n is the length of input string
 
 Space : O(1)
@@ -703,73 +546,76 @@ class Solution {
 
   public int myAtoi(String s) {
 
-​    if (s == null || s.length() == 0) {
+      if (s == null || s.length() == 0) {
 
-​      return 0;
+        return 0;
 
-​    }
+      }
 
-​    //maintain an index to loop the char in string
+      //maintain an index to loop the char in string
 
-​    int index = 0;
+      int index = 0;
 
   
 
-​    //Step1: remove leading space
+      //Step1: remove leading space
 
-​    while (index < s.length() && s.charAt(index) == ' ') {
+      while (index < s.length() && s.charAt(index) == ' ') {
 
-​      index++;
+        index++;
 
-​    } 
+      } 
 
-​    
+      
 
-​    //Step2: check the sign
+      //Step2: check the sign
 
-​    int sign = 1;
+      int sign = 1;
 
-​    if (index < s.length() && (s.charAt(index) == '-' || s.charAt(index) == '+')) {
+      if (index < s.length() && (s.charAt(index) == '-' || s.charAt(index) == '+')) {
 
-​      sign = s.charAt(index) == '-' ? -1 : 1;
+        sign = s.charAt(index) == '-' ? -1 : 1;
 
-​      index++;
+        index++;
 
-​    }
+      }
 
-​    
+      
 
-​    //Step3: read the digit until non-digit
+      //Step3: read the digit until non-digit
 
-​    int result = 0;
+      int result = 0;
 
-​    while (index < s.length() && s.charAt(index) >= '0' && s.charAt(index) <= '9') {
+      while (index < s.length() && s.charAt(index) >= '0' && s.charAt(index) <= '9') {
 
-​      int digit = s.charAt(index) - '0';
+        int digit = s.charAt(index) - '0';
 
-​      
+        
 
-​      **if (result > Integer.MAX_VALUE / 10** 
+        **if (result > Integer.MAX_VALUE / 10** 
 
-​        **|| (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {**
+          **|| (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {**
 
-​        **return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;**
+          **return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;**
 
-​      **}**
+        **}**
 
-​      result = result * 10 + digit;;
+        result = result * 10 + digit;;
 
-​      index++;
+        index++;
 
-​    }
+      }
 
-​    return sign * result;
+      return sign * result;
 
-​    
+      
 
   }
 
 }
+```
+
+
 
 
 
@@ -785,37 +631,41 @@ High Level: 取%，取/
 
 Java:
 
+```java
 //方法一：
 
 class Solution {
 
   public boolean isPalindrome(int x) {
 
-​    if (x < 0) return false;
+      if (x < 0) return false;
 
-​     
+       
 
-​    int rev = 0;
+      int rev = 0;
 
-​    int y = x;
+      int y = x;
 
  
 
-​    while ( y != 0) {
+      while ( y != 0) {
 
-​        rev = rev * 10 + y % 10;
+          rev = rev * 10 + y % 10;
 
-​        System.out.println(rev);
+          System.out.println(rev);
 
-​        y = y / 10;
+          y = y / 10;
 
-​    }
+      }
 
-​    return rev == x; // -1126087180 overflow return false;
+      return rev == x; // -1126087180 overflow return false;
 
   }
 
 }
+
+
+```
 
 
 
@@ -823,33 +673,37 @@ class Solution {
 
 c#
 
+```c#
 public class Solution {
 
   public bool IsPalindrome(int x) {
 
-​    if(x < 0 || (x % 10 == 0 && x != 0)) {
+      if(x < 0 || (x % 10 == 0 && x != 0)) {
 
-​      return false;
+        return false;
 
-​    }
+      }
 
-​    int half = 0;
+      int half = 0;
 
-​    while( x > half){
+      while( x > half){
 
-​      half = half *10 + x % 10;
+        half = half *10 + x % 10;
 
-​      x /= 10;
+        x /= 10;
 
-​    }
+      }
 
-​    return half == x || ( x == half /10);
+      return half == x || ( x == half /10);
 
   }
 
 
 
 }
+```
+
+
 
 
 
@@ -859,6 +713,7 @@ public class Solution {
 
 (luo)
 
+```java
 /*
 
 dp的方法
@@ -877,77 +732,80 @@ class Solution {
 
   public boolean isMatch(String s, String p) {
 
-​    int lenS = s.length();
+      int lenS = s.length();
 
-​    int lenP = p.length();
+      int lenP = p.length();
 
-​    char[] sArray = s.toCharArray();
+      char[] sArray = s.toCharArray();
 
-​    char[] pArray = p.toCharArray();
+      char[] pArray = p.toCharArray();
 
-​    
+      
 
-​    boolean[][] dp = new boolean[lenS + 1][lenP + 1];
+      boolean[][] dp = new boolean[lenS + 1][lenP + 1];
 
-​    dp[0][0] = true;
+      dp[0][0] = true;
 
-​    
+      
 
-​    //当s的长度为0的情况
+      //当s的长度为0的情况
 
-​    for (int i = 2; i <= lenP; i++) {
+      for (int i = 2; i <= lenP; i++) {
 
-​      dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 2] : false;
+        dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 2] : false;
 
-​    }
+      }
 
-​    
+      
 
-​    for (int i = 1; i <= lenS; i++) {
+      for (int i = 1; i <= lenS; i++) {
 
-​      for (int j = 1; j <= lenP; j++) {
+        for (int j = 1; j <= lenP; j++) {
 
-​        
+          
 
-​        char sc = sArray[i - 1];
+          char sc = sArray[i - 1];
 
-​        char pc = pArray[j - 1];
+          char pc = pArray[j - 1];
 
-​        
+          
 
-​        if (sc == pc || pc == '.') {
+          if (sc == pc || pc == '.') {
 
-​          dp[i][j] = dp[i - 1][j - 1];
+            dp[i][j] = dp[i - 1][j - 1];
 
-​        } else {
+          } else {
 
-​          if (pc == '*') { // 前面的字母重复0次，直接看j-2的位置
+            if (pc == '*') { // 前面的字母重复0次，直接看j-2的位置
 
-​            if (dp[i][j - 2]) {
+              if (dp[i][j - 2]) {
 
-​              dp[i][j] = true;
+                dp[i][j] = true;
 
-​            } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') {// 前面的字母重复1次
+              } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') {// 前面的字母重复1次
 
-​              dp[i][j] = dp[i - 1][j];
+                dp[i][j] = dp[i - 1][j];
 
-​            }
+              }
 
-​          }
+            }
 
-​        } 
+          } 
 
-​      }
+        }
 
-​    }
+      }
 
-​    return dp[lenS][lenP];
+      return dp[lenS][lenP];
 
  
 
   }
 
 }
+```
+
+
 
 
 
@@ -967,35 +825,39 @@ TC: O((lenS+lenP) * 2^(lenS + lenP))
 
 */
 
+```java
 // recursion的方法，代码简短
 
 class Solution {
 
   public boolean isMatch(String s, String p) {
 
-​    // corner case check, if p length is 0 but s length is not 0, return false
+      // corner case check, if p length is 0 but s length is not 0, return false
 
-​    if (p.length() == 0) return s.length() == 0;
+      if (p.length() == 0) return s.length() == 0;
 
-​    
+      
 
-​    boolean firstMatch = s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
+      boolean firstMatch = s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
 
-​    
+      
 
-​    if (p.length() >= 2 && p.charAt(1) == '*' ) {
+      if (p.length() >= 2 && p.charAt(1) == '*' ) {
 
-​      return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
+        return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
 
-​    } else {
+      } else {
 
-​      return firstMatch && isMatch(s.substring(1), p.substring(1));
+        return firstMatch && isMatch(s.substring(1), p.substring(1));
 
-​    }
+      }
 
   }
 
 }
+```
+
+
 
 
 
@@ -1007,56 +869,59 @@ class Solution {
 
 双指针
 
-
-
+```java
 public int maxArea(int[] height) {
 
-​    if (height == null || height.length == 0) {
+      if (height == null || height.length == 0) {
 
-​      return 0;
+        return 0;
 
-​    }
+      }
 
-​    
+      
 
-​    int start = 0;
+      int start = 0;
 
-​    int end = height.length - 1;
+      int end = height.length - 1;
 
-​    int maxArea = 0;
+      int maxArea = 0;
 
-​    while (start < end) {
+      while (start < end) {
 
-​      int current = Math.min(height[start], height[end]);
+        int current = Math.min(height[start], height[end]);
 
-​      maxArea = Math.max(maxArea, current * (end - start));
+        maxArea = Math.max(maxArea, current * (end - start));
 
-​      while (start < end && height[start] <= current) {
+        while (start < end && height[start] <= current) {
 
-​        start++;
+          start++;
 
-​      }
+        }
 
-​      
+        
 
-​      while (start < end && height[end] <= current) {
+        while (start < end && height[end] <= current) {
 
-​        end--;
+          end--;
 
-​      }
+        }
 
-​    }
+      }
 
-​    
+      
 
-​    return maxArea;
+      return maxArea;
 
   }
+```
+
+
 
 # 14. Longest Common Prefix
 
 (zhang)
 
+```java
 class Solution {
 
  // Horizontal scanning
@@ -1069,13 +934,13 @@ class Solution {
 
   for (int i = 1; i < strs.length; i++)
 
-​    while (strs[i].indexOf(prefix) != 0) {
+      while (strs[i].indexOf(prefix) != 0) {
 
-​      prefix = prefix.substring(0, prefix.length() - 1);
+        prefix = prefix.substring(0, prefix.length() - 1);
 
-​      if (prefix.isEmpty()) return "";
+        if (prefix.isEmpty()) return "";
 
-​    }     
+      }     
 
   return prefix;
 
@@ -1083,7 +948,7 @@ class Solution {
 
   
 
-​    // Vertical scanning
+      // Vertical scanning
 
  public String longestCommonPrefix_Vertical(String[] strs) {
 
@@ -1091,15 +956,15 @@ class Solution {
 
   for (int i = 0; i < strs[0].length() ; i++){
 
-​    char c = strs[0].charAt(i);
+      char c = strs[0].charAt(i);
 
-​    for (int j = 1; j < strs.length; j ++) {
+      for (int j = 1; j < strs.length; j ++) {
 
-​      if (i == strs[j].length() || strs[j].charAt(i) != c)
+        if (i == strs[j].length() || strs[j].charAt(i) != c)
 
-​        return strs[0].substring(0, i);       
+          return strs[0].substring(0, i);       
 
-​    }
+      }
 
   }
 
@@ -1111,25 +976,26 @@ class Solution {
 
 public String longestCommonPrefix_sort(String[] strs) {
 
-​    if (strs == null || strs.length == 0) return "";
+      if (strs == null || strs.length == 0) return "";
 
-​    Arrays.sort(strs);
+      Arrays.sort(strs);
 
-​     
+       
 
-​    int len = Math.min(strs[0].length(), strs[strs.length - 1].length());
+      int len = Math.min(strs[0].length(), strs[strs.length - 1].length());
 
-​    int i = 0;
+      int i = 0;
 
-​    while (i < len && strs[0].charAt(i) == strs[strs.length - 1].charAt(i))
+      while (i < len && strs[0].charAt(i) == strs[strs.length - 1].charAt(i))
 
-​        i++;
+          i++;
 
-​    return strs[0].substring(0, i);
+      return strs[0].substring(0, i);
 
   }
 
 }
+```
 
 
 
@@ -1169,17 +1035,105 @@ Java:
 
 先sort，再 two pointers
 
-// TC： O（n^2） class Solution {   public int threeSumSmaller(int[] nums, int target) {     Arrays.sort(nums);     int sum = 0;     for (int i = 0; i < nums.length - 2; i++) {       sum += twoSumSmaller(nums, i + 1, target - nums[i]);     }     return sum;   }    private int twoSumSmaller(int[] nums, int startIndex, int target) {     int sum = 0;     int left = startIndex;     int right = nums.length - 1;     while (left < right) {       if (nums[left] + nums[right] < target) {         sum += right - left; //这里是关键         left++;       } else {         right--;       }     }     return sum;   } }
+// TC： O（n^2）
 
+```java
+class Solution {
 
+	public int threeSumSmaller(int[] nums, int target) {
+		Arrays.sort(nums);
+		int sum = 0;
+		for (int i = 0; i < nums.length - 2; i++) {
+			sum += twoSumSmaller(nums, i + 1, target - nums[i]);
+		}
+		return sum;
+	}
 
+	private int twoSumSmaller(int[] nums, int startIndex, int target) {
+		int sum = 0;
+		int left = startIndex;
+		int right = nums.length - 1;
+		while (left < right) {
+			if (nums[left] + nums[right] < target) {
+				sum += right - left;
+				// 这里是关键
+				left++;
+			} else {
+				right--;
+			}
+		}
+		return sum;
+	}
+}
+```
 
+```java
+class Solution {
+	public int threeSumSmaller(int[] nums, int target) {
+		Arrays.sort(nums);
+		int sum = 0;
+		for (int i = 0; i < nums.length - 2; i++) {
+			sum += twoSumSmaller(nums, i + 1, target - nums[i]);
+		}
+		return sum;
+	}
 
+	private int twoSumSmaller(int[] nums, int startIndex, int target) {
+		int sum = 0;
+		int left = startIndex;
+		int right = nums.length - 1;
+		while (left < right) {
+			if (nums[left] + nums[right] < target) {
+				/*
+				 * L [left,nL]?? right | | | -3 -2 -1 0 1 3 t: 2 [left, right - 1], newTarget:
+				 * target - nums[right] each point (L, right]: right-left, right - nL
+				 */ int newLeft = binarySearch(nums, left, right - 1, target - nums[right]);
+				if (newLeft == -1) {
+					return sum;
+				}
+				sum += ((right - left) + (right - newLeft)) * (newLeft - left + 1) / 2;
+				left = newLeft;
+				left++;
+			} else {
+				int newRight = binarySearch(nums, left + 1, right, target - nums[left]);
+				if (newRight == -1) {
+					return sum;
+				}
+				right = newRight;
+			}
+		}
+		return sum;
+	}
 
-
-/*******************Hybrid*********************************/ class Solution {   public int threeSumSmaller(int[] nums, int target) {     Arrays.sort(nums);     int sum = 0;     for (int i = 0; i < nums.length - 2; i++) {       sum += twoSumSmaller(nums, i + 1, target - nums[i]);     }     return sum;   }    private int twoSumSmaller(int[] nums, int startIndex, int target) {     int sum = 0;     int left = startIndex;     int right = nums.length - 1;     while (left < right) {       if (nums[left] + nums[right] < target) {         /*        L        [left,nL]??  right         |  |     |       -3 -2 -1 0 1 3  t: 2 [left, right - 1], newTarget: target - nums[right]      each point (L, right]: right-left, right - nL                         */         int newLeft = binarySearch(nums, left, right - 1, target - nums[right]);         if (newLeft == -1) {           return sum;         }         sum += ((right - left) + (right - newLeft)) * (newLeft - left + 1) / 2;         left = newLeft;         left++;       } else {         int newRight = binarySearch(nums, left + 1, right, target - nums[left]);         if (newRight == -1) {           return sum;         }         right = newRight;       }     }     return sum;   }      private int binarySearch(int[] arr, int left, int right, int target) {     int mid;     int left0 = left;     if (arr[right] < target) {       return right;     }     if (right >= left + 1 && arr[left+1] < target) {       while (left < right - 1) {         mid = left + (right - left) / 2;         if (arr[mid] >= target) {           right = mid;         } else {           left = mid;         }       }       if (arr[right] < target) {         return right;       }       if (arr[left] < target) {         return left;       }                }      if (arr[left0] < target) {       return left;     }     return -1;    } } /* Runtime: 5 ms, faster than 98.30% of Java online submissions for 3Sum Smaller. Memory Usage: 38.2 MB, less than 96.10% of Java online submissions for 3Sum Smaller. */   
-
-
+	private int binarySearch(int[] arr, int left, int right, int target) {
+		int mid;
+		int left0 = left;
+		if (arr[right] < target) {
+			return right;
+		}
+		if (right >= left + 1 && arr[left + 1] < target) {
+			while (left < right - 1) {
+				mid = left + (right - left) / 2;
+				if (arr[mid] >= target) {
+					right = mid;
+				} else {
+					left = mid;
+				}
+			}
+			if (arr[right] < target) {
+				return right;
+			}
+			if (arr[left] < target) {
+				return left;
+			}
+		}
+		if (arr[left0] < target) {
+			return left;
+		}
+		return -1;
+	}
+} 
+```
 
 
 
@@ -1197,6 +1151,7 @@ C#
 
 
 
+```java
 //(luo) DFS
 
 class Solution {
@@ -1207,51 +1162,54 @@ class Solution {
 
   public List<String> letterCombinations(String digits) {
 
-​    if (digits == null || digits.length() == 0) {
+      if (digits == null || digits.length() == 0) {
 
-​      return new ArrayList<>();
+        return new ArrayList<>();
 
-​    }
+      }
 
-​    String[] numChar = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+      String[] numChar = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-​    char[] input = digits.toCharArray();
+      char[] input = digits.toCharArray();
 
-​    List<String> result = new ArrayList<>();
+      List<String> result = new ArrayList<>();
 
-​    StringBuilder sb = new StringBuilder();
+      StringBuilder sb = new StringBuilder();
 
-​    helper(input, numChar, sb, result, 0);
+      helper(input, numChar, sb, result, 0);
 
-​    return result;
+      return result;
 
   }
 
   private void helper(char[] input, String[] numChar, StringBuilder sb, List<String> result, int index) {
 
-​    if (index == input.length) {
+      if (index == input.length) {
 
-​      result.add(sb.toString());
+        result.add(sb.toString());
 
-​      return;
+        return;
 
-​    }
+      }
 
-​    char[] chars = numChar[input[index] - '0'].toCharArray(); // 注意这里
+      char[] chars = numChar[input[index] - '0'].toCharArray(); // 注意这里
 
-​    for (int i = 0; i < chars.length; i++) {
+      for (int i = 0; i < chars.length; i++) {
 
-​      sb.append(chars[i]);
+        sb.append(chars[i]);
 
-​      helper(input, numChar, sb, result, index + 1);
+        helper(input, numChar, sb, result, index + 1);
 
-​      sb.deleteCharAt(sb.length() - 1);
+        sb.deleteCharAt(sb.length() - 1);
 
-​    }
+      }
 
   }
 
 }
+
+
+```
 
 
 
@@ -1261,9 +1219,33 @@ class Solution {
 
 (tang)
 
+```java
+//快慢指针
+class Solution {
+	public ListNode removeNthFromEnd(ListNode head, int n) {
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+		ListNode slow = head;
+		ListNode fast = head;
+		int count = 0;
+		while (count < n && fast.next != null) {
+			fast = fast.next;
+			count++;
+		}
+		if (count < n) {
+			return head.next;
+		}
+		while (fast.next != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+		slow.next = slow.next.next;
+		return dummy.next;
+	}
+} 
 
-
-// 快慢指针 class Solution {   public ListNode removeNthFromEnd(ListNode head, int n) {     ListNode dummy = new ListNode(0);     dummy.next = head;     ListNode slow = head;     ListNode fast = head;     int count = 0;     while (count < n && fast.next != null) {       fast = fast.next;       count++;     }     if (count < n) {       return head.next;     }     while (fast.next != null) {       fast = fast.next;       slow = slow.next;     }     slow.next = slow.next.next;     return dummy.next;   } } /* n = 2 count = 2;   s   |  |   d>1,2,3> 5  o(2n) o(1) */
+/* n = 2 count = 2;   s   |  |   d>1,2,3> 5  o(2n) o(1) */
+```
 
 
 
@@ -1273,59 +1255,63 @@ class Solution {
 
 High Level: stack
 
+```java
 public boolean isValid(String s) {
 
-​    if (s == null || s.length() == 0) {
+      if (s == null || s.length() == 0) {
 
-​      return true;
+        return true;
 
-​    }
+      }
 
-​    int index = 0;
+      int index = 0;
 
-​    Deque<Character> stack = new ArrayDeque<>();
+      Deque<Character> stack = new ArrayDeque<>();
 
-​    while (index < s.length()) {
+      while (index < s.length()) {
 
-​      char c = s.charAt(index);
+        char c = s.charAt(index);
 
-​      if (c == '(' || c =='{' || c == '[') {
+        if (c == '(' || c =='{' || c == '[') {
 
-​        stack.push(c);
+          stack.push(c);
 
-​      } else if (c == ')') {
+        } else if (c == ')') {
 
-​        if (stack.isEmpty() || stack.pop() != '(') {
+          if (stack.isEmpty() || stack.pop() != '(') {
 
-​          return false;
+            return false;
 
-​        }
+          }
 
-​      } else if (c == ']') {
+        } else if (c == ']') {
 
-​        if (stack.isEmpty() || stack.pop() != '[') {
+          if (stack.isEmpty() || stack.pop() != '[') {
 
-​          return false;
+            return false;
 
-​        }
+          }
 
-​      } else if (c == '}') {
+        } else if (c == '}') {
 
-​        if (stack.isEmpty() || stack.pop() != '{') {
+          if (stack.isEmpty() || stack.pop() != '{') {
 
-​          return false;
+            return false;
 
-​        }
+          }
 
-​      }
+        }
 
-​      index++;
+        index++;
 
-​    }
+      }
 
-​    return stack.isEmpty();
+      return stack.isEmpty();
 
   }
+```
+
+
 
 
 
@@ -1333,53 +1319,57 @@ public boolean isValid(String s) {
 
 (Lynn)
 
+```java
 public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-​    if (l1 == null || l2 == null) {
+      if (l1 == null || l2 == null) {
 
-​      return l1 == null ? l2 : l1;
+        return l1 == null ? l2 : l1;
 
-​    }
+      }
 
-​    ListNode dummy = new ListNode(0);
+      ListNode dummy = new ListNode(0);
 
-​    ListNode cur = dummy;
+      ListNode cur = dummy;
 
-​    while (l1 != null && l2 != null) {
+      while (l1 != null && l2 != null) {
 
-​      **if (l1.val <= l2.val) {**
+        **if (l1.val <= l2.val) {**
 
-​        **cur.next = l1;**
+          **cur.next = l1;**
 
-​        **l1 = l1.next;**
+          **l1 = l1.next;**
 
-​      **} else {**
+        **} else {**
 
-​        **cur.next = l2;**
+          **cur.next = l2;**
 
-​        **l2 = l2.next;**
+          **l2 = l2.next;**
 
-​      **}**
+        **}**
 
-​      cur = cur.next;
+        cur = cur.next;
 
-​    }
+      }
 
-​    if (l1 != null) {
+      if (l1 != null) {
 
-​      cur.next = l1;
+        cur.next = l1;
 
-​    }
+      }
 
-​    if (l2 != null) {
+      if (l2 != null) {
 
-​      cur.next = l2;
+        cur.next = l2;
 
-​    }
+      }
 
-​    return dummy.next;
+      return dummy.next;
 
   }
+```
+
+
 
 
 
@@ -1389,51 +1379,55 @@ public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
 (Lynn)
 
+ ```java
  public ListNode mergeKLists(ListNode[] lists) {
+ 
+       ListNode dummy = new ListNode(0);
+ 
+       ListNode cur = dummy;
+ 
+       **PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);**
+ 
+       
+ 
+       for (ListNode head : lists) {
+ 
+         if (head != null) {
+ 
+           minHeap.offer(head);
+ 
+         }
+ 
+       } 
+ 
+       while (!minHeap.isEmpty()) {
+ 
+         **//pop top out and add to result**
+ 
+         ListNode node = minHeap.poll();
+ 
+         cur.next = node;
+ 
+         cur = cur.next;
+ 
+         
+ 
+         **//offer a next node to the queue**
+ 
+         if (node.next != null) {
+ 
+           minHeap.offer(node.next);
+ 
+         }
+ 
+       }
+ 
+       return dummy.next;
+ 
+   }
+ ```
 
-​    ListNode dummy = new ListNode(0);
 
-​    ListNode cur = dummy;
-
-​    **PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);**
-
-​    
-
-​    for (ListNode head : lists) {
-
-​      if (head != null) {
-
-​        minHeap.offer(head);
-
-​      }
-
-​    } 
-
-​    while (!minHeap.isEmpty()) {
-
-​      **//pop top out and add to result**
-
-​      ListNode node = minHeap.poll();
-
-​      cur.next = node;
-
-​      cur = cur.next;
-
-​      
-
-​      **//offer a next node to the queue**
-
-​      if (node.next != null) {
-
-​        minHeap.offer(node.next);
-
-​      }
-
-​    }
-
-​    return dummy.next;
-
-  }
 
 
 
@@ -1443,6 +1437,7 @@ public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
 (luo)
 
+```java
 /*https://www.youtube.com/watch?v=dlATMslQ6Uc 
 
 从右往前依次处理
@@ -1456,60 +1451,60 @@ TC：O（n）从右到左一遍
 SC：O（1）
 
 */
-
-
-
 class Solution {
 
   public int romanToInt(String s) {
 
-​    Map<Character, Integer> map = new HashMap<>();
+      Map<Character, Integer> map = new HashMap<>();
 
-​    map.put('I', 1);
+      map.put('I', 1);
 
-​    map.put('V', 5);
+      map.put('V', 5);
 
-​    map.put('X', 10);
+      map.put('X', 10);
 
-​    map.put('L', 50);
+      map.put('L', 50);
 
-​    map.put('C', 100);
+      map.put('C', 100);
 
-​    map.put('D', 500);
+      map.put('D', 500);
 
-​    map.put('M', 1000);
+      map.put('M', 1000);
 
-​    
+      
 
-​    int n = s.length();
+      int n = s.length();
 
-​    int result = map.get(s.charAt(n - 1));
+      int result = map.get(s.charAt(n - 1));
 
 
 
-​    for (int i = n - 2; i >= 0; i--) {
+      for (int i = n - 2; i >= 0; i--) {
 
-​      int currentValue = map.get(s.charAt(i));
+        int currentValue = map.get(s.charAt(i));
 
-​      
+        
 
-​      if (currentValue < map.get(s.charAt(i + 1))) {
+        if (currentValue < map.get(s.charAt(i + 1))) {
 
-​        result -= currentValue;
+          result -= currentValue;
 
-​      } else {
+        } else {
 
-​        result += currentValue;
+          result += currentValue;
 
-​      }
+        }
 
-​    }
+      }
 
-​    return result;
+      return result;
 
   }
 
 }
+
+
+```
 
 
 
@@ -1519,51 +1514,81 @@ class Solution {
 
 (Huang)
 
-
-
-
-
+```java
 // (Luo) TC: O(n) SC: O(1) recursively swap the nodes
 
 class Solution {
 
   public ListNode swapPairs(ListNode head) {
 
-​    if (head == null || head.next == null) {
+      if (head == null || head.next == null) {
 
-​      return head;
+        return head;
 
-​    }
+      }
 
-​    ListNode node1 = head;
+      ListNode node1 = head;
 
-​    ListNode node2 = head.next;
+      ListNode node2 = head.next;
 
-​    ListNode node3 = head.next.next;
+      ListNode node3 = head.next.next;
 
-​    
+      
 
-​    ListNode node = swapPairs(node3);
+      ListNode node = swapPairs(node3);
 
-​    
+      
 
-​    node2.next = node1;
+      node2.next = node1;
 
-​    node1.next = node;
+      node1.next = node;
 
-​    
+      
 
-​    return node2;
+      return node2;
 
   }
 
 }
+```
+
+
 
 
 
 # 25  Reverse Nodes in k-Group
 
-(Tang)   public ListNode reverseKGroup2(ListNode head, int k) {     ListNode dummy = new ListNode(0), start = dummy;     dummy.next = head;     ListNode p = start, c, n = p; // 0     while(n != null) {       p = start;        n = p;       start = p.next; // 1       for(int i = 0; i < k && n != null; i++) n = n.next; // 2       if(n == null) break;       for(int i = 0; i < k-1; i++) {         c = p.next;         p.next = c.next;         c.next = n.next;         n.next = c;       }     }     return dummy.next;   }   /*--------k == 3----------------  * n(tail)  * p(prev)   * start  *dummy  1  2  3  4  5  *    cur  *----------------------------* 0/   /*----------------------------  * n(tail)  * p(prev)   *    start        *dummy  1  2  3  4  5  *    cur  *----------------------------* 1/      /*----------------------------  *          n(tail)  * p(prev)   *    start  *dummy  1  2  3  4  5  *    cur  *----------------------------* 2/        /*----------------------------  *          n(tail)  * p(prev)   *    start  *dummy  (1)  2  3  4  5  *    cur  *----------------------------* 3-0/    /*----------------------------  *       n(tail)  * p(prev)   *         start  *dummy  2  3  （1）  4  5  *    cur  *----------------------------* 3-1/      /*----------------------------  *    n(tail)  * p(prev)   *          start  *dummy  3   2  1   4  5  *    cur  *----------------------------* 3-2/     /*-----------top again--------------  *          n(tail)  *          p(prev)   *          start  *dummy  3   2  1   4  5  *    cur  *----------------------------* 4/
+(Tang) 
+
+```java
+class Solution {
+
+	public ListNode reverseKGroup2(ListNode head, int k) {
+		ListNode dummy = new ListNode(0), start = dummy;
+		dummy.next = head;
+		ListNode p = start, c, n = p;
+
+		while (n != null) {
+			p = start;
+			n = p;
+			start = p.next; // 1
+			for (int i = 0; i < k && n != null; i++)
+				n = n.next; // 2
+			if (n == null)
+				break;
+			for (int i = 0; i < k - 1; i++) {
+				c = p.next;
+				p.next = c.next;
+				c.next = n.next;
+				n.next = c;
+			}
+		}
+		return dummy.next;
+	}
+}
+```
+
+
 
 
 
@@ -1571,39 +1596,43 @@ class Solution {
 
 # 26  Remove Duplicates from Sorted Array
 
+```java
 // code by Luo, 快慢指针
 
 class Solution {
 
   public int removeDuplicates(int[] nums) {
 
-​    if (nums.length <= 1) {
+      if (nums.length <= 1) {
 
-​      return nums.length;
+        return nums.length;
 
-​    }
+      }
 
-​    int slow = 1; // **[0...slow-1] to keep**
+      int slow = 1; // **[0...slow-1] to keep**
 
-​    
+      
 
-​    for (int i = 1; i < nums.length; i++) {**// fast pointer to traverse**
+      for (int i = 1; i < nums.length; i++) {**// fast pointer to traverse**
 
-​      if (nums[i] != nums[slow - 1]) {
+        if (nums[i] != nums[slow - 1]) {
 
-​        nums[slow] = nums[i];
+          nums[slow] = nums[i];
 
-​        slow++;
+          slow++;
 
-​      }
+        }
 
-​    }
+      }
 
-​    return slow;
+      return slow;
 
   }
 
 }
+
+
+```
 
 
 
@@ -1617,27 +1646,31 @@ class Solution {
 
 High Level: bit operation
 
-
-
+```java
 public int divide(int A, int B) {
 
-​    if (A == 1 << 31 && B == -1) return (1 << 31) - 1;
+      if (A == 1 << 31 && B == -1) return (1 << 31) - 1;
 
-​    int a = Math.abs(A), b = Math.abs(B), res = 0;
+      int a = Math.abs(A), b = Math.abs(B), res = 0;
 
-​    for (int x = 31; x >= 0; x--)
+      for (int x = 31; x >= 0; x--)
 
-​      if ((a >>> x) - b >= 0) {
+        if ((a >>> x) - b >= 0) {
 
-​        res += 1 << x;
+          res += 1 << x;
 
-​        a -= b << x;
+          a -= b << x;
 
-​      }
+        }
 
-​    return (A > 0) == (B > 0) ? res : -res;
+      return (A > 0) == (B > 0) ? res : -res;
 
   }
+```
+
+
+
+
 
 
 
@@ -1651,7 +1684,43 @@ public int divide(int A, int B) {
 
 reference: https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/
 
- // Java code by Tang   public void nextPermutation(int[] nums) {      int i = nums.length - 2;     while (i >= 0 && nums[i + 1] <= nums[i]) {       i--;     }     if (i >= 0) {       int j = nums.length - 1;       while (nums[j] <= nums[i]) {         j--;       }       swap(nums, i, j);     }     reverse(nums, i + 1);   }    private void reverse(int[] nums, int start) {     int i = start, j = nums.length - 1;     while (i < j) {       swap(nums, i, j);       i++;       j--;     }   }    private void swap(int[] nums, int i, int j) {     int temp = nums[i];     nums[i] = nums[j];     nums[j] = temp;   }
+ // Java code by Tang   
+
+```java
+class Solution {
+	public void nextPermutation(int[] nums) {
+		int i = nums.length - 2;
+		while (i >= 0 && nums[i + 1] <= nums[i]) {
+			i--;
+		}
+		if (i >= 0) {
+			int j = nums.length - 1;
+			while (nums[j] <= nums[i]) {
+				j--;
+			}
+			swap(nums, i, j);
+		}
+		reverse(nums, i + 1);
+	}
+
+	private void reverse(int[] nums, int start) {
+		int i = start, j = nums.length - 1;
+		while (i < j) {
+			swap(nums, i, j);
+			i++;
+			j--;
+		}
+	}
+
+	private void swap(int[] nums, int i, int j) {
+		int temp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = temp;
+	}
+}
+```
+
+
 
 
 
@@ -1661,13 +1730,127 @@ reference: https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-
 
  
 
-Java code by Tang   public List<List<Integer>> permute(int[] nums) {     List<List<Integer>> res = new ArrayList<List<Integer>>();     if (nums == null || nums.length == 0) {       return res;     }     helper(nums, 0, res);     return res;   }   private void helper(int[] nums, int idx, List<List<Integer>> res) {     if (idx == nums.length - 1) {       List<Integer> tmp = toList(nums);       res.add(tmp);       return;     }     for (int i = idx; i < nums.length; i++) {       swap(nums, idx, i);       helper(nums, idx + 1, res);       swap(nums, idx, i);           }   }   private List<Integer> toList(int[] nums) {     List<Integer> res = new ArrayList<Integer>();     for (int i = 0; i < nums.length; i++) {       res.add(nums[i]);     }     return res;   }   private void swap(int[] arr, int i, int j) {     int tmp = arr[i];     arr[i] = arr[j];     arr[j] = tmp;   } /* dfs recur tree o(n!) - tc;   ||  1 2 3 4 5   0, i -[0, .., n-1]          /  |  \   \    (1)2345 (2)xxx (3)xxx  (4)xxxx  (5)XXXXX  n      /||\      (12)xxx (13)xx                   n-1     /||\   - - - - - n                       1  |0  1 -[1,n]  ------   n-1  |1      n   1    ------    |    n     tc: n * (n-1) * (n-2) *... * 1 = n! sc: o(n)   */  
+Java code by Tang   
+
+```java
+class solution {
+	public List<List<Integer>> permute(int[] nums) {
+		List<List<Integer>> res = new ArrayList<List<Integer>>();
+		if (nums == null || nums.length == 0) {
+			return res;
+		}
+
+		helper(nums, 0, res);
+		return res;
+	}
+
+	private void helper(int[] nums, int idx, List<List<Integer>> res) {
+		if (idx == nums.length - 1) {
+			List<Integer> tmp = toList(nums);
+			res.add(tmp);
+			return;
+		}
+		for (int i = idx; i < nums.length; i++) {
+			swap(nums, idx, i);
+			helper(nums, idx + 1, res);
+			swap(nums, idx, i);
+		}
+	}
+
+	private List<Integer> toList(int[] nums) {
+		List<Integer> res = new ArrayList<Integer>();
+		for (int i = 0; i < nums.length; i++) {
+			res.add(nums[i]);
+		}
+		return res;
+	}
+
+	private void swap(int[] arr, int i, int j) {
+		int tmp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = tmp;
+	}
+}
+```
+
+
 
 
 
 # 32  Longest Valid Parentheses
 
-(huang) Java code by Tang /* ************Method 1: two times traversal with o(1) space complexity ************/   public int longestValidParentheses(String s) {     int left = 0, right = 0, maxlength = 0;     for (int i = 0; i < s.length(); i++) {       if (s.charAt(i) == '(') {         left++;       } else {         right++;       }       if (left == right) {         maxlength = Math.max(maxlength, 2 * right);       } else if (right >= left) {         left = right = 0;       }     }     left = right = 0;     for (int i = s.length() - 1; i >= 0; i--) {       if (s.charAt(i) == '(') {         left++;       } else {         right++;       }       if (left == right) {         maxlength = Math.max(maxlength, 2 * left);       } else if (left >= right) {         left = right = 0;       }     }     return maxlength;   } /* ************Method 2: Stack method with o(n) space complexity ************/ /* ************common stack setting with consideration on corner cases ************/   public int longestValidParentheses(String s) {     int max = 0;     Deque<Integer> stack = new ArrayDeque<>();     for (int i = 0; i < s.length(); i++) {       char c = s.charAt(i);       if (c == '(') {         stack.offerLast(i);       } else {         if (!stack.isEmpty() && s.charAt(stack.peekLast()) == '(') {            stack.pollLast();           int left = stack.isEmpty() ? -1 : Math.abs(stack.peekLast());           max = Math.max(max, i - left); // (peekLast(), i]         } else { // don't forgot to add ')' if necessary           stack.offerLast(i);         }       }     }     return max;   }  
+(huang) Java code by Tang
+
+```java
+class Solution {
+	// Method 1: two times traversal with o(1) space complexity
+		public int longestValidParentheses(String s) {
+		int left = 0, right = 0, maxlength = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '(') {
+				left++;
+			} else {
+				right++;
+			}
+			if (left == right) {
+				maxlength = Math.max(maxlength, 2 * right);
+			} else if (right >= left) {
+				left = right = 0;
+			}
+		}
+		left = right = 0;
+		for (int i = s.length() - 1; i >= 0; i--) {
+			if (s.charAt(i) == '(') {
+				left++;
+			} else {
+				right++;
+			}
+			if (left == right) {
+				maxlength = Math.max(maxlength, 2 * left);
+			} else if (left >= right) {
+				left = right = 0;
+			}
+		}
+		return maxlength;
+	}
+
+}
+```
+
+
+
+
+
+```java
+ /* ************Method 2: Stack method with o(n) space complexity ************/ 
+
+/* ************common stack setting with consideration on corner cases ************/   
+class Solution {
+	public int longestValidParentheses(String s) {
+		int max = 0;
+		Deque<Integer> stack = new ArrayDeque<>();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (c == '(') {
+				stack.offerLast(i);
+			} else {
+				if (!stack.isEmpty() && s.charAt(stack.peekLast()) == '(') {
+					stack.pollLast();
+					int left = stack.isEmpty() ? -1 : Math.abs(stack.peekLast());
+					max = Math.max(max, i - left); // (peekLast(), i]
+				} else {
+					// don't forgot to add ')' if necessary
+					stack.offerLast(i);
+				}
+			}
+		}
+		return max;
+	}
+
+}
+```
+
+
 
 
 
@@ -1679,85 +1862,89 @@ Java code by Tang   public List<List<Integer>> permute(int[] nums) {     List<Li
 
  
 
+```java
 public int search(int[] nums, int target) { // code by Tang
 
-​    if (nums == null || nums.length == 0) {
+      if (nums == null || nums.length == 0) {
 
-​      return -1;
+        return -1;
 
-​    }
+      }
 
-​    int lo = 0;
+      int lo = 0;
 
-​    int hi = nums.length - 1;
+      int hi = nums.length - 1;
 
-​    int mid;
+      int mid;
 
-​    while (lo < hi - 1) {
+      while (lo < hi - 1) {
 
-​      mid = lo + (hi - lo) / 2;
+        mid = lo + (hi - lo) / 2;
 
-​      // if you use double side binary search protocol
+        // if you use double side binary search protocol
 
-​      if (nums[lo] == target) {
+        if (nums[lo] == target) {
 
-​        return lo;
+          return lo;
 
-​      } else if (nums[hi] == target) {
+        } else if (nums[hi] == target) {
 
-​        return hi;
+          return hi;
 
-​      } else if (nums[mid] == target) {
+        } else if (nums[mid] == target) {
 
-​        return mid;
+          return mid;
 
-​      }
+        }
 
-​      // boundary must be check to avoid error, e.g. [1,2,3], target 1
+        // boundary must be check to avoid error, e.g. [1,2,3], target 1
 
-​      if (nums[mid] > nums[lo]) { // left mono-increasing
+        if (nums[mid] > nums[lo]) { // left mono-increasing
 
-​        if (target > nums[lo] && target < nums[mid]) {
+          if (target > nums[lo] && target < nums[mid]) {
 
-​          hi = mid;
+            hi = mid;
 
-​        } else {
+          } else {
 
-​          lo = mid;
+            lo = mid;
 
-​        }
+          }
 
-​      } else {
+        } else {
 
-​        if (target > nums[mid] && target < nums[hi]) {
+          if (target > nums[mid] && target < nums[hi]) {
 
-​          lo = mid;
+            lo = mid;
 
-​        } else {
+          } else {
 
-​          hi = mid;
+            hi = mid;
 
-​        }
+          }
 
-​      }
+        }
 
-​    }
+      }
 
-​    if (nums[lo] == target) {
+      if (nums[lo] == target) {
 
-​      return lo;
+        return lo;
 
-​    }
+      }
 
-​    if (nums[hi] == target) {
+      if (nums[hi] == target) {
 
-​      return hi;
+        return hi;
 
-​    }
+      }
 
-​    return -1;
+      return -1;
 
   }
+```
+
+
 
 
 
@@ -1765,161 +1952,165 @@ public int search(int[] nums, int target) { // code by Tang
 
 //(Zhang)
 
+ ```java
  public int[] searchRange(int[] A, int target) {
-
-   int start = firstGreaterEqual(A, target);
-
-   if (start == A.length || A[start] != target) {
-
-​       return new int[]{-1, -1};
-
-   }
-
-   int second = firstGreaterEqual(A, target + 1) - 1;
-
-   return new int[]{start, second};
-
+ 
+    int start = firstGreaterEqual(A, target);
+ 
+    if (start == A.length || A[start] != target) {
+ 
+          return new int[]{-1, -1};
+ 
+    }
+ 
+    int second = firstGreaterEqual(A, target + 1) - 1;
+ 
+    return new int[]{start, second};
+ 
+  }
+ 
+ 
+ 
+  //find the first number that is greater than or equal to target.
+ 
+  //could return A.length if target is greater than A[A.length-1].
+ 
+  //actually this is the same as lower_bound in C++ STL.
+ 
+  private int firstGreaterEqual(int[] A, int target) {
+ 
+    int low = 0, high = A.length;
+ 
+    while (low < high) {
+ 
+        int mid = low + ((high - low) >> 1);
+ 
+        //low <= mid < high
+ 
+        if (A[mid] < target) {
+ 
+          low = mid + 1;
+ 
+        } else {
+ 
+          //should not be mid-1 when A[mid]==target.
+ 
+          //could be mid even if A[mid]>target because mid<high.
+ 
+          high = mid;
+ 
+        }
+ 
+    }
+ 
+    return low;
+ 
+  }
+ 
  }
-
-
-
- //find the first number that is greater than or equal to target.
-
- //could return A.length if target is greater than A[A.length-1].
-
- //actually this is the same as lower_bound in C++ STL.
-
- private int firstGreaterEqual(int[] A, int target) {
-
-   int low = 0, high = A.length;
-
-   while (low < high) {
-
-​     int mid = low + ((high - low) >> 1);
-
-​     //low <= mid < high
-
-​     if (A[mid] < target) {
-
-​       low = mid + 1;
-
-​     } else {
-
-​       //should not be mid-1 when A[mid]==target.
-
-​       //could be mid even if A[mid]>target because mid<high.
-
-​       high = mid;
-
-​     }
-
+ 
+ 
+ 
+ // double-sided binary search by Tang
+ 
+   public int[] searchRange(int[] nums, int target) {
+ 
+       int[] res = new int[]{-1, -1};
+ 
+       if (nums == null || nums.length == 0) {
+ 
+         return res;
+ 
+       }
+ 
+       int left = firstBS(nums, target, 0, nums.length - 1);
+ 
+       if (left == -1) {
+ 
+         return res;
+ 
+       }
+ 
+       int right = lastBS(nums, target, left, nums.length - 1);
+ 
+         return new int[]{left, right};
+ 
    }
+ 
+   private int firstBS(int[] array, int target, int lo, int hi) {
+ 
+       int mid;
+ 
+       while (lo < hi - 1) {
+ 
+         mid = lo + (hi - lo) / 2;
+ 
+         if (array[mid] >= target) {
+ 
+           hi = mid;
+ 
+         } else {
+ 
+           lo = mid;
+ 
+         }
+ 
+       }
+ 
+       if (array[lo] == target) {
+ 
+         return lo;
+ 
+       }
+ 
+       if (array[hi] == target) {
+ 
+         return hi;
+ 
+       }
+ 
+       return -1;
+ 
+   }
+ 
+   private int lastBS(int[] array, int target, int lo, int hi) {
+ 
+       int mid;
+ 
+       while (lo < hi - 1) {
+ 
+         mid = lo + (hi - lo) / 2;
+ 
+         if (array[mid] <= target) {
+ 
+           lo = mid;
+ 
+         } else {
+ 
+           hi = mid;
+ 
+         }
+ 
+       }
+ 
+       if (array[hi] == target) {
+ 
+         return hi;
+ 
+       }    
+ 
+       if (array[lo] == target) {
+ 
+         return lo;
+ 
+       }
+ 
+       return -1;
+ 
+   }
+ ```
 
-   return low;
 
- }
-
-}
-
-
-
-// double-sided binary search by Tang
-
-  public int[] searchRange(int[] nums, int target) {
-
-​    int[] res = new int[]{-1, -1};
-
-​    if (nums == null || nums.length == 0) {
-
-​      return res;
-
-​    }
-
-​    int left = firstBS(nums, target, 0, nums.length - 1);
-
-​    if (left == -1) {
-
-​      return res;
-
-​    }
-
-​    int right = lastBS(nums, target, left, nums.length - 1);
-
-​      return new int[]{left, right};
-
-  }
-
-  private int firstBS(int[] array, int target, int lo, int hi) {
-
-​    int mid;
-
-​    while (lo < hi - 1) {
-
-​      mid = lo + (hi - lo) / 2;
-
-​      if (array[mid] >= target) {
-
-​        hi = mid;
-
-​      } else {
-
-​        lo = mid;
-
-​      }
-
-​    }
-
-​    if (array[lo] == target) {
-
-​      return lo;
-
-​    }
-
-​    if (array[hi] == target) {
-
-​      return hi;
-
-​    }
-
-​    return -1;
-
-  }
-
-  private int lastBS(int[] array, int target, int lo, int hi) {
-
-​    int mid;
-
-​    while (lo < hi - 1) {
-
-​      mid = lo + (hi - lo) / 2;
-
-​      if (array[mid] <= target) {
-
-​        lo = mid;
-
-​      } else {
-
-​        hi = mid;
-
-​      }
-
-​    }
-
-​    if (array[hi] == target) {
-
-​      return hi;
-
-​    }    
-
-​    if (array[lo] == target) {
-
-​      return lo;
-
-​    }
-
-​    return -1;
-
-  }
 
 
 
@@ -1935,63 +2126,67 @@ Binary Search 找target，或者找应该插入的位置
 
 
 
+```java
 class Solution {
 
   public int searchInsert(int[] nums, int target) {
 
-​    // pre-process提前处理target小于最小值，大于最大值的情况
+      // pre-process提前处理target小于最小值，大于最大值的情况
 
-​    if (target < nums[0]) {
+      if (target < nums[0]) {
 
-​      return 0;
+        return 0;
 
-​    }
+      }
 
-​    if (target > nums[nums.length - 1]) {
+      if (target > nums[nums.length - 1]) {
 
-​      return nums.length;
+        return nums.length;
 
-​    }
+      }
 
-​    
+      
 
-​    int left = 0;
+      int left = 0;
 
-​    int right = nums.length - 1;
+      int right = nums.length - 1;
 
-​    
+      
 
-​    while (left + 1 < right) {
+      while (left + 1 < right) {
 
-​      int mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2;
 
-​      if (nums[mid] == target) {
+        if (nums[mid] == target) {
 
-​        return mid;
+          return mid;
 
-​      } else if (nums[mid] < target) {
+        } else if (nums[mid] < target) {
 
-​        left = mid;
+          left = mid;
 
-​      } else {
+        } else {
 
-​        right = mid;
+          right = mid;
 
-​      }
+        }
 
-​    }
+      }
 
-​    
+      
 
-​    if (target == nums[left]) return left;
+      if (target == nums[left]) return left;
 
-​    if (target == nums[right]) return right;
+      if (target == nums[right]) return right;
 
-​    return left + 1;
+      return left + 1;
 
   }
 
 }
+
+
+```
 
 
 
@@ -1999,6 +2194,7 @@ class Solution {
 
 // code by Luo, 分别看行，列，和每一个box
 
+```java
 class Solution {
 
  public boolean isValidSudoku(char[][] board) {
@@ -2013,11 +2209,11 @@ class Solution {
 
    for (int j = 0; j < 9; j++) {    
 
-​    if (board[i][j] != '.' && !set.add(board[i][j])) {
+      if (board[i][j] != '.' && !set.add(board[i][j])) {
 
-​     return false;
+       return false;
 
-​    } 
+      } 
 
    }
 
@@ -2031,11 +2227,11 @@ class Solution {
 
    for (int j = 0; j < 9; j++) {
 
-​    if (board[j][i] != '.' && !set.add(board[j][i])) {
+      if (board[j][i] != '.' && !set.add(board[j][i])) {
 
-​     return false;
+       return false;
 
-​    } 
+      } 
 
    }
 
@@ -2051,11 +2247,11 @@ class Solution {
 
    for (int j = 0; j < 9; j++) { // 小格的index
 
-​    if (board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3] != '.' && !set.add(board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3])) {
+      if (board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3] != '.' && !set.add(board[3 * (i / 3) + j / 3][3 * (i % 3) + j % 3])) {
 
-​     return false;
+       return false;
 
-​    }    
+      }    
 
    }
 
@@ -2070,6 +2266,9 @@ class Solution {
  }
 
 }
+```
+
+
 
 
 
@@ -5939,8 +6138,26 @@ class Solution { // DFS   public Node lowestCommonAncestor(Node p, Node q) {    
 ## [1676. Lowest Common Ancestor of a Binary Tree IV](https://leetcode.ca/2020-07-02-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV/)
 
 ```java
-class Solution { // need iterative method   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {   Set<TreeNode> set = new HashSet<TreeNode>();   for (TreeNode n : nodes) set.add(n);   return helper(root, set);  }  private TreeNode helper(TreeNode root, Set<TreeNode> set) {   // base case   if (root == null || set.contains(root)) {    return root;   }   TreeNode lr = helper(root.left, set);   TreeNode rr = helper(root.right, set);   if (lr != null && rr != null) {    return root;   }   return lr != null ? lr : rr;  } }
+class Solution { // need iterative method
+	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {
+		Set<TreeNode> set = new HashSet<TreeNode>();
+		for (TreeNode n : nodes)
+			set.add(n);
+		return helper(root, set);
+	}
+
+	private TreeNode helper(TreeNode root, Set<TreeNode> set) {
+		// base case
+		if (root == null || set.contains(root)) {
+			return root;
+		}
+		TreeNode lr = helper(root.left, set);
+		TreeNode rr = helper(root.right, set);
+		if (lr != null && rr != null) {
+			return root;
+		}
+		return lr != null ? lr : rr;
+	}
+}
 ```
-
-
 
