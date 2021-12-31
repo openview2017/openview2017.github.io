@@ -29,9 +29,7 @@ class Solution:
 
 
 
-follow up: 如果数据量很大怎么办？
-
-
+**follow up: 如果数据量很大怎么办？** 
 
 Step 1: Ask if the data is already sorted
 
@@ -53,37 +51,21 @@ python
 
 ```python
 class Solution:
-
   def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-
     dummy = temp = ListNode()
-
     carry = 0
-
     while l1 or l2 or carry:
-
       val1 = val2 = 0
-
       if l1:
-
         val1 = l1.val
-
         l1 = l1.next
-
-      if l2:
-
+     if l2:
         val2 = l2.val
-
         l2 = l2.next
 
       temp.next = ListNode((val1 + val2 + carry)%10)
-
       carry = (val1 + val2 + carry)//10
-
       temp = temp.next
-
-      
-
     return dummy.next
 ```
 
@@ -97,9 +79,7 @@ follow up：减法
 class Solution {
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-
      return addTwoNumbers(l1, l2, false);
-
   }
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2, boolean flip) {
@@ -143,12 +123,9 @@ class Solution {
      if (carry < 0) {
        last = carry;
      } 
-
       if (carry == 0 && allEqual) {
         return new ListNode(0);
      }
-  
-
      if (last < 0 && !flip) {
       return addTwoNumbers(l2, l1, true);
      }
@@ -182,105 +159,55 @@ High Level: 双指针, 慢指针跳着走
 public class Solution {
 
   public int LengthOfLongestSubstring(string s) {
-
      Dictionary<int, int> slow_map = new Dictionary<int, int>();
-
      int slow = 0;
-
      int maxlen = 0;
 
      for(int fast = 0; fast < s.Length; fast ++)
-
      {
-
        char ch = s[fast];
-
        if (slow_map.ContainsKey(ch)){
-
          slow = Math.Max(slow, slow_map[ch] + 1);
-
        }
-
        maxlen = Math.Max(maxlen, fast - slow + 1);
-
        slow_map[ch] = fast;
-
      }
-
      return maxlen;
-
   }
-
 }
-
-
 
 private static List<String> longestSubstr(String s) {
+   List<String> res = new ArrayList<>();
+   int start = 0;
+   int end = 0;
+   int maxLen = 0, counter = 0;
+   int[] map = new int[128]; // to check the char exists or not
 
- List<String> res = new ArrayList<>();
-
- int start = 0;
-
- int end = 0;
-
- int maxLen = 0, counter = 0;
-
- int[] map = new int[128]; // to check the char exists or not
-
- 
-
- while ( end < s.length()) {
-
-  char c1 = s.charAt(end);
-
-  if (map[c1] > 0) counter++;
-
-  map[c1]++; // set c1 from 0 to 1
-
-  end++;
-
-  
-
-  while (counter > 0) {
-
-   char c2 = s.charAt(start);
-
-   if (map[c2] > 1) counter--; // c1 == c2, decrease the counter
-
-   map[c2]--;
-
-   start++; // reset start to new pos     
-
+    while ( end < s.length()) {
+      char c1 = s.charAt(end);
+      if (map[c1] > 0) counter++;
+      map[c1]++; // set c1 from 0 to 1
+      end++;
+      while (counter > 0) {
+        char c2 = s.charAt(start);
+        if (map[c2] > 1) counter--; // c1 == c2, decrease the counter
+         map[c2]--;
+         start++; // reset start to new pos     
+      }
+      maxLen = Math.max(maxLen, end - start);
+      String substr = s.substring(start, end); // candidates
+      res.add(substr);
+     }
+	
+    // maxLen, find all substr in res which len == maxLen
+    List<String> subset = new ArrayList<>();
+    for (String str : res) {
+    if (str.length() == maxLen) {
+      subset.add(str);
+    }
+   }
+   return subset;
   }
-
-  maxLen = Math.max(maxLen, end - start);
-
-  String substr = s.substring(start, end); // candidates
-
-  res.add(substr);
-
- }
-
- 
-
- // maxLen, find all substr in res which len == maxLen
-
- List<String> subset = new ArrayList<>();
-
- for (String str : res) {
-
-  if (str.length() == maxLen) {
-
-   subset.add(str);
-
-  }
-
- }
-
- return subset;
-
-}
-
 }
 ```
 
@@ -357,10 +284,6 @@ High Level: 找第k个数 + recursion
 		return i;
 	}
 ```
-
-
-
-
 
 
 
@@ -449,8 +372,6 @@ boolean goingdown, 换方向
 
 TC: O(1)
 
-
-
 ```java
 class Solution {
 
@@ -490,8 +411,6 @@ class Solution {
 
 (lynn)
 
-
-
 需要处理边界 - 用long
 
 或者每次需要乘以0时，判断是否valid
@@ -529,95 +448,48 @@ class Solution {
 
 
 
-
-
 # 8. String to Integer (atoi)
 
 (lynn) 
 
-Java:
-
-```java
 Time O(n) n is the length of input string
-
 Space : O(1)
 
+```java
 class Solution {
-
   public int myAtoi(String s) {
-
       if (s == null || s.length() == 0) {
-
         return 0;
-
       }
-
       //maintain an index to loop the char in string
-
       int index = 0;
-
-  
-
       //Step1: remove leading space
-
       while (index < s.length() && s.charAt(index) == ' ') {
-
         index++;
-
       } 
-
-      
-
       //Step2: check the sign
-
       int sign = 1;
-
       if (index < s.length() && (s.charAt(index) == '-' || s.charAt(index) == '+')) {
-
         sign = s.charAt(index) == '-' ? -1 : 1;
-
         index++;
-
       }
-
-      
-
       //Step3: read the digit until non-digit
-
       int result = 0;
-
       while (index < s.length() && s.charAt(index) >= '0' && s.charAt(index) <= '9') {
-
         int digit = s.charAt(index) - '0';
 
-        
-
-        **if (result > Integer.MAX_VALUE / 10** 
-
-          **|| (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {**
-
-          **return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;**
-
-        **}**
-
+        if (result > Integer.MAX_VALUE / 10 ||
+            (result == Integer.MAX_VALUE / 10 && 
+             digit > Integer.MAX_VALUE % 10)) {
+							return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        }
         result = result * 10 + digit;;
-
         index++;
-
       }
-
       return sign * result;
-
-      
-
   }
-
 }
 ```
-
-
-
-
 
 
 
@@ -625,183 +497,88 @@ class Solution {
 
 (zhang)
 
-
-
 High Level: 取%，取/
 
 Java:
 
 ```java
 //方法一：
-
 class Solution {
-
   public boolean isPalindrome(int x) {
-
       if (x < 0) return false;
-
-       
-
       int rev = 0;
-
       int y = x;
-
- 
-
       while ( y != 0) {
-
           rev = rev * 10 + y % 10;
-
-          System.out.println(rev);
-
           y = y / 10;
-
       }
-
       return rev == x; // -1126087180 overflow return false;
-
   }
-
 }
-
-
 ```
 
-
-
-//方法二：只做一半，不需要考虑overflow的情况，更好
-
-c#
+方法二：只做一半，不需要考虑overflow的情况，更好， c#
 
 ```c#
 public class Solution {
-
   public bool IsPalindrome(int x) {
-
       if(x < 0 || (x % 10 == 0 && x != 0)) {
-
         return false;
-
       }
-
       int half = 0;
-
       while( x > half){
-
         half = half *10 + x % 10;
-
         x /= 10;
-
       }
-
       return half == x || ( x == half /10);
-
   }
-
-
-
 }
 ```
-
-
-
-
 
 
 
 # 10. Regular Expression Matching
 
-(luo)
+(luo)  dp的方法：复杂度更好
 
 ```java
 /*
-
 dp的方法
-
 TC： O（mn）
-
 SC: O(mn)
-
 https://www.youtube.com/watch?v=bSdw9rJYf-I
-
 */
-
-// dp的方法：复杂度更好
-
 class Solution {
-
-  public boolean isMatch(String s, String p) {
-
+	public boolean isMatch(String s, String p) {
       int lenS = s.length();
-
       int lenP = p.length();
-
       char[] sArray = s.toCharArray();
-
       char[] pArray = p.toCharArray();
-
-      
-
       boolean[][] dp = new boolean[lenS + 1][lenP + 1];
-
       dp[0][0] = true;
-
-      
-
       //当s的长度为0的情况
-
       for (int i = 2; i <= lenP; i++) {
-
         dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 2] : false;
-
       }
-
-      
-
       for (int i = 1; i <= lenS; i++) {
-
         for (int j = 1; j <= lenP; j++) {
-
-          
-
           char sc = sArray[i - 1];
-
           char pc = pArray[j - 1];
-
-          
-
           if (sc == pc || pc == '.') {
-
             dp[i][j] = dp[i - 1][j - 1];
-
           } else {
-
             if (pc == '*') { // 前面的字母重复0次，直接看j-2的位置
-
               if (dp[i][j - 2]) {
-
                 dp[i][j] = true;
-
               } else if (sc == p.charAt(j - 2) || p.charAt(j - 2) == '.') {// 前面的字母重复1次
-
                 dp[i][j] = dp[i - 1][j];
-
               }
-
             }
-
           } 
-
         }
-
       }
-
       return dp[lenS][lenP];
-
- 
-
   }
-
 }
 ```
 
@@ -809,57 +586,27 @@ class Solution {
 
 
 
-// recursion
+**recursion**
 
-/*
-
-recursion的方法
-
-先看第一个字母是否match
-
-再看剩下的
-
-
+先看第一个字母是否match，再看剩下的
 
 TC: O((lenS+lenP) * 2^(lenS + lenP))
 
-*/
-
 ```java
 // recursion的方法，代码简短
-
 class Solution {
-
   public boolean isMatch(String s, String p) {
-
       // corner case check, if p length is 0 but s length is not 0, return false
-
       if (p.length() == 0) return s.length() == 0;
-
-      
-
       boolean firstMatch = s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.');
-
-      
-
       if (p.length() >= 2 && p.charAt(1) == '*' ) {
-
         return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
-
       } else {
-
         return firstMatch && isMatch(s.substring(1), p.substring(1));
-
       }
-
   }
-
 }
 ```
-
-
-
-
 
 
 
@@ -871,47 +618,24 @@ class Solution {
 
 ```java
 public int maxArea(int[] height) {
-
       if (height == null || height.length == 0) {
-
         return 0;
-
       }
-
-      
-
       int start = 0;
-
       int end = height.length - 1;
-
       int maxArea = 0;
 
       while (start < end) {
-
         int current = Math.min(height[start], height[end]);
-
         maxArea = Math.max(maxArea, current * (end - start));
-
         while (start < end && height[start] <= current) {
-
           start++;
-
         }
-
-        
-
         while (start < end && height[end] <= current) {
-
-          end--;
-
+					end--;
         }
-
       }
-
-      
-
       return maxArea;
-
   }
 ```
 
@@ -923,77 +647,40 @@ public int maxArea(int[] height) {
 
 ```java
 class Solution {
-
- // Horizontal scanning
-
- public String longestCommonPrefix(String[] strs) {
-
-  if (strs.length == 0) return "";
-
-  String prefix = strs[0];
-
-  for (int i = 1; i < strs.length; i++)
-
-      while (strs[i].indexOf(prefix) != 0) {
-
-        prefix = prefix.substring(0, prefix.length() - 1);
-
+	// Horizontal scanning
+ 	public String longestCommonPrefix(String[] strs) {
+		if (strs.length == 0) return "";
+		String prefix = strs[0];
+	  for (int i = 1; i < strs.length; i++)
+	  	while (strs[i].indexOf(prefix) != 0) {
+      	prefix = prefix.substring(0, prefix.length() - 1);
         if (prefix.isEmpty()) return "";
-
-      }     
-
-  return prefix;
-
-   }
-
-  
-
-      // Vertical scanning
-
- public String longestCommonPrefix_Vertical(String[] strs) {
-
-  if (strs == null || strs.length == 0) return "";
-
-  for (int i = 0; i < strs[0].length() ; i++){
-
-      char c = strs[0].charAt(i);
-
-      for (int j = 1; j < strs.length; j ++) {
-
-        if (i == strs[j].length() || strs[j].charAt(i) != c)
-
-          return strs[0].substring(0, i);       
-
       }
+		return prefix;
+   }
+      
+  // Vertical scanning
+	public String longestCommonPrefix_Vertical(String[] strs) {
+		if (strs == null || strs.length == 0) return "";
+		for (int i = 0; i < strs[0].length() ; i++){
+      char c = strs[0].charAt(i);
+      for (int j = 1; j < strs.length; j ++) {
+        if (i == strs[j].length() || strs[j].charAt(i) != c)
+          return strs[0].substring(0, i);
+    	}
+  	}
+		return strs[0];
+	}
 
+  public String longestCommonPrefix_sort(String[] strs) {
+    if (strs == null || strs.length == 0) return "";
+    Arrays.sort(strs);
+    int len = Math.min(strs[0].length(), strs[strs.length - 1].length());
+		int i = 0;
+    while (i < len && strs[0].charAt(i) == strs[strs.length - 1].charAt(i))
+      i++;
+    return strs[0].substring(0, i);
   }
-
-  return strs[0];
-
-}
-
-
-
-public String longestCommonPrefix_sort(String[] strs) {
-
-      if (strs == null || strs.length == 0) return "";
-
-      Arrays.sort(strs);
-
-       
-
-      int len = Math.min(strs[0].length(), strs[strs.length - 1].length());
-
-      int i = 0;
-
-      while (i < len && strs[0].charAt(i) == strs[strs.length - 1].charAt(i))
-
-          i++;
-
-      return strs[0].substring(0, i);
-
-  }
-
 }
 ```
 
