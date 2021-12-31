@@ -2661,157 +2661,131 @@ class Solution {
 # 44. Wildcard Matching
 
 //(zhang) recursion
+```java
+
 
 class Solution { 
 
- public HashMap<String, Boolean> memoMap = new HashMap<>();
+    public HashMap<String, Boolean> memoMap = new HashMap<>();
 
   
 
- public boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
 
-​    if (s == null) return false;
+    ​    if (s == null) return false;
 
-​    boolean match = dfs(s, 0, p, 0);
+    ​    boolean match = dfs(s, 0, p, 0);
 
-​    return match;
+    ​    return match;
 
-  }
+    }
 
 
 
-  private boolean dfs(String s, int i, String p, int j) {
+    private boolean dfs(String s, int i, String p, int j) {
 
-​    String key = i + "#" + j;
+    ​    String key = i + "#" + j;
 
-​    if (memoMap.containsKey(key)) {
+    ​    if (memoMap.containsKey(key)) {
 
-​      return memoMap.get(key);
+    ​      return memoMap.get(key);
 
-​    }   
+    ​    }
 
-​    boolean match = false;
+    ​    boolean match = false;
 
-​    if (j == p.length() && i == s.length())
+    ​    if (j == p.length() && i == s.length()) return true;
 
-​      return true;
+        if (i > s.length())  return false;
 
- 
+    ​    if (i < s.length() && j < p.length() && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
+    ​      match = dfs(s, i + 1, p, j + 1);
+    ​    }
 
-​      if (i > s.length())
+    ​    if (j < p.length() && p.charAt(j) == '*') {
+    ​      match = dfs(s, i + 1, p, j) || dfs(s, i, p, j + 1);
+    ​    }
 
-​        return false;
+    ​    memoMap.put(key, match);
 
-​     
-
-​    if (i < s.length() && j < p.length() && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
-
-​      match = dfs(s, i + 1, p, j + 1);
-
-​    }
-
-​     
-
-​    if (j < p.length() && p.charAt(j) == '*') {
-
-​      match = dfs(s, i + 1, p, j) || dfs(s, i, p, j + 1);
-
-​    }
-
-​     
-
-​    memoMap.put(key, match);
-
-​    return match;
-
-  }
+    ​    return match;
+    }
 
 }
+```
 
-
-
+```java
 //(Luo) DP
 
 class Solution {
 
-  public boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
+    ​    // s 可能为空，且只包含从 a-z 的小写字母。
+    ​    // p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
 
-​    // s 可能为空，且只包含从 a-z 的小写字母。
+    ​    int lens = s.length();
 
-​    // p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
+    ​    int lenp = p.length();
 
+    ​    char[] sArray = s.toCharArray();
 
-
-​    int lens = s.length();
-
-​    int lenp = p.length();
-
-​    char[] sArray = s.toCharArray();
-
-​    char[] pArray = p.toCharArray();
-
-​    
-
-​    boolean[][] dp = new boolean[lens + 1][lenp + 1];
-
-​    dp[0][0] = true;
-
-​       
-
-​    //当s的长度为0的情况
-
-​    for (int i = 1; i <= lenp; i++) {
-
-​      dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 1] : false;
-
-​    }
-
-​    
-
-​    for (int i = 1; i <= lens; i++) {
-
-​      for (int j = 1; j <= lenp; j++) {
-
-​        
-
-​        char sc = sArray[i - 1];
-
-​        char pc = pArray[j - 1];
-
-​          
-
-​        if (sc == pc || pc == '?') {
-
-​          dp[i][j] = dp[i - 1][j - 1];// 当前字符匹配,当前s[0..i-1]p[0..j-1]是否匹配取决于之前dp[i - 1][j - 1]
-
-​        } else {
-
-​          if (pc == '*') {
-
-​            if (dp[i][j - 1] || dp[i - 1][j - 1] || dp[i - 1][j]) { // 这里是填表格的关键
-
-​              dp[i][j] = true;
-
-​            }
-
-​          }
-
-​        }
-
-​      }
-
-​    }
-
-​    return dp[lens][lenp];
-
-  }
+    ​    char[] pArray = p.toCharArray();
 
 
+    ​    boolean[][] dp = new boolean[lens + 1][lenp + 1];
+
+    ​    dp[0][0] = true;
+
+    ​    //当s的长度为0的情况
+
+    ​    for (int i = 1; i <= lenp; i++) {
+
+    ​      dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 1] : false;
+
+    ​    }
+
+
+    ​    for (int i = 1; i <= lens; i++) {
+
+    ​      for (int j = 1; j <= lenp; j++) {
+
+    ​
+
+    ​        char sc = sArray[i - 1];
+
+    ​        char pc = pArray[j - 1];
+
+    ​
+
+    ​        if (sc == pc || pc == '?') {
+
+    ​          dp[i][j] = dp[i - 1][j - 1];// 当前字符匹配,当前s[0..i-1]p[0..j-1]是否匹配取决于之前dp[i - 1][j - 1]
+
+    ​        } else {
+
+    ​          if (pc == '*') {
+
+    ​            if (dp[i][j - 1] || dp[i - 1][j - 1] || dp[i - 1][j]) { // 这里是填表格的关键
+
+    ​              dp[i][j] = true;
+
+    ​            }
+
+    ​          }
+
+    ​        }
+
+    ​      }
+
+    ​    }
+
+    ​    return dp[lens][lenp];
+
+    }
 
 }
 
-
-
+```
 
 
 /*
@@ -3124,7 +3098,7 @@ class Solution {
 
 (Lynn)
 
-
+```java
 
 class Solution {
 
@@ -3158,8 +3132,7 @@ class Solution {
 
 ​    }
 
-​    
-
+​
 ​    // deal with digit overflow
 
 ​    for (int i = res.length - 1; i >= 0; i--) {
@@ -3205,7 +3178,7 @@ class Solution {
 }
 
 
-
+```
 
 
 # 792. Number of Matching Subsequences
