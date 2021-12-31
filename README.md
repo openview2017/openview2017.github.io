@@ -2603,8 +2603,56 @@ class Solution {
 
 # 43. Multiply Strings
 
- /* ************ Method 2: Binary string multiply code added and tested in leetcode ************/   public String multiply(String num1, String num2) {     int m = num1.length(), n = num2.length();     String num1Binary = Integer.toBinaryString(Integer.parseInt(num1));     String num2Binary = Integer.toBinaryString(Integer.parseInt(num2));     String binRes = multiplyBinary(num1Binary, num2Binary);     System.out.print("String Binary Mutiply : " + binRes + ", ");     int[] pos = new int[m + n];          for(int i = m - 1; i >= 0; i--) {       for(int j = n - 1; j >= 0; j--) {         int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0');          int p1 = i + j, p2 = i + j + 1;         int sum = mul + pos[p2];            pos[p1] += sum / 10;         pos[p2] = (sum) % 10;       }     }           StringBuilder sb = new StringBuilder();     for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);     String res = sb.length() == 0 ? "0" : sb.toString(); // special cases for empty     System.out.println( Integer.parseInt(binRes, 2) );     return res;   }    public String multiplyBinary(String num1, String num2) { // binary string multiply !!!     int m = num1.length(), n = num2.length();     int[] pos = new int[m + n];          for(int i = m - 1; i >= 0; i--) {       for(int j = n - 1; j >= 0; j--) {         int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0');          int p1 = i + j, p2 = i + j + 1;         int sum = mul + pos[p2];            pos[p1] += sum / 2;         pos[p2] = (sum) % 2;       }     }           StringBuilder sb = new StringBuilder();     for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);     return sb.length() == 0 ? "0" : sb.toString(); // special cases for empty   } 
+```java
 
+ /* ************ Method 2: Binary string multiply code added and tested in leetcode  ************/
+    public String multiply(String num1, String num2) {
+        int m = num1.length(), n = num2.length();
+        String num1Binary = Integer.toBinaryString(Integer.parseInt(num1));
+        String num2Binary = Integer.toBinaryString(Integer.parseInt(num2));
+        String binRes = multiplyBinary(num1Binary, num2Binary);
+        System.out.print("String Binary Mutiply : " + binRes + ", ");
+        int[] pos = new int[m + n];
+       
+        for(int i = m - 1; i >= 0; i--) {
+            for(int j = n - 1; j >= 0; j--) {
+                int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0'); 
+                int p1 = i + j, p2 = i + j + 1;
+                int sum = mul + pos[p2];
+    
+                pos[p1] += sum / 10;
+                pos[p2] = (sum) % 10;
+            }
+        }  
+        
+        StringBuilder sb = new StringBuilder();
+        for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);
+        String res = sb.length() == 0 ? "0" : sb.toString(); // special cases for empty
+        System.out.println( Integer.parseInt(binRes, 2) );
+        return res;
+    } 
+    public String multiplyBinary(String num1, String num2) { // binary string multiply !!!
+        int m = num1.length(), n = num2.length();
+        int[] pos = new int[m + n];
+       
+        for(int i = m - 1; i >= 0; i--) {
+            for(int j = n - 1; j >= 0; j--) {
+                int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0'); 
+                int p1 = i + j, p2 = i + j + 1;
+                int sum = mul + pos[p2];
+    
+                pos[p1] += sum / 2;
+                pos[p2] = (sum) % 2;
+            }
+        }  
+        
+        StringBuilder sb = new StringBuilder();
+        for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);
+        return sb.length() == 0 ? "0" : sb.toString(); // special cases for empty
+    }  
+
+    
+```
 
 
 # 44. Wildcard Matching
