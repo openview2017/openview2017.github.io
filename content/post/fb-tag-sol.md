@@ -4024,7 +4024,7 @@ class Solution:
 
 https://leetcode.com/list/9rjh2ka1/ 扫描线几个高频题list
 
-
+```java
 
 // pq sort
 
@@ -4072,7 +4072,7 @@ public int[][] merge(int[][] intervals) {
 
   }
 
-
+```
 
 //(luo) 扫描线的方法
 
@@ -4095,7 +4095,7 @@ public int[][] merge(int[][] intervals) {
 
 
 
-
+```java
 class Solution {
 
   public int[][] merge(int[][] intervals) {
@@ -4191,7 +4191,7 @@ class Solution {
   
 
 }
-
+```
 
 
 # 57  Insert Interval
@@ -4207,7 +4207,7 @@ class Solution {
 ​    intervals[i]如果整体都在newInterval之后，则将newInterval（可能经历了融合）加入results，并把未遍历的intervals[i]也都加入results;
 
 
-
+```java
    public int[][] insert(int[][] intervals, int[] newInterval) {
 
 ​     LinkedList<int[]> result = new LinkedList<int[]>();
@@ -4249,6 +4249,8 @@ class Solution {
 ​    return result.toArray(new int[result.size()][2]);
 
   }
+```
+
 
 # 60  Permutation Sequence
 
