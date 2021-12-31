@@ -2550,6 +2550,7 @@ class Solution {
 # 42. Trapping Rain Water
 
 ```java
+
 /* ************Method 1: Two pointer method with o(1) space complexity ************/
     public int trap(int[] height) {
         // time : O(n)
@@ -2594,6 +2595,7 @@ class Solution {
         }
         return water;
     }
+    
 ```
 
 
