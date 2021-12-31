@@ -1,5 +1,5 @@
 ---
-title: "Fb Tag Sol"
+title: "Leetcode problems with Facebook tags"
 date: 2021-12-30T15:25:08-08:00
 draft: false
 ---
@@ -220,21 +220,18 @@ draft: false
 
 (Wu)
 
-python
-
+```python
 class Solution:
 
   def twoSum(self, nums: List[int], target: int) -> List[int]:
+		s = {}
+		for i, e in enumerate(nums):
+			if target - e in s:
+				return [i, s[target-e]]
+		s[e] = i
 
-​    s = {}
 
-​    for i, e in enumerate(nums):
-
-​      if target - e in s:
-
-​        return [i, s[target-e]]
-
-​      s[e] = i
+```
 
 
 
@@ -260,39 +257,43 @@ Step 4: 外排的方法是 - 分成k份，分别到内存里排序，再merge k 
 
 python
 
+```python
 class Solution:
 
   def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
-​    dummy = temp = ListNode()
+    dummy = temp = ListNode()
 
-​    carry = 0
+    carry = 0
 
-​    while l1 or l2 or carry:
+    while l1 or l2 or carry:
 
-​      val1 = val2 = 0
+      val1 = val2 = 0
 
-​      if l1:
+      if l1:
 
-​        val1 = l1.val
+        val1 = l1.val
 
-​        l1 = l1.next
+        l1 = l1.next
 
-​      if l2:
+      if l2:
 
-​        val2 = l2.val
+        val2 = l2.val
 
-​        l2 = l2.next
+        l2 = l2.next
 
-​      temp.next = ListNode((val1 + val2 + carry)%10)
+      temp.next = ListNode((val1 + val2 + carry)%10)
 
-​      carry = (val1 + val2 + carry)//10
+      carry = (val1 + val2 + carry)//10
 
-​      temp = temp.next
+      temp = temp.next
 
-​      
+      
 
-​    return dummy.next
+    return dummy.next
+```
+
+
 
 
 
@@ -544,7 +545,71 @@ High Level: 找第k个数 + recursion
 
 (huang)
 
- public double median(int[] a, int[] b) {   // Write your solution here   //time : O(nlogn)   //space : O(1)   Arrays.sort(a);   Arrays.sort(b);   int length = a.length + b.length;   int mid0 = (length - 1 )/ 2;   int mid1 = length / 2;   int left = 0;   int right = length - 1;   while(left < mid0 || right > mid1) {//quick select + binary search or whatever    int pivot = quickSelectIndex(a, b, left, right);    if(pivot <= mid0) {     left = pivot + 1;    } else {     right = pivot - 1;    }   }   return (double)(num(a, b, mid0) + num(a, b, mid1)) /2;  }  private int num(int[] a, int[] b, int i) {//2-array mapping function   return i < a.length ? a[i] : b[i - a.length];  }  private void swap(int[] a, int[] b, int i, int j) {//2-array mapping and swap function   int[] numi = i < a.length ? a : b;   int[] numj = j < a.length ? a : b;   i = i < a.length ? i : i - a.length;   j = j < a.length ? j : j - a.length;   int tmp = numi[i];   numi[i] = numj[j];   numj[j] = tmp;   return;  }  private int quickSelectIndex(int[] a, int[] b, int left, int right) {   int pivot = left + (int)(Math.random() * (right + 1 - left) );   int i = left;   int j = right - 1;   swap(a, b, pivot, right);   while(i <= j) {    if(num(a, b, i) > num(a, b, right)) {     if(num(a, b, j) >= num(a, b, right)) {      j--;     } else {      swap(a, b, i, j);      i++;      j--;     }    } else {     i++;    }   }   swap(a, b, i, right);   return i ;  }
+```java
+	public double median(int[] a, int[] b) {
+		// Write your solution here
+		// time : O(nlogn)
+		// space : O(1)
+		Arrays.sort(a);
+		Arrays.sort(b);
+		int length = a.length + b.length;
+		int mid0 = (length - 1) / 2;
+		int mid1 = length / 2;
+		int left = 0;
+		int right = length - 1;
+		while (left < mid0 || right > mid1) {
+			// quick select + binary search or whatever
+			int pivot = quickSelectIndex(a, b, left, right);
+			if (pivot <= mid0) {
+				left = pivot + 1;
+			} else {
+				right = pivot - 1;
+			}
+		}
+		return (double) (num(a, b, mid0) + num(a, b, mid1)) / 2;
+	}
+
+	private int num(int[] a, int[] b, int i) {
+		// 2-array mapping function
+		return i < a.length ? a[i] : b[i - a.length];
+	}
+
+	private void swap(int[] a, int[] b, int i, int j) {
+		// 2-array mapping and swap function
+		int[] numi = i < a.length ? a : b;
+		int[] numj = j < a.length ? a : b;
+		i = i < a.length ? i : i - a.length;
+		j = j < a.length ? j : j - a.length;
+		int tmp = numi[i];
+		numi[i] = numj[j];
+		numj[j] = tmp;
+		return;
+	}
+
+	private int quickSelectIndex(int[] a, int[] b, int left, int right) {
+		int pivot = left + (int) (Math.random() * (right + 1 - left));
+		int i = left;
+		int j = right - 1;
+		swap(a, b, pivot, right);
+		while (i <= j) {
+			if (num(a, b, i) > num(a, b, right)) {
+				if (num(a, b, j) >= num(a, b, right)) {
+					j--;
+				} else {
+					swap(a, b, i, j);
+					i++;
+					j--;
+				}
+			} else {
+				i++;
+			}
+		}
+		swap(a, b, i, right);
+		return i;
+	}
+```
+
+
 
 
 
@@ -560,9 +625,68 @@ High Level：
 
 Java:
 
+```java
 // TC: O(n^2) SC: O(1) 空间优化的方法
+class Solution {
+	public String longestPalindrome(String s) {
+		if (s == null || s.length() < 1)
+			return "";
+		int start = 0, end = 0;
+		for (int i = 0; i < s.length(); i++) {
+			int len1 = expandAroundCenter(s, i, i);
+			int len2 = expandAroundCenter(s, i, i + 1);
+			int len = Math.max(len1, len2);
+			if (len > end - start) {
+				start = i - (len - 1) / 2;
+				end = i + len / 2;
+			}
+		}
+		return s.substring(start, end + 1);
+	}
 
-class Solution { public String longestPalindrome(String s) {   if (s == null || s.length() < 1) return "";   int start = 0, end = 0;   for (int i = 0; i < s.length(); i++) {     int len1 = expandAroundCenter(s, i, i);     int len2 = expandAroundCenter(s, i, i + 1);     int len = Math.max(len1, len2);     if (len > end - start) {       start = i - (len - 1) / 2;       end = i + len / 2;     }   }   return s.substring(start, end + 1); }  private int expandAroundCenter(String s, int left, int right) {   int L = left, R = right;   while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {     L--;     R++; // (L, R)   }   return R - L - 1; } }  // dp的方法 SC O(n^2) class Solution { public String longestPalindrome(String s) {   if (s == null || s.length() < 1) return "";   int start = 0, end = 0;   for (int i = 0; i < s.length(); i++) {     int len1 = expandAroundCenter(s, i, i);     int len2 = expandAroundCenter(s, i, i + 1);     int len = Math.max(len1, len2);     if (len > end - start) {       start = i - (len - 1) / 2;       end = i + len / 2;     }   }   return s.substring(start, end + 1); }  private int expandAroundCenter(String s, int left, int right) {   int L = left, R = right;   while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {     L--;     R++; // (L, R)   }   return R - L - 1; } }
+	private int expandAroundCenter(String s, int left, int right) {
+		int L = left, R = right;
+		while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+			L--;
+			R++;
+			// (L, R)
+		}
+		return R - L - 1;
+	}
+}
+```
+
+
+
+```java
+	// dp的方法 SC O(n^2) 
+		class Solution {
+			public String longestPalindrome(String s) {
+				if (s == null || s.length() < 1)
+					return "";
+				int start = 0, end = 0;
+				for (int i = 0; i < s.length(); i++) {
+					int len1 = expandAroundCenter(s, i, i);
+					int len2 = expandAroundCenter(s, i, i + 1);
+					int len = Math.max(len1, len2);
+					if (len > end - start) {
+						start = i - (len - 1) / 2;
+						end = i + len / 2;
+					}
+				}
+				return s.substring(start, end + 1);
+			}
+
+			private int expandAroundCenter(String s, int left, int right) {
+				int L = left, R = right;
+				while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+					L--;
+					R++; // (L, R) } return R - L - 1; } }
+				}
+	}
+```
+
+
 
 
 
@@ -582,55 +706,38 @@ TC: O(1)
 
 
 
+```java
 class Solution {
 
-public String longestPalindrome(String s) {
+  public String longestPalindrome(String s) {
 
-  if (s == null || s.length() < 1) return "";
+    if (s == null || s.length() < 1) return "";
+    int start = 0, end = 0;
+    for (int i = 0; i < s.length(); i++) {
+      int len1 = expandAroundCenter(s, i, i);
+      int len2 = expandAroundCenter(s, i, i + 1);
+      int len = Math.max(len1, len2);
 
-  int start = 0, end = 0;
-
-  for (int i = 0; i < s.length(); i++) {
-
-​    int len1 = expandAroundCenter(s, i, i);
-
-​    int len2 = expandAroundCenter(s, i, i + 1);
-
-​    int len = Math.max(len1, len2);
-
-​    if (len > end - start) {
-
-​      start = i - (len - 1) / 2;
-
-​      end = i + len / 2;
-
-​    }
-
+      if (len > end - start) {
+        start = i - (len - 1) / 2;
+        end = i + len / 2;
+      }
+    }
+    return s.substring(start, end + 1);
   }
 
-  return s.substring(start, end + 1);
+  private int expandAroundCenter(String s, int left, int right) {
 
-}
-
-
-
-private int expandAroundCenter(String s, int left, int right) {
-
-  int L = left, R = right;
-
-  while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
-
-​    L--;
-
-​    R++; // (L, R)
-
+    int L = left, R = right;
+    while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+      L--;
+      R++; // (L, R)
+    }
+    return R - L - 1;
   }
-
-  return R - L - 1;
-
 }
 
-}
+```
 
 
 
@@ -648,49 +755,32 @@ Time : O(1) max should be the digit number of Integer_MAX_VALUE
 
 Space : O(1)
 
+```java
 class Solution {
 
   public int reverse(int x) {
 
-​    int result = 0;
+     int result = 0;
+     long longRes = 0;
+     boolean negative = x > 0 ? false : true;
 
-​    long longRes = 0;
-
-​    boolean negative = x > 0 ? false : true;
-
-​    x = x > 0 ? x : -1 * x;
-
-​    while (x != 0) {
-
-​      int digit = x % 10;
-
-​      int curResult = result * 10 + digit; 
-
-​      
-
-​      //curResult might be overflow
-
-​      //check overflow, if we calculate back to match result failed, represent there is an overflow
-
-​      if ((curResult - digit) / 10 != result) {
-
-​        return 0;
-
-​      }
-
-​      result = curResult;
-
-​      x = x / 10;
-
-​    }
-
-​    
-
-​    return negative ? -1 * result : result;
-
+     x = x > 0 ? x : -1 * x;
+     while (x != 0) {
+       int digit = x % 10;
+       int curResult = result * 10 + digit; 
+       //curResult might be overflow
+       //check overflow, if we calculate back to match result failed, represent there is an overflow
+       if ((curResult - digit) / 10 != result) {
+         return 0;
+       }
+       result = curResult;
+       x = x / 10;
+     }
+     return negative ? -1 * result : result;
   }
-
 }
+
+```
 
 
 
@@ -1176,17 +1266,105 @@ Java:
 
 先sort，再 two pointers
 
-// TC： O（n^2） class Solution {   public int threeSumSmaller(int[] nums, int target) {     Arrays.sort(nums);     int sum = 0;     for (int i = 0; i < nums.length - 2; i++) {       sum += twoSumSmaller(nums, i + 1, target - nums[i]);     }     return sum;   }    private int twoSumSmaller(int[] nums, int startIndex, int target) {     int sum = 0;     int left = startIndex;     int right = nums.length - 1;     while (left < right) {       if (nums[left] + nums[right] < target) {         sum += right - left; //这里是关键         left++;       } else {         right--;       }     }     return sum;   } }
+// TC： O（n^2）
 
+```java
+class Solution {
 
+	public int threeSumSmaller(int[] nums, int target) {
+		Arrays.sort(nums);
+		int sum = 0;
+		for (int i = 0; i < nums.length - 2; i++) {
+			sum += twoSumSmaller(nums, i + 1, target - nums[i]);
+		}
+		return sum;
+	}
 
+	private int twoSumSmaller(int[] nums, int startIndex, int target) {
+		int sum = 0;
+		int left = startIndex;
+		int right = nums.length - 1;
+		while (left < right) {
+			if (nums[left] + nums[right] < target) {
+				sum += right - left;
+				// 这里是关键
+				left++;
+			} else {
+				right--;
+			}
+		}
+		return sum;
+	}
+}
+```
 
+```java
+class Solution {
+	public int threeSumSmaller(int[] nums, int target) {
+		Arrays.sort(nums);
+		int sum = 0;
+		for (int i = 0; i < nums.length - 2; i++) {
+			sum += twoSumSmaller(nums, i + 1, target - nums[i]);
+		}
+		return sum;
+	}
 
+	private int twoSumSmaller(int[] nums, int startIndex, int target) {
+		int sum = 0;
+		int left = startIndex;
+		int right = nums.length - 1;
+		while (left < right) {
+			if (nums[left] + nums[right] < target) {
+				/*
+				 * L [left,nL]?? right | | | -3 -2 -1 0 1 3 t: 2 [left, right - 1], newTarget:
+				 * target - nums[right] each point (L, right]: right-left, right - nL
+				 */ int newLeft = binarySearch(nums, left, right - 1, target - nums[right]);
+				if (newLeft == -1) {
+					return sum;
+				}
+				sum += ((right - left) + (right - newLeft)) * (newLeft - left + 1) / 2;
+				left = newLeft;
+				left++;
+			} else {
+				int newRight = binarySearch(nums, left + 1, right, target - nums[left]);
+				if (newRight == -1) {
+					return sum;
+				}
+				right = newRight;
+			}
+		}
+		return sum;
+	}
 
-
-/*******************Hybrid*********************************/ class Solution {   public int threeSumSmaller(int[] nums, int target) {     Arrays.sort(nums);     int sum = 0;     for (int i = 0; i < nums.length - 2; i++) {       sum += twoSumSmaller(nums, i + 1, target - nums[i]);     }     return sum;   }    private int twoSumSmaller(int[] nums, int startIndex, int target) {     int sum = 0;     int left = startIndex;     int right = nums.length - 1;     while (left < right) {       if (nums[left] + nums[right] < target) {         /*        L        [left,nL]??  right         |  |     |       -3 -2 -1 0 1 3  t: 2 [left, right - 1], newTarget: target - nums[right]      each point (L, right]: right-left, right - nL                         */         int newLeft = binarySearch(nums, left, right - 1, target - nums[right]);         if (newLeft == -1) {           return sum;         }         sum += ((right - left) + (right - newLeft)) * (newLeft - left + 1) / 2;         left = newLeft;         left++;       } else {         int newRight = binarySearch(nums, left + 1, right, target - nums[left]);         if (newRight == -1) {           return sum;         }         right = newRight;       }     }     return sum;   }      private int binarySearch(int[] arr, int left, int right, int target) {     int mid;     int left0 = left;     if (arr[right] < target) {       return right;     }     if (right >= left + 1 && arr[left+1] < target) {       while (left < right - 1) {         mid = left + (right - left) / 2;         if (arr[mid] >= target) {           right = mid;         } else {           left = mid;         }       }       if (arr[right] < target) {         return right;       }       if (arr[left] < target) {         return left;       }                }      if (arr[left0] < target) {       return left;     }     return -1;    } } /* Runtime: 5 ms, faster than 98.30% of Java online submissions for 3Sum Smaller. Memory Usage: 38.2 MB, less than 96.10% of Java online submissions for 3Sum Smaller. */   
-
-
+	private int binarySearch(int[] arr, int left, int right, int target) {
+		int mid;
+		int left0 = left;
+		if (arr[right] < target) {
+			return right;
+		}
+		if (right >= left + 1 && arr[left + 1] < target) {
+			while (left < right - 1) {
+				mid = left + (right - left) / 2;
+				if (arr[mid] >= target) {
+					right = mid;
+				} else {
+					left = mid;
+				}
+			}
+			if (arr[right] < target) {
+				return right;
+			}
+			if (arr[left] < target) {
+				return left;
+			}
+		}
+		if (arr[left0] < target) {
+			return left;
+		}
+		return -1;
+	}
+} 
+```
 
 
 
@@ -1268,9 +1446,33 @@ class Solution {
 
 (tang)
 
+```java
+//快慢指针
+class Solution {
+	public ListNode removeNthFromEnd(ListNode head, int n) {
+		ListNode dummy = new ListNode(0);
+		dummy.next = head;
+		ListNode slow = head;
+		ListNode fast = head;
+		int count = 0;
+		while (count < n && fast.next != null) {
+			fast = fast.next;
+			count++;
+		}
+		if (count < n) {
+			return head.next;
+		}
+		while (fast.next != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+		slow.next = slow.next.next;
+		return dummy.next;
+	}
+} 
 
-
-// 快慢指针 class Solution {   public ListNode removeNthFromEnd(ListNode head, int n) {     ListNode dummy = new ListNode(0);     dummy.next = head;     ListNode slow = head;     ListNode fast = head;     int count = 0;     while (count < n && fast.next != null) {       fast = fast.next;       count++;     }     if (count < n) {       return head.next;     }     while (fast.next != null) {       fast = fast.next;       slow = slow.next;     }     slow.next = slow.next.next;     return dummy.next;   } } /* n = 2 count = 2;   s   |  |   d>1,2,3> 5  o(2n) o(1) */
+/* n = 2 count = 2;   s   |  |   d>1,2,3> 5  o(2n) o(1) */
+```
 
 
 
@@ -1570,7 +1772,37 @@ class Solution {
 
 # 25  Reverse Nodes in k-Group
 
-(Tang)   public ListNode reverseKGroup2(ListNode head, int k) {     ListNode dummy = new ListNode(0), start = dummy;     dummy.next = head;     ListNode p = start, c, n = p; // 0     while(n != null) {       p = start;        n = p;       start = p.next; // 1       for(int i = 0; i < k && n != null; i++) n = n.next; // 2       if(n == null) break;       for(int i = 0; i < k-1; i++) {         c = p.next;         p.next = c.next;         c.next = n.next;         n.next = c;       }     }     return dummy.next;   }   /*--------k == 3----------------  * n(tail)  * p(prev)   * start  *dummy  1  2  3  4  5  *    cur  *----------------------------* 0/   /*----------------------------  * n(tail)  * p(prev)   *    start        *dummy  1  2  3  4  5  *    cur  *----------------------------* 1/      /*----------------------------  *          n(tail)  * p(prev)   *    start  *dummy  1  2  3  4  5  *    cur  *----------------------------* 2/        /*----------------------------  *          n(tail)  * p(prev)   *    start  *dummy  (1)  2  3  4  5  *    cur  *----------------------------* 3-0/    /*----------------------------  *       n(tail)  * p(prev)   *         start  *dummy  2  3  （1）  4  5  *    cur  *----------------------------* 3-1/      /*----------------------------  *    n(tail)  * p(prev)   *          start  *dummy  3   2  1   4  5  *    cur  *----------------------------* 3-2/     /*-----------top again--------------  *          n(tail)  *          p(prev)   *          start  *dummy  3   2  1   4  5  *    cur  *----------------------------* 4/
+(Tang) 
+
+```java
+class Solution {
+
+	public ListNode reverseKGroup2(ListNode head, int k) {
+		ListNode dummy = new ListNode(0), start = dummy;
+		dummy.next = head;
+		ListNode p = start, c, n = p;
+
+		while (n != null) {
+			p = start;
+			n = p;
+			start = p.next; // 1
+			for (int i = 0; i < k && n != null; i++)
+				n = n.next; // 2
+			if (n == null)
+				break;
+			for (int i = 0; i < k - 1; i++) {
+				c = p.next;
+				p.next = c.next;
+				c.next = n.next;
+				n.next = c;
+			}
+		}
+		return dummy.next;
+	}
+}
+```
+
+
 
 
 
@@ -1668,7 +1900,50 @@ reference: https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-
 
  
 
-Java code by Tang   public List<List<Integer>> permute(int[] nums) {     List<List<Integer>> res = new ArrayList<List<Integer>>();     if (nums == null || nums.length == 0) {       return res;     }     helper(nums, 0, res);     return res;   }   private void helper(int[] nums, int idx, List<List<Integer>> res) {     if (idx == nums.length - 1) {       List<Integer> tmp = toList(nums);       res.add(tmp);       return;     }     for (int i = idx; i < nums.length; i++) {       swap(nums, idx, i);       helper(nums, idx + 1, res);       swap(nums, idx, i);           }   }   private List<Integer> toList(int[] nums) {     List<Integer> res = new ArrayList<Integer>();     for (int i = 0; i < nums.length; i++) {       res.add(nums[i]);     }     return res;   }   private void swap(int[] arr, int i, int j) {     int tmp = arr[i];     arr[i] = arr[j];     arr[j] = tmp;   } /* dfs recur tree o(n!) - tc;   ||  1 2 3 4 5   0, i -[0, .., n-1]          /  |  \   \    (1)2345 (2)xxx (3)xxx  (4)xxxx  (5)XXXXX  n      /||\      (12)xxx (13)xx                   n-1     /||\   - - - - - n                       1  |0  1 -[1,n]  ------   n-1  |1      n   1    ------    |    n     tc: n * (n-1) * (n-2) *... * 1 = n! sc: o(n)   */  
+Java code by Tang   
+
+```java
+class solution {
+	public List<List<Integer>> permute(int[] nums) {
+		List<List<Integer>> res = new ArrayList<List<Integer>>();
+		if (nums == null || nums.length == 0) {
+			return res;
+		}
+
+		helper(nums, 0, res);
+		return res;
+	}
+
+	private void helper(int[] nums, int idx, List<List<Integer>> res) {
+		if (idx == nums.length - 1) {
+			List<Integer> tmp = toList(nums);
+			res.add(tmp);
+			return;
+		}
+		for (int i = idx; i < nums.length; i++) {
+			swap(nums, idx, i);
+			helper(nums, idx + 1, res);
+			swap(nums, idx, i);
+		}
+	}
+
+	private List<Integer> toList(int[] nums) {
+		List<Integer> res = new ArrayList<Integer>();
+		for (int i = 0; i < nums.length; i++) {
+			res.add(nums[i]);
+		}
+		return res;
+	}
+
+	private void swap(int[] arr, int i, int j) {
+		int tmp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = tmp;
+	}
+}
+```
+
+
 
 
 
@@ -5945,4 +6220,27 @@ class Solution { // DFS   public Node lowestCommonAncestor(Node p, Node q) {    
 
 ## [1676. Lowest Common Ancestor of a Binary Tree IV](https://leetcode.ca/2020-07-02-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV/)
 
-class Solution { // need iterative method   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {   Set<TreeNode> set = new HashSet<TreeNode>();   for (TreeNode n : nodes) set.add(n);   return helper(root, set);  }  private TreeNode helper(TreeNode root, Set<TreeNode> set) {   // base case   if (root == null || set.contains(root)) {    return root;   }   TreeNode lr = helper(root.left, set);   TreeNode rr = helper(root.right, set);   if (lr != null && rr != null) {    return root;   }   return lr != null ? lr : rr;  } }
+```java
+class Solution { // need iterative method
+	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {
+		Set<TreeNode> set = new HashSet<TreeNode>();
+		for (TreeNode n : nodes)
+			set.add(n);
+		return helper(root, set);
+	}
+
+	private TreeNode helper(TreeNode root, Set<TreeNode> set) {
+		// base case
+		if (root == null || set.contains(root)) {
+			return root;
+		}
+		TreeNode lr = helper(root.left, set);
+		TreeNode rr = helper(root.right, set);
+		if (lr != null && rr != null) {
+			return root;
+		}
+		return lr != null ? lr : rr;
+	}
+}
+```
+
