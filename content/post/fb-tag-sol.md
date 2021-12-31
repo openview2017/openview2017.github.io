@@ -2607,6 +2607,7 @@ class Solution {
 # 43. Multiply Strings
 
 ```java
+<<<<<<< HEAD
  /* ************ Method 2: Binary string multiply code added and tested in leetcode ************/   public String multiply(String num1, String num2) {     int m = num1.length(), n = num2.length();     String num1Binary = Integer.toBinaryString(Integer.parseInt(num1));     String num2Binary = Integer.toBinaryString(Integer.parseInt(num2));     String binRes = multiplyBinary(num1Binary, num2Binary);     System.out.print("String Binary Mutiply : " + binRes + ", ");     int[] pos = new int[m + n];          for(int i = m - 1; i >= 0; i--) {       for(int j = n - 1; j >= 0; j--) {         int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0');          int p1 = i + j, p2 = i + j + 1;         int sum = mul + pos[p2];            pos[p1] += sum / 10;         pos[p2] = (sum) % 10;       }     }           StringBuilder sb = new StringBuilder();     for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);     String res = sb.length() == 0 ? "0" : sb.toString(); // special cases for empty     System.out.println( Integer.parseInt(binRes, 2) );     return res;   }    public String multiplyBinary(String num1, String num2) { // binary string multiply !!!     int m = num1.length(), n = num2.length();     int[] pos = new int[m + n];          for(int i = m - 1; i >= 0; i--) {       for(int j = n - 1; j >= 0; j--) {         int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0');          int p1 = i + j, p2 = i + j + 1;         int sum = mul + pos[p2];            pos[p1] += sum / 2;         pos[p2] = (sum) % 2;       }     }           StringBuilder sb = new StringBuilder();     for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);     return sb.length() == 0 ? "0" : sb.toString(); // special cases for empty   } 
 
 ```
@@ -2617,155 +2618,190 @@ class Solution {
 //(zhang) recursion
 
 class Solution { 
+=======
+>>>>>>> 94bd5e25b0e906d2db0df569c157957dc831c2f7
 
- public HashMap<String, Boolean> memoMap = new HashMap<>();
+ /* ************ Method 2: Binary string multiply code added and tested in leetcode  ************/
+    public String multiply(String num1, String num2) {
+        int m = num1.length(), n = num2.length();
+        String num1Binary = Integer.toBinaryString(Integer.parseInt(num1));
+        String num2Binary = Integer.toBinaryString(Integer.parseInt(num2));
+        String binRes = multiplyBinary(num1Binary, num2Binary);
+        System.out.print("String Binary Mutiply : " + binRes + ", ");
+        int[] pos = new int[m + n];
+       
+        for(int i = m - 1; i >= 0; i--) {
+            for(int j = n - 1; j >= 0; j--) {
+                int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0'); 
+                int p1 = i + j, p2 = i + j + 1;
+                int sum = mul + pos[p2];
+    
+                pos[p1] += sum / 10;
+                pos[p2] = (sum) % 10;
+            }
+        }  
+        
+        StringBuilder sb = new StringBuilder();
+        for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);
+        String res = sb.length() == 0 ? "0" : sb.toString(); // special cases for empty
+        System.out.println( Integer.parseInt(binRes, 2) );
+        return res;
+    } 
+    public String multiplyBinary(String num1, String num2) { // binary string multiply !!!
+        int m = num1.length(), n = num2.length();
+        int[] pos = new int[m + n];
+       
+        for(int i = m - 1; i >= 0; i--) {
+            for(int j = n - 1; j >= 0; j--) {
+                int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0'); 
+                int p1 = i + j, p2 = i + j + 1;
+                int sum = mul + pos[p2];
+    
+                pos[p1] += sum / 2;
+                pos[p2] = (sum) % 2;
+            }
+        }  
+        
+        StringBuilder sb = new StringBuilder();
+        for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);
+        return sb.length() == 0 ? "0" : sb.toString(); // special cases for empty
+    }  
+
+
+```
+
+
+
+
+
+# 44. Wildcard Matching
+
+//(zhang) recursion
+```java
+
+
+class Solution { 
+
+    public HashMap<String, Boolean> memoMap = new HashMap<>();
 
   
 
- public boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
 
-​    if (s == null) return false;
+    ​    if (s == null) return false;
 
-​    boolean match = dfs(s, 0, p, 0);
+    ​    boolean match = dfs(s, 0, p, 0);
 
-​    return match;
+    ​    return match;
 
-  }
+    }
 
 
 
-  private boolean dfs(String s, int i, String p, int j) {
+    private boolean dfs(String s, int i, String p, int j) {
 
-​    String key = i + "#" + j;
+    ​    String key = i + "#" + j;
 
-​    if (memoMap.containsKey(key)) {
+    ​    if (memoMap.containsKey(key)) {
 
-​      return memoMap.get(key);
+    ​      return memoMap.get(key);
 
-​    }   
+    ​    }
 
-​    boolean match = false;
+    ​    boolean match = false;
 
-​    if (j == p.length() && i == s.length())
+    ​    if (j == p.length() && i == s.length()) return true;
 
-​      return true;
+        if (i > s.length())  return false;
 
- 
+    ​    if (i < s.length() && j < p.length() && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
+    ​      match = dfs(s, i + 1, p, j + 1);
+    ​    }
 
-​      if (i > s.length())
+    ​    if (j < p.length() && p.charAt(j) == '*') {
+    ​      match = dfs(s, i + 1, p, j) || dfs(s, i, p, j + 1);
+    ​    }
 
-​        return false;
+    ​    memoMap.put(key, match);
 
-​     
-
-​    if (i < s.length() && j < p.length() && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
-
-​      match = dfs(s, i + 1, p, j + 1);
-
-​    }
-
-​     
-
-​    if (j < p.length() && p.charAt(j) == '*') {
-
-​      match = dfs(s, i + 1, p, j) || dfs(s, i, p, j + 1);
-
-​    }
-
-​     
-
-​    memoMap.put(key, match);
-
-​    return match;
-
-  }
+    ​    return match;
+    }
 
 }
+```
 
-
-
+```java
 //(Luo) DP
 
 class Solution {
 
-  public boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
+    ​    // s 可能为空，且只包含从 a-z 的小写字母。
+    ​    // p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
 
-​    // s 可能为空，且只包含从 a-z 的小写字母。
+    ​    int lens = s.length();
 
-​    // p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
+    ​    int lenp = p.length();
 
+    ​    char[] sArray = s.toCharArray();
 
-
-​    int lens = s.length();
-
-​    int lenp = p.length();
-
-​    char[] sArray = s.toCharArray();
-
-​    char[] pArray = p.toCharArray();
-
-​    
-
-​    boolean[][] dp = new boolean[lens + 1][lenp + 1];
-
-​    dp[0][0] = true;
-
-​       
-
-​    //当s的长度为0的情况
-
-​    for (int i = 1; i <= lenp; i++) {
-
-​      dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 1] : false;
-
-​    }
-
-​    
-
-​    for (int i = 1; i <= lens; i++) {
-
-​      for (int j = 1; j <= lenp; j++) {
-
-​        
-
-​        char sc = sArray[i - 1];
-
-​        char pc = pArray[j - 1];
-
-​          
-
-​        if (sc == pc || pc == '?') {
-
-​          dp[i][j] = dp[i - 1][j - 1];// 当前字符匹配,当前s[0..i-1]p[0..j-1]是否匹配取决于之前dp[i - 1][j - 1]
-
-​        } else {
-
-​          if (pc == '*') {
-
-​            if (dp[i][j - 1] || dp[i - 1][j - 1] || dp[i - 1][j]) { // 这里是填表格的关键
-
-​              dp[i][j] = true;
-
-​            }
-
-​          }
-
-​        }
-
-​      }
-
-​    }
-
-​    return dp[lens][lenp];
-
-  }
+    ​    char[] pArray = p.toCharArray();
 
 
+    ​    boolean[][] dp = new boolean[lens + 1][lenp + 1];
+
+    ​    dp[0][0] = true;
+
+    ​    //当s的长度为0的情况
+
+    ​    for (int i = 1; i <= lenp; i++) {
+
+    ​      dp[0][i] = pArray[i - 1] == '*' ? dp[0][i - 1] : false;
+
+    ​    }
+
+
+    ​    for (int i = 1; i <= lens; i++) {
+
+    ​      for (int j = 1; j <= lenp; j++) {
+
+    ​
+
+    ​        char sc = sArray[i - 1];
+
+    ​        char pc = pArray[j - 1];
+
+    ​
+
+    ​        if (sc == pc || pc == '?') {
+
+    ​          dp[i][j] = dp[i - 1][j - 1];// 当前字符匹配,当前s[0..i-1]p[0..j-1]是否匹配取决于之前dp[i - 1][j - 1]
+
+    ​        } else {
+
+    ​          if (pc == '*') {
+
+    ​            if (dp[i][j - 1] || dp[i - 1][j - 1] || dp[i - 1][j]) { // 这里是填表格的关键
+
+    ​              dp[i][j] = true;
+
+    ​            }
+
+    ​          }
+
+    ​        }
+
+    ​      }
+
+    ​    }
+
+    ​    return dp[lens][lenp];
+
+    }
 
 }
 
-
-
+```
 
 
 /*
@@ -3078,7 +3114,7 @@ class Solution {
 
 (Lynn)
 
-
+```java
 
 class Solution {
 
@@ -3112,8 +3148,7 @@ class Solution {
 
 ​    }
 
-​    
-
+​
 ​    // deal with digit overflow
 
 ​    for (int i = res.length - 1; i >= 0; i--) {
@@ -3159,7 +3194,7 @@ class Solution {
 }
 
 
-
+```
 
 
 # 792. Number of Matching Subsequences
