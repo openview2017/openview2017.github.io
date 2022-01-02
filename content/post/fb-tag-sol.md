@@ -4289,7 +4289,6 @@ class Solution {
 class Solution {   public List<List<Integer>> findLeaves(TreeNode root) {     List<List<Integer>> res = new ArrayList<>();     getHeight(root, res);     return res;   }   private int getHeight(TreeNode root, List<List<Integer>> res) {     if (root == null) {       return -1;     }     int left = getHeight(root.left, res);     int right = getHeight(root.right, res);     int curHeight = Math.max(left, right) + 1;     if (curHeight == res.size()) {       res.add(new ArrayList<Integer>());     }     res.get(curHeight).add(root.val);     // root.left = null;     // root.right = null;     return curHeight;   } }  
 
 
-
 # 380  Insert Delete GetRandom O(1)
 
 (Luo)
