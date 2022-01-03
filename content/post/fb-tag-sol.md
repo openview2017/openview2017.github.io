@@ -5981,3 +5981,98 @@ class Solution { // need iterative method
 }
 ```
 
+# [37. Sudoku Solver]()
+
+后序遍历：
+将先序遍历的左右调换，最后将result list整体进行reverse()
+先序： root->left->right
+后序：root->right->left   —reverse=> left->right->root
+
+
+"""
+1. initialize the digit use indicator array
+2. find the least choices, r,c
+3. iterate the choices for r, c
+4. fine one solution, True condition: no space to filled
+5, output
+
+"""
+
+```python
+class Solution:
+    def __init__(self):
+        # constructor
+        self.row = [[False] * 10 for _ in range(10)]
+        self.col = [[False] * 10 for _ in range(10)]
+        self.block = [[[False] * 10 for _ in range(3)] for _ in range(3)]
+        
+    def initindicate(self, board :List[List[str]]) -> None:
+        """
+        fill indicator 
+        """
+        for r in range (9):
+            for c in range (9):
+                if board[r][c] == '.':
+                    continue
+                digit = int(board[r][c])
+                self.row[r][digit] = self.col[c][digit] = self.block[r // 3][c // 3][digit] = True
+        
+    def solveSudoku(self, board: List[List[str]]) -> None:
+        """
+        solve Sodoku
+        """
+        ans = []
+        self.initindicate(board)
+        self.solveSodukoHelper(board, ans)
+        return ans     
+
+    def solveSodukoHelper(self, board:list[list[str]], ans) -> bool:
+        """
+        helper function 
+        """
+        is_digit, vals, r, c = self.getLeastChoice(board)
+        
+        # return condition
+        if not is_digit:
+            for i in range(9):
+                ans.append(' '.join(board[i])) 
+            return True
+        
+        for val in vals:
+            board[r][c] = str(val)
+            self.row[r][val] = self.col[c][val] = self.block[r//3][c//3][val] = True
+            if self.solveSodukoHelper(board, ans):
+                return True
+            self.row[r][val] = self.col[c][val] = self.block[r//3][c//3][val] = False
+            board[r][c] = '.'
+            
+        return False   
+    
+    def getLeastChoice(self, board :List[List[str]]) -> tuple[bool, list[int], int, int]:
+        """
+        find the postion that has the least choices
+        needed:  if still postion to fill
+        row, col: position
+        gvals: digit can filled at board[row][col]
+        
+        """
+        gval, row, col = 9, 0, 0
+        gvals = []
+        needed = False
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] != '.':
+                    continue
+                needed = True
+                vals = []
+                for i in range(1, 10):
+                    if self.row[r][i] == False and self.col[c][i] == False and self.block[r // 3][c // 3][i] == False:
+                        vals.append(i)
+                if gval > len(vals):
+                    gvals = vals[:]
+                    gval = len(vals)
+                    row, col = r, c
+                 
+        return needed, gvals, row, col
+```
+
