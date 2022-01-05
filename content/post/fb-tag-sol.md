@@ -5988,7 +5988,6 @@ class Solution { // need iterative method
 先序： root->left->right
 后序：root->right->left   —reverse=> left->right->root
 
-
 """
 1. initialize the digit use indicator array
 2. find the least choices, r,c

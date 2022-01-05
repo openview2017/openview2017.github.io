@@ -15,7 +15,6 @@ Output: true
 Explanation: "amanaplanacanalpanama" is a palindrome.
 
 
-
 */
 class IsPalindrome {
     public boolean isPalindrome(String s) {
