@@ -6075,3 +6075,42 @@ class Solution:
         return needed, gvals, row, col
 ```
 
+
+# 158. Read N Characters Given read4 II - Call Multiple Times
+```java
+/*
+这道题和readN 2那个题目的区别是，那个可以读多次，这个每次就是读一次。
+所以这里的pointer每次总以0为首出发，count也每次重新读。
+但是那个题需要记录，如果不是从0出发，是从哪里出发，所以需要一个global的pointer和counter
+
+*/
+public class Solution extends Reader4 {
+    /**
+     * @param buf Destination buffer
+     * @param n   Number of characters to read
+     * @return    The number of actual characters read
+     */
+    private char[] tmp = new char[4];
+    private int tmpPointer = 0; // pointer
+    private int tmpCount = 0; // tmp count
+    
+    public int read(char[] buf, int n) {
+        int total = 0; // index of the total we read
+        while (total < n) {
+            if (tmpPointer == 0) { //代表需要重新load一个read4到tmp array里面
+                tmpCount = read4(tmp); //把tmp array里面装4个字符，tmpCount初始就为4
+            }
+            while (total < n && tmpPointer < tmpCount) { 
+                buf[total++] = tmp[tmpPointer++]; //往buf里面装，当total还没完，当前的4个还没完时
+            }
+            if (tmpPointer == 4) {
+                tmpPointer = 0; // 如果pointer和count相等了，说明下一轮需要重新load，所以这里让pointer为0
+            }  
+            if (tmpCount < 4) { // 如果tmpCount小于4，说明刚才就没load够，就不用再走了。可以break了
+                break;
+            }
+        }
+        return total;
+    }
+}
+```
