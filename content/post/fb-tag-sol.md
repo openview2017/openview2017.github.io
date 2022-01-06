@@ -6238,3 +6238,117 @@ public class Codec {
 }
 
 ```
+
+# 282. Expression Add Operators
+```java
+class Solution {
+    public List<String> addOperators(String num, int target) {
+        List<String> rst = new ArrayList<String>();
+        if(num == null || num.length() == 0) return rst;
+        helper(rst, "", num, target, 0, 0, 0);
+        return rst;
+    }
+    public void helper(List<String> rst, String path, String num, int target, int pos, long eval, long multed){
+        if(pos == num.length()){
+            if(target == eval)
+                rst.add(path);
+            return;
+        }
+        for(int i = pos; i < num.length(); i++){
+            if(i != pos && num.charAt(pos) == '0') break; // end index
+            long cur = Long.parseLong(num.substring(pos, i + 1));
+            if(pos == 0){
+                helper(rst, path + cur, num, target, i + 1, cur, cur);
+            }
+            else{
+                helper(rst, path + "+" + cur, num, target, i + 1, eval + cur , cur);
+                
+                helper(rst, path + "-" + cur, num, target, i + 1, eval -cur, -cur); // multed is a cache
+                
+                helper(rst, path + "*" + cur, num, target, i + 1, eval - multed + multed * cur, multed * cur );
+            }
+        }
+    }
+}
+
+/*                 | 
+                  123
+                  /    (m*3)^m, m
+                 1 12 123
+                /|\
+       mult:1          +/-/*2 ||| +/-/*23
+       eval: 3 -1 2   
+        m    2 -2 2
+        
+        1+[(2)*3] * 4
+        eval - mult + mult*3
+*/
+```
+
+1762. Buildings With an Ocean View
+```java
+class Solution {
+    public int[] findBuildings(int[] heights) {
+        int n = heights.length;
+        List<Integer> list = new ArrayList<>();
+        int maxHeight = -1;
+        
+        for (int current = n - 1; current >= 0; --current) {
+            // If there is no building higher (or equal) than the current one to its right,
+            // push it in the list.
+            if (maxHeight < heights[current]) {
+                list.add(current);
+                
+                // Update max building till now.
+                maxHeight = heights[current];
+            }
+        }
+        
+        // Push building indices from list to answer array in reverse order.
+        int[] answer = new int[list.size()];
+        for (int i = 0; i < list.size(); ++i) {
+            answer[i] = list.get(list.size() - 1 - i);
+        }
+        
+        return answer;
+    }
+}
+
+```
+
+# 1570. Dot Product of Two Sparse Vectors
+```java
+class SparseVector {
+    
+    // Map the index to value for all non-zero values in the vector
+    Map<Integer, Integer> mapping;      
+
+    SparseVector(int[] nums) {
+        mapping = new HashMap<>();
+        for (int i = 0; i < nums.length; ++i) {
+            if (nums[i] != 0) {
+                mapping.put(i, nums[i]);        
+            }
+        }
+    }
+
+    public int dotProduct(SparseVector vec) {        
+        int result = 0;
+
+        // iterate through each non-zero element in this sparse vector
+        // update the dot product if the corresponding index has a non-zero value in the other vector
+        for (Integer i : this.mapping.keySet()) {
+            if (vec.mapping.containsKey(i)) {
+                result += this.mapping.get(i) * vec.mapping.get(i);
+            }
+        }
+        return result;
+    }
+}
+
+// Your SparseVector object will be instantiated and called as such:
+// SparseVector v1 = new SparseVector(nums1);
+// SparseVector v2 = new SparseVector(nums2);
+// int ans = v1.dotProduct(v2);
+
+```
