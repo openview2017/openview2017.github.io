@@ -6115,3 +6115,126 @@ public class Solution extends Reader4 {
     }
 }
 ```
+
+# 297. Serialize and Deserialize Binary Tree
+(Tang)
+```java
+// level order solution 
+public class Codec {
+    public static String SEP = ",";
+    public static String NULL = "#";
+    public static TreeNode nullNode = new TreeNode(-1);
+    
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) { // level
+        if (root == null) {
+            return NULL;
+        }
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        StringBuilder sb = new StringBuilder();
+
+        queue.offerLast(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode tmp = queue.pollFirst();
+                if (tmp != nullNode) {
+                    sb.append(tmp.val); 
+                    if (tmp.left != null) {
+                       queue.offerLast(tmp.left);
+                    } else {
+                        queue.offerLast(nullNode);
+                    }
+                    if (tmp.right != null) {
+                       queue.offerLast(tmp.right);
+                    } else {
+                        queue.offerLast(nullNode);
+                    }
+                } else {
+                   sb.append(NULL);
+                } 
+                sb.append(SEP);
+            }
+        }
+        sb.deleteCharAt(sb.length() - 1);
+        return sb.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if(data == null || data.length() < 1) return null;
+        String[] d = data.split(SEP);
+        if(d[0].equals(NULL)) return null;
+
+        TreeNode root = new TreeNode(Integer.valueOf(d[0]));
+        Deque<TreeNode> q = new ArrayDeque<TreeNode>();
+        q.offer(root);
+        int i = 1;
+        while(!q.isEmpty() && i < d.length-1) {
+            //int size = q.size();
+            TreeNode node = q.poll();
+
+            if(!d[i].equals(NULL)) {
+                node.left = new TreeNode(Integer.valueOf(d[i]));
+                q.offer(node.left);
+            }
+            i++;
+
+            if(!d[i].equals(NULL)) {
+                node.right = new TreeNode(Integer.valueOf(d[i]));
+                q.offer(node.right);
+            }
+            i++;
+
+        }
+        return root;
+    }
+}
+
+// preorder
+public class Codec {
+    public static String SEP = ",";
+    public static String NULL = "#";
+    
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) { // preOrder
+        StringBuilder sb = new StringBuilder();
+        preorder(root, sb);
+        sb.deleteCharAt(sb.length() - 1);
+        return sb.toString();
+    }
+    
+    private void preorder(TreeNode root, StringBuilder sb) {
+        if (root == null) {
+            sb.append(NULL);
+            sb.append(SEP);
+            return;
+        }
+        sb.append(root.val);
+        sb.append(SEP);
+        preorder(root.left, sb);
+        preorder(root.right, sb);
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) { // preorder
+        String[] strs = data.split(SEP);
+        int[] index = {0};
+        
+        return de_preorder(strs, index);
+    }
+    
+    private TreeNode de_preorder(String[] strs, int[] index) {
+        if (strs[index[0]].equals(NULL)) {
+            index[0]++;
+            return null;
+        }
+        TreeNode root = new TreeNode(Integer.parseInt(strs[index[0]]));
+        index[0]++;
+        root.left = de_preorder(strs, index);
+        root.right = de_preorder(strs, index);
+        return root;
+    }
+}
+
+```
