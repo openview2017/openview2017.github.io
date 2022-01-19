@@ -6403,3 +6403,166 @@ class Solution {
 
 ```
 
+# 272. Closest Binary Search Tree Value II
+``` java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ 
+ Method 1: 
+ 1. in-order trav -> list<integer> - sorted   sc/tc: o(n)
+ 
+ 2. binary search closest (smaller) element in list, target -> index: tc: o(logn)
+ 3. pointer l, r = l+1   -> tc: o(k)
+   l--, r++, out of border
+    int[]
+    2+3: log(n) + k
+    
+ Method 2: 
+ 1.
+ 2. quick partition, partition, dist to target, tc: o(n)
+ 
+ Method 3: target
+ 1. search target - o(logn)
+ 2. iterator -> pre / post iterator   (target) -> pre(ele), post(ele)
+ tc o(1)/per cal   k, o(n)
+ 
+ iteratively in order traversal -> stack<>
+ 
+ tc: o(logn + k)
+ 
+ 
+ maxheap   comparator abs(cur.val - target)
+    max of (heap)   cur.root
+ traversal 
+ tc: o(nlogk), sc: o(k)
+ 
+ 
+ arryk
+ kth smallest element int arr, abs(val - target)
+ 
+ 3.7, size 5
+          i                        |
+ [4(0.3), 3(0.7),5(1.3),1(2.7),2(1.7)], 2
+                          j
+ pivot - left + 1 = 2 
+  
+ [0, i) - distance <= 0.7
+ 
+ 
+ (pivot + 1, right), 3-2=1
+ 
+ [5(1.3),1(2.7),2(1.7)]
+ 
+ 
+ 
+ */
+class Solution {
+    public List<Integer> closestKValues(TreeNode root, double target, int k) {
+        List<Integer> ret = new LinkedList<>();
+        Stack<TreeNode> succ = new Stack<>();
+        Stack<TreeNode> pred = new Stack<>();
+        initializePredecessorStack(root, target, pred);
+        initializeSuccessorStack(root, target, succ);
+        if(!succ.isEmpty() && !pred.isEmpty() && succ.peek().val == pred.peek().val) {
+            getNextPredecessor(pred);
+        }
+        while(k-- > 0) {
+            if(succ.isEmpty()) {
+                ret.add(getNextPredecessor(pred));
+            } else if(pred.isEmpty()) {
+                ret.add(getNextSuccessor(succ));
+            } else {
+                double succ_diff = Math.abs((double)succ.peek().val - target);
+                double pred_diff = Math.abs((double)pred.peek().val - target);
+                if(succ_diff < pred_diff) {
+                    ret.add(getNextSuccessor(succ));
+                } else {
+                    ret.add(getNextPredecessor(pred));
+                }
+            }
+        }
+        return ret;
+    }
+
+    private void initializeSuccessorStack(TreeNode root, double target, Stack<TreeNode> succ) {
+        while(root != null) {
+            if(root.val == target) {
+                succ.push(root);
+                break;
+            } else if(root.val > target) {
+                succ.push(root);
+                root = root.left;
+            } else {
+                root = root.right;
+            }
+        }
+    }
+
+    private void initializePredecessorStack(TreeNode root, double target, Stack<TreeNode> pred) {
+        while(root != null){
+            if(root.val == target){
+                pred.push(root);
+                break;
+            } else if(root.val < target){
+                pred.push(root);
+                root = root.right;
+            } else{
+                root = root.left;
+            }
+        }
+    }
+    
+    private int getNextSuccessor(Stack<TreeNode> succ) {
+        TreeNode curr = succ.pop();
+        int ret = curr.val;
+        curr = curr.right;
+        while(curr != null) {
+            succ.push(curr);
+            curr = curr.left;
+        }
+        return ret;
+    }
+
+    private int getNextPredecessor(Stack<TreeNode> pred) {
+        TreeNode curr = pred.pop();
+        int ret = curr.val;
+        curr = curr.left;
+        while(curr != null) {
+            pred.push(curr);
+            curr = curr.right;
+        }
+        return ret;
+    }
+}
+
+``` 
+
+
+# 
