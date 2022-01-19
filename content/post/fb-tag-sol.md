@@ -6565,4 +6565,50 @@ class Solution {
 ``` 
 
 
-# 
+# 200. Number of Islands
+
+``` java
+class Solution {
+    public static final int[][] DIRS = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    
+    public int numIslands(char[][] grid) {
+        Deque<Integer> queue = new ArrayDeque<>();
+        int m = grid.length, n = grid[0].length;
+        int count = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == '1') {
+                    count++;
+                    bfs(grid, queue, i, m, j, n);
+                }
+            }
+        }
+        return count;
+    }
+    
+    private void bfs(char[][] grid, Deque<Integer> queue, int r, int row, int c, int col) {
+        // if (grid[r][c] == '0') {
+        //     return;
+        // }
+        grid[r][c] = '0';
+        queue.offerLast(r * col + c);
+        while (!queue.isEmpty()) {
+            int tmp = queue.pollFirst();
+            int curR = tmp / col;
+            int curC = tmp % col;
+            for (int[] dir : DIRS) {
+                int nxtR = curR + dir[0];
+                int nxtC = curC + dir[1];
+                
+                if (nxtR < 0 || nxtR >= row || nxtC < 0 || nxtC >= col || grid[nxtR][nxtC] == '0') {
+                    continue;    
+                }
+                grid[nxtR][nxtC] = '0';
+                queue.offerLast(nxtR * col + nxtC);
+            }
+        }
+        return;
+    }
+}
+
+``` 
