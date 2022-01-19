@@ -6647,7 +6647,7 @@ class Solution {
 ```
 
 
-# 695. Max Area of Island
+# 827. Making A Large Island
 
 ``` java
 
