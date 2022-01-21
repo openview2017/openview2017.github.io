@@ -6686,6 +6686,7 @@ class Solution {
         return ans;
     }
 
+
     public int dfs(int r, int c, int index) {
         int ans = 1;
         grid[r][c] = index;
