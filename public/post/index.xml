@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode problems top 100 liked and top 150 questions in Python</title>
+      <link>http://localhost:1313/post/python_basic_questions/</link>
+      <pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/python_basic_questions/</guid>
+      <description>Backtracking/DFS </description>
+    </item>
+    
+    <item>
+      <title>Leetcode problems with Facebook tags</title>
+      <link>http://localhost:1313/post/fb-tag-sol/</link>
+      <pubDate>Thu, 30 Dec 2021 15:25:08 -0800</pubDate>
+      
+      <guid>http://localhost:1313/post/fb-tag-sol/</guid>
+      <description>解法原始链接 - Google Doc 1. Two Sum (Wu) 1 2 3 4 5 6 7 8 class Solution: def twoSum(self, nums: List[int], target: int) -&amp;gt; List[int]: s = {} for i, e in enumerate(nums): if target - e in s: return [i, s[target-e]] s[e] = i follow up: 如果数据量很大怎么办？ Step 1: Ask if the data</description>
+    </item>
+    
+  </channel>
+</rss>
